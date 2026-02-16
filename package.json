@@ -1,7 +1,7 @@
 {
   "name": "joaquin-cv",
   "version": "1.0.0",
-  "description": "Interactive portfolio and CV for Joaquín Noguera Velázquez — Senior Backend Engineer",
+  "description": "Interactive portfolio and CV for Joaquín Noguera Velázquez — Developer Backend Senior",
   "private": true,
   "scripts": {
     "serve": "npx serve@latest . -l 3000",

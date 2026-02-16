@@ -13,7 +13,7 @@
     "cta_explore": "Explorar mi trabajo",
     "cta_cv": "Ver CV",
     "typing": [
-      "Ingeniero Backend Senior",
+      "Desarrollador Backend Senior",
       "Construyendo sistemas de pago a escala",
       "NestJS • Node.js • PostgreSQL",
       "Explorando IA con LangChain"
@@ -22,9 +22,9 @@
   "about": {
     "label": "// sobre-mi",
     "title": "Sobre mí",
-    "subtitle": "Ingeniero backend con pasión por la arquitectura escalable",
+    "subtitle": "Desarrollador backend con pasión por la arquitectura escalable",
     "filename": "LEEME.md",
-    "p1": "Soy Ingeniero Backend Senior con más de 6 años de experiencia profesional y más de una década programando. Durante los últimos 4+ años, he construido la infraestructura de pagos y gestión de eventos en Blackthorn.io, trabajando con todo el stack backend — microservicios NestJS, PostgreSQL, MongoDB, Redis — diseñando sistemas que manejan miles de transacciones diarias de forma confiable.",
+    "p1": "Soy Desarrollador Backend Senior con más de 6 años de experiencia profesional y más de una década programando. Durante los últimos 4+ años, he construido la infraestructura de pagos y gestión de eventos en Blackthorn.io, trabajando con todo el stack backend — microservicios NestJS, PostgreSQL, MongoDB, Redis — diseñando sistemas que manejan miles de transacciones diarias de forma confiable.",
     "p2": "Lo que me distingue es mi capacidad de adaptarme rápidamente a nuevas tecnologías y aportar soluciones innovadoras. Desde migrar 48 clases de Salesforce a almacenamiento externo hasta implementar analíticas de embudo de compra con Google Tag Manager — no solo escribo código, resuelvo problemas de negocio.",
     "p3": "Antes de Blackthorn, adquirí experiencia versátil en desarrollo Salesforce, integraciones cloud en Azure (más de 40 flujos de integración empresarial) y desarrollo full-stack. Creo que los mejores ingenieros son los que nunca dejan de aprender — por eso actualmente estoy explorando LangChain, LangGraph y Agentes de IA.",
     "learning_label": "Explorando actualmente",
@@ -36,7 +36,7 @@
     "subtitle": "Construyendo software de impacto en pagos, cloud y sistemas empresariales",
     "roles": [
       {
-        "title": "Ingeniero Backend Senior",
+        "title": "Desarrollador de Software",
         "company": "Blackthorn.io",
         "period": "Abr 2022 — Presente",
         "location": "Estados Unidos (Remoto)",
@@ -147,8 +147,8 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Ingeniero Backend Senior",
-    "summary": "Ingeniero Backend Senior con más de 6 años de experiencia profesional y más de 10 años programando. Durante los últimos 4+ años en Blackthorn.io, he construido sistemas escalables de pagos y gestión de eventos con microservicios NestJS, PostgreSQL, MongoDB y Redis. Historial comprobado resolviendo desafíos complejos — desde migrar 48 clases de Salesforce hasta implementar caché Redis que redujo tiempos de consulta de 20s a menos de un segundo. Ingeniero adaptable que domina rápidamente nuevas tecnologías y entrega soluciones innovadoras. Actualmente explorando agentes de IA con LangChain y LangGraph.",
+    "subtitle": "Desarrollador Backend Senior",
+    "summary": "Desarrollador Backend Senior con más de 6 años de experiencia profesional y más de 10 años programando. Durante los últimos 4+ años en Blackthorn.io, he construido sistemas escalables de pagos y gestión de eventos con microservicios NestJS, PostgreSQL, MongoDB y Redis. Historial comprobado resolviendo desafíos complejos — desde migrar 48 clases de Salesforce hasta implementar caché Redis que redujo tiempos de consulta de 20s a menos de un segundo. Desarrollador adaptable que domina rápidamente nuevas tecnologías y entrega soluciones innovadoras. Actualmente explorando agentes de IA con LangChain y LangGraph.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
     "sections": {
@@ -159,7 +159,7 @@
     },
     "roles": [
       {
-        "title": "Ingeniero Backend Senior",
+        "title": "Desarrollador de Software",
         "company": "Blackthorn.io",
         "period": "Abr 2022 — Presente",
         "location": "Estados Unidos (Remoto)",
