@@ -13,7 +13,7 @@
     "cta_explore": "Explore My Work",
     "cta_cv": "View CV",
     "typing": [
-      "Developer Backend Senior",
+      "Software Developer",
       "Building payment systems at scale",
       "NestJS • Node.js • PostgreSQL",
       "Exploring AI with LangChain"
@@ -22,13 +22,13 @@
   "about": {
     "label": "// about-me",
     "title": "About Me",
-    "subtitle": "Backend engineer with a passion for scalable architecture",
+    "subtitle": "Backend developer with a passion for scalable architecture",
     "filename": "README.md",
-    "p1": "I'm a Developer Backend Senior with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
-    "p2": "What sets me apart is my ability to rapidly adapt to new technologies and bring innovative solutions to the table. From migrating 48 Salesforce classes to external storage to implementing purchase funnel analytics with Google Tag Manager — I don't just write code, I solve business problems.",
-    "p3": "Before Blackthorn, I gained versatile experience in Salesforce development, Azure cloud integrations (40+ enterprise integration flows), and full-stack development. I believe the best engineers are the ones who never stop learning — which is why I'm currently diving into LangChain, LangGraph, and AI Agents.",
+    "p1": "I'm a Software Developer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
+    "p2": "My view of this role goes beyond any single technology: I don't see myself boxed in as an Angular or TypeScript developer. I see myself as a builder of products and digital experiences, always leveraging technology and software development to create real impact for users and the business.",
+    "p3": "Looking ahead, I want to keep deepening my work in AI-driven products and also move into mobile development to build cohesive end-to-end experiences.",
     "learning_label": "Currently exploring",
-    "learning_items": "LangChain · LangGraph · AI Agents · Software Architecture"
+    "learning_items": "LangChain · LangGraph · AI Agents · Software Architecture · Mobile Development"
   },
   "experience": {
     "label": "// career-path",
@@ -119,13 +119,13 @@
       {
         "text": "Joaquín consistently demonstrates exceptional technical skills and a deep understanding of our industry. His innovative approach and problem-solving abilities have significantly contributed to the success of our projects. He is not only technically proficient but also a fantastic team player. He is always willing to lend a hand, share his knowledge, and collaborate to achieve the best results.",
         "name": "Hugo Héctor Fernández",
-        "role": "Senior Software Engineer, Blackthorn",
+        "role": "Software Developer, Blackthorn",
         "initials": "HF"
       },
       {
         "text": "I was lucky to call him my coworker. He consistently gave 100 percent effort to the team and played a significant role in ensuring that we completed assignments on time. Any team would be lucky to have Joaquín.",
         "name": "Cristian Vizzarri",
-        "role": "Salesforce Engineer, Folder IT",
+        "role": "Salesforce Developer, Folder IT",
         "initials": "CV"
       }
     ]
@@ -147,8 +147,8 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Developer Backend Senior",
-    "summary": "Developer Backend Senior with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable engineer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph.",
+    "subtitle": "Software Developer",
+    "summary": "Software Developer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable developer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph, while deepening software architecture and moving into mobile development.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
     "sections": {
@@ -206,7 +206,7 @@
     ],
     "education": [
       {
-        "degree": "Informatics Engineering",
+        "degree": "Informatics",
         "school": "Universidad Nacional del Litoral",
         "period": "2017 — 2019"
       },

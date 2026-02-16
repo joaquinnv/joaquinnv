@@ -1,6 +1,6 @@
 # Hey, I'm Joaquín 👋
 
-**Developer Backend Senior** building scalable payment systems at [Blackthorn.io](https://www.blackthorn.io)
+**Developer Backend Senior**
 
 I have 6+ years of professional experience and over a decade writing code. I architect NestJS microservices, optimize databases, and implement caching strategies that turn 20-second queries into sub-second responses. I thrive in fast-paced environments where I can solve complex problems and bring innovative solutions to the table.
 
@@ -36,4 +36,4 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 
 ---
 
-*Open to new opportunities — let's build something great together.*
+_Open to new opportunities — let's build something great together._
