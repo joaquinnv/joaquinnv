@@ -17,7 +17,7 @@ const TYPING_DELETE_SPEED_MS = 40;
 
 /** Default (English) typing phrases — used as fallback before i18n loads */
 const DEFAULT_PHRASES = [
-  'Software Developer',
+  'SeniorSoftware Developer',
   'Building payment systems at scale',
   'NestJS • Node.js • PostgreSQL',
   'Exploring AI with LangChain',
