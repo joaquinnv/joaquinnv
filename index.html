@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Prevent FOUC: apply saved theme & language before first paint -->
+    <script>
+      (function(){
+        var root=document.documentElement;
+        var t='light';
+        var l='en';
+        try {
+          var storedTheme=localStorage.getItem('jcv-theme');
+          if(storedTheme==='dark'||storedTheme==='light'){
+            t=storedTheme;
+          } else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        } catch (_e) {
+          if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        }
+        root.setAttribute('data-theme',t);
+
+        try {
+          var urlLang=new URLSearchParams(window.location.search).get('lang');
+          if(urlLang==='en'||urlLang==='es'){
+            l=urlLang;
+          } else {
+            var storedLang=localStorage.getItem('jcv-lang');
+            if(storedLang==='en'||storedLang==='es'){
+              l=storedLang;
+            } else {
+              var browserLang=(navigator.language||'en').slice(0,2);
+              l=(browserLang==='es')?'es':'en';
+            }
+          }
+        } catch (_err) {
+          var fallbackLang=(navigator.language||'en').slice(0,2);
+          l=(fallbackLang==='es')?'es':'en';
+        }
+
+        root.setAttribute('lang',l);
+        if(l==='es'){root.setAttribute('data-i18n-pending','true')}
+      })();
+    </script>
+    <style>html[data-i18n-pending="true"] body{visibility:hidden}</style>
+
+    <title>Joaquín Noguera — Senior Backend Engineer</title>
+    <meta name="description" content="Senior Backend Engineer with 6+ years of professional experience and 10+ years programming. Building scalable payment systems with NestJS, Node.js, and PostgreSQL. Open to new opportunities.">
+    <meta name="author" content="Joaquín Noguera Velázquez">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joaquín Noguera — Senior Backend Engineer">
+    <meta property="og:description" content="Building resilient payment systems at scale. NestJS, Node.js, PostgreSQL. Open to opportunities.">
+    <meta property="og:image" content="assets/joaquin-og.jpg">
+    <meta property="og:url" content="https://joaquinnv.github.io/joaquin-cv/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joaquín Noguera — Senior Backend Engineer">
+    <meta name="twitter:description" content="Building resilient payment systems at scale. NestJS, Node.js, PostgreSQL.">
+    <meta name="twitter:image" content="assets/joaquin-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="alternate icon" href="assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts (non-render-blocking) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Icons (non-render-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joaquín Noguera Velázquez",
+        "jobTitle": "Senior Backend Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Blackthorn.io"
+        },
+        "url": "https://joaquinnv.github.io/joaquin-cv/",
+        "sameAs": [
+            "https://www.linkedin.com/in/joaqu%C3%ADn-noguera-velazquez-043234138",
+            "https://github.com/joaquinnv"
+        ],
+        "email": "nvjoaquin@gmail.com",
+        "knowsAbout": ["Node.js", "NestJS", "PostgreSQL", "MongoDB", "Redis", "TypeScript", "Angular", "Azure", "Microservices"],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Universidad Nacional del Litoral"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Paraná",
+            "addressRegion": "Entre Ríos",
+            "addressCountry": "AR"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Particle Canvas -->
+    <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- i18n Live Region -->
+    <div id="i18n-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo" aria-label="Joaquín Noguera — Home">
+                <span class="nav__logo-bracket">{</span>
+                <span class="nav__logo-letter">J</span>
+                <span class="nav__logo-bracket">}</span>
+            </a>
+
+            <nav class="nav__links" id="nav-links" aria-label="Main navigation">
+                <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+                <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+                <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+                <a href="#testimonials" class="nav__link" data-i18n="nav.testimonials">Testimonials</a>
+                <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+                <a href="cv.html" class="nav__link nav__link--cv" data-i18n="nav.cv">View CV</a>
+            </nav>
+
+            <div class="nav__actions">
+                <button class="nav__lang-toggle" data-lang-toggle aria-label="Switch language">
+                    <span>EN</span>
+                </button>
+                <button class="nav__theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+                    <i class="fas fa-sun nav__theme-icon nav__theme-icon--sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon nav__theme-icon nav__theme-icon--moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="hero" aria-label="Introduction">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <span class="badge" data-i18n="hero.badge">
+                        <span class="badge__dot" aria-hidden="true"></span>
+                        Open to opportunities
+                    </span>
+
+                    <h1 class="hero__title">
+                        Joaquín Noguera<br>Velázquez
+                    </h1>
+
+                    <p class="hero__subtitle" aria-label="Senior Backend Engineer">
+                        <span id="hero-typing"></span>
+                        <span class="typing-cursor" aria-hidden="true"></span>
+                    </p>
+
+                    <p class="hero__intro" data-i18n="hero.intro">
+                        I build resilient backend systems that power thousands of payment transactions. Specialized in NestJS, Node.js, and PostgreSQL — with a knack for turning complex problems into elegant, scalable solutions.
+                    </p>
+
+                    <div class="hero__ctas">
+                        <a href="#about" class="btn btn--primary" data-i18n="hero.cta_explore">
+                            Explore My Work
+                        </a>
+                        <a href="cv.html" class="btn btn--secondary" data-i18n="hero.cta_cv">
+                            View CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__image-wrapper">
+                    <picture>
+                        <source srcset="assets/joaquin.webp" type="image/webp">
+                        <img src="assets/joaquin.jpg"
+                             alt="Joaquín Noguera Velázquez — Illustrated caricature portrait surrounded by developer tools and technology icons"
+                             class="hero__image"
+                             width="400"
+                             height="500"
+                             loading="eager">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="about section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__label" data-i18n="about.label">// about-me</span>
+                    <h2 class="section__title" id="about-title" data-i18n="about.title">About Me</h2>
+                    <p class="section__subtitle" data-i18n="about.subtitle">Backend engineer with a passion for scalable architecture</p>
+                </div>
+
+                <div class="about__grid">
+                    <div class="card card--editor animate-on-scroll">
+                        <div class="card__editor-bar">
+                            <div class="card__editor-dots">
+                                <span class="card__editor-dot card__editor-dot--red" aria-hidden="true"></span>
+                                <span class="card__editor-dot card__editor-dot--yellow" aria-hidden="true"></span>
+                                <span class="card__editor-dot card__editor-dot--green" aria-hidden="true"></span>
+                            </div>
+                            <span class="card__editor-filename" data-i18n="about.filename">README.md</span>
+                        </div>
+                        <div class="card__body about__text">
+                            <p data-i18n="about.p1">I'm a Senior Backend Engineer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.</p>
+                            <p data-i18n="about.p2">What sets me apart is my ability to rapidly adapt to new technologies and bring innovative solutions to the table. From migrating 48 Salesforce classes to external storage to implementing purchase funnel analytics with Google Tag Manager — I don't just write code, I solve business problems.</p>
+                            <p data-i18n="about.p3">Before Blackthorn, I gained versatile experience in Salesforce development, Azure cloud integrations (40+ enterprise integration flows), and full-stack development. I believe the best engineers are the ones who never stop learning — which is why I'm currently diving into LangChain, LangGraph, and AI Agents.</p>
+
+                            <div class="about__learning">
+                                <p class="about__learning-label" data-i18n="about.learning_label">Currently exploring</p>
+                                <div class="about__learning-tags">
+                                    <span class="tag tag--secondary">LangChain</span>
+                                    <span class="tag tag--secondary">LangGraph</span>
+                                    <span class="tag tag--secondary">AI Agents</span>
+                                    <span class="tag tag--secondary">Software Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section class="experience section" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__label" data-i18n="experience.label">// career-path</span>
+                    <h2 class="section__title" id="experience-title" data-i18n="experience.title">Experience</h2>
+                    <p class="section__subtitle" data-i18n="experience.subtitle">Building impactful software across payments, cloud, and enterprise systems</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Blackthorn -->
+                    <article class="timeline__entry animate-on-scroll" aria-label="Senior Backend Engineer at Blackthorn.io" aria-current="step">
+                        <div class="timeline__dot timeline__dot--current" aria-hidden="true"></div>
+                        <div class="timeline__header">
+                            <h3 class="timeline__role" data-i18n="experience.roles.0.title">Senior Backend Engineer</h3>
+                            <p class="timeline__company">Blackthorn.io</p>
+                            <div class="timeline__meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.0.period">Apr 2022 — Present</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.0.location">United States (Remote)</span></span>
+                            </div>
+                        </div>
+                        <ul class="timeline__bullets">
+                            <li data-i18n="experience.roles.0.bullets.0">Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies</li>
+                            <li data-i18n="experience.roles.0.bullets.1">Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second</li>
+                            <li data-i18n="experience.roles.0.bullets.2">Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions</li>
+                            <li data-i18n="experience.roles.0.bullets.3">Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability</li>
+                            <li data-i18n="experience.roles.0.bullets.4">Provide cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations</li>
+                            <li data-i18n="experience.roles.0.bullets.5">Participate in on-call rotation, regularly resolving critical payment production incidents under pressure</li>
+                        </ul>
+                    </article>
+
+                    <!-- Folder IT — Salesforce -->
+                    <article class="timeline__entry animate-on-scroll" aria-label="Salesforce Developer at Folder IT">
+                        <div class="timeline__dot" aria-hidden="true"></div>
+                        <div class="timeline__header">
+                            <h3 class="timeline__role" data-i18n="experience.roles.1.title">Salesforce Developer</h3>
+                            <p class="timeline__company">Folder IT</p>
+                            <div class="timeline__meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.1.period">Aug 2021 — Apr 2022</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.1.location">Santa Fe, Argentina</span></span>
+                            </div>
+                        </div>
+                        <ul class="timeline__bullets">
+                            <li data-i18n="experience.roles.1.bullets.0">Provided CPQ support and maintenance for active client production systems on the Salesforce platform</li>
+                            <li data-i18n="experience.roles.1.bullets.1">Resolved long-standing bugs in client Salesforce applications, improving system reliability for end users</li>
+                            <li data-i18n="experience.roles.1.bullets.2">Monitored and reviewed trigger handlers, batch jobs, and schedulable processes to ensure operational stability</li>
+                        </ul>
+                    </article>
+
+                    <!-- Folder IT — Azure -->
+                    <article class="timeline__entry animate-on-scroll" aria-label="Azure Integration Developer at Folder IT">
+                        <div class="timeline__dot" aria-hidden="true"></div>
+                        <div class="timeline__header">
+                            <h3 class="timeline__role" data-i18n="experience.roles.2.title">Azure Integration Developer</h3>
+                            <p class="timeline__company">Folder IT</p>
+                            <div class="timeline__meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.2.period">Mar 2021 — Jul 2021</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.2.location">Santa Fe, Argentina</span></span>
+                            </div>
+                        </div>
+                        <ul class="timeline__bullets">
+                            <li data-i18n="experience.roles.2.bullets.0">Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake</li>
+                            <li data-i18n="experience.roles.2.bullets.1">Connected Salesforce with Microsoft Dynamics 365 and other enterprise systems for seamless data exchange</li>
+                            <li data-i18n="experience.roles.2.bullets.2">Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring</li>
+                        </ul>
+                    </article>
+
+                    <!-- Digital Lab -->
+                    <article class="timeline__entry animate-on-scroll" aria-label="Full Stack Developer at Digital Lab">
+                        <div class="timeline__dot" aria-hidden="true"></div>
+                        <div class="timeline__header">
+                            <h3 class="timeline__role" data-i18n="experience.roles.3.title">Full Stack Developer</h3>
+                            <p class="timeline__company">Digital Lab</p>
+                            <div class="timeline__meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.3.period">Sep 2020 — Feb 2021</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="experience.roles.3.location">Esperanza, Santa Fe, Argentina</span></span>
+                            </div>
+                        </div>
+                        <ul class="timeline__bullets">
+                            <li data-i18n="experience.roles.3.bullets.0">Built a full-stack graphic resources platform from scratch using Angular 9 frontend and Node.js/Express RESTful API</li>
+                            <li data-i18n="experience.roles.3.bullets.1">Translated Adobe XD mockups into production-ready interfaces using Bootstrap and Angular Material</li>
+                            <li data-i18n="experience.roles.3.bullets.2">Identified and proposed architectural improvements to key portions of the codebase</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="skills section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__label" data-i18n="skills.label">// tech-stack</span>
+                    <h2 class="section__title" id="skills-title" data-i18n="skills.title">Skills</h2>
+                    <p class="section__subtitle" data-i18n="skills.subtitle">Technologies I work with daily and have deep experience in</p>
+                </div>
+
+                <div class="skills__grid">
+                    <!-- Backend -->
+                    <div class="card skills__category animate-on-scroll stagger-1">
+                        <div class="skills__category-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
+                        <h3 class="skills__category-title" data-i18n="skills.categories.0.title">Backend</h3>
+                        <div class="skills__tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">NestJS</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Microservices</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="card skills__category animate-on-scroll stagger-2">
+                        <div class="skills__category-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+                        <h3 class="skills__category-title" data-i18n="skills.categories.1.title">Frontend</h3>
+                        <div class="skills__tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud -->
+                    <div class="card skills__category animate-on-scroll stagger-3">
+                        <div class="skills__category-icon" aria-hidden="true"><i class="fas fa-cloud"></i></div>
+                        <h3 class="skills__category-title" data-i18n="skills.categories.2.title">Cloud &amp; DevOps</h3>
+                        <div class="skills__tags">
+                            <span class="tag">Azure</span>
+                            <span class="tag">Salesforce</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="card skills__category animate-on-scroll stagger-4">
+                        <div class="skills__category-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+                        <h3 class="skills__category-title" data-i18n="skills.categories.3.title">Databases</h3>
+                        <div class="skills__tags">
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TESTIMONIALS ===== -->
+        <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__label" data-i18n="testimonials.label">// what-colleagues-say</span>
+                    <h2 class="section__title" id="testimonials-title" data-i18n="testimonials.title">Testimonials</h2>
+                    <p class="section__subtitle" data-i18n="testimonials.subtitle">From people I've had the pleasure of working with</p>
+                </div>
+
+                <div class="testimonials__grid">
+                    <!-- Hugo -->
+                    <article class="card testimonial animate-on-scroll stagger-1" aria-label="Testimonial from Hugo Héctor Fernández">
+                        <span class="testimonial__quote-mark" aria-hidden="true">"</span>
+                        <blockquote class="testimonial__text" data-i18n="testimonials.items.0.text">
+                            Joaquín consistently demonstrates exceptional technical skills and a deep understanding of our industry. His innovative approach and problem-solving abilities have significantly contributed to the success of our projects. He is not only technically proficient but also a fantastic team player. He is always willing to lend a hand, share his knowledge, and collaborate to achieve the best results.
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar" aria-hidden="true">HF</div>
+                            <div>
+                                <p class="testimonial__name">Hugo Héctor Fernández</p>
+                                <p class="testimonial__role" data-i18n="testimonials.items.0.role">Senior Software Engineer, Blackthorn</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cristian -->
+                    <article class="card testimonial animate-on-scroll stagger-2" aria-label="Testimonial from Cristian Vizzarri">
+                        <span class="testimonial__quote-mark" aria-hidden="true">"</span>
+                        <blockquote class="testimonial__text" data-i18n="testimonials.items.1.text">
+                            I was lucky to call him my coworker. He consistently gave 100 percent effort to the team and played a significant role in ensuring that we completed assignments on time. Any team would be lucky to have Joaquín.
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <div class="testimonial__avatar" aria-hidden="true">CV</div>
+                            <div>
+                                <p class="testimonial__name">Cristian Vizzarri</p>
+                                <p class="testimonial__role" data-i18n="testimonials.items.1.role">Salesforce Engineer, Folder IT</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="contact section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section__header animate-on-scroll">
+                    <span class="section__label" data-i18n="contact.label">// get-in-touch</span>
+                    <h2 class="section__title" id="contact-title" data-i18n="contact.title">Contact</h2>
+                    <p class="section__subtitle" data-i18n="contact.subtitle">Let's build something great together</p>
+                </div>
+
+                <div class="contact__content animate-on-scroll">
+                    <p class="contact__intro" data-i18n="contact.intro">
+                        I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers. Feel free to reach out!
+                    </p>
+
+                    <div class="contact__cards">
+                        <a href="mailto:nvjoaquin@gmail.com" class="contact__card card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="contact__card-title" data-i18n="contact.email_title">Email</h3>
+                            <span class="contact__card-value">nvjoaquin@gmail.com</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/joaqu%C3%ADn-noguera-velazquez-043234138" target="_blank" rel="noopener noreferrer" class="contact__card card">
+                            <div class="contact__card-icon">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="contact__card-title">LinkedIn</h3>
+                            <span class="contact__card-value" data-i18n="contact.linkedin_label">Joaquín Noguera</span>
+                        </a>
+
+                        <a href="https://github.com/joaquinnv" target="_blank" rel="noopener noreferrer" class="contact__card card">
+                            <div class="contact__card-icon">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="contact__card-title">GitHub</h3>
+                            <span class="contact__card-value" data-i18n="contact.github_label">joaquinnv</span>
+                        </a>
+
+                        <div class="contact__card card">
+                            <div class="contact__card-icon">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="contact__card-title" data-i18n="contact.location_title">Location</h3>
+                            <span class="contact__card-value" data-i18n="contact.location_value">Paraná, Argentina (Remote)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">
+                &copy; <span id="copyright-year">2026</span> <span data-i18n="footer.copyright">Joaquín Noguera Velázquez. Built with vanilla HTML, CSS &amp; JS.</span>
+            </p>
+            <div class="footer__links">
+                <a href="https://github.com/joaquinnv" target="_blank" rel="noopener noreferrer" class="footer__link" data-i18n="footer.source">View Source</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>

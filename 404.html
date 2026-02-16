@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Prevent FOUC: apply saved theme & language before first paint -->
+    <script>
+      (function(){
+        var root=document.documentElement;
+        var t='light';
+        var l='en';
+        try {
+          var storedTheme=localStorage.getItem('jcv-theme');
+          if(storedTheme==='dark'||storedTheme==='light'){
+            t=storedTheme;
+          } else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        } catch (_e) {
+          if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        }
+        root.setAttribute('data-theme',t);
+
+        try {
+          var urlLang=new URLSearchParams(window.location.search).get('lang');
+          if(urlLang==='en'||urlLang==='es'){
+            l=urlLang;
+          } else {
+            var storedLang=localStorage.getItem('jcv-lang');
+            if(storedLang==='en'||storedLang==='es'){
+              l=storedLang;
+            } else {
+              var browserLang=(navigator.language||'en').slice(0,2);
+              l=(browserLang==='es')?'es':'en';
+            }
+          }
+        } catch (_err) {
+          var fallbackLang=(navigator.language||'en').slice(0,2);
+          l=(fallbackLang==='es')?'es':'en';
+        }
+        root.setAttribute('lang',l);
+      })();
+    </script>
+
+    <title>404 — Page Not Found | Joaquín Noguera</title>
+    <meta name="description" content="This page doesn't exist. Let's get you back to Joaquín's portfolio.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="alternate icon" href="assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+        .error-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            text-align: center;
+            padding: var(--space-6);
+        }
+
+        .error-page__code {
+            font-family: var(--font-mono);
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: var(--weight-bold);
+            line-height: 1;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-4);
+        }
+
+        .error-page__title {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-4);
+        }
+
+        .error-page__message {
+            font-family: var(--font-mono);
+            font-size: var(--text-sm);
+            color: var(--color-text-tertiary);
+            max-width: 28rem;
+            margin-bottom: var(--space-2);
+            line-height: var(--leading-normal);
+        }
+
+        .error-page__stack {
+            font-family: var(--font-mono);
+            font-size: var(--text-xs);
+            color: var(--color-text-tertiary);
+            max-width: 28rem;
+            margin-bottom: var(--space-8);
+            text-align: left;
+            padding: var(--space-4);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+        }
+
+        .error-page__stack span {
+            color: var(--color-editor-dot-red);
+        }
+
+        .error-page__actions {
+            display: flex;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="error-page">
+        <p class="error-page__code" aria-hidden="true">404</p>
+
+        <h1 class="error-page__title">Page Not Found</h1>
+
+        <div class="error-page__stack" aria-label="Humorous error stack trace">
+            <span>Error: PageNotFoundException</span><br>
+            &nbsp;&nbsp;at Router.resolve("/this-page")<br>
+            &nbsp;&nbsp;at Server.handleRequest()<br>
+            &nbsp;&nbsp;at joaquin.portfolio.serve()<br>
+            <br>
+            <span>Hint:</span> The page you're looking for doesn't exist,<br>
+            &nbsp;&nbsp;but my portfolio does! ↓
+        </div>
+
+        <div class="error-page__actions">
+            <a href="index.html" class="btn btn--primary">
+                Go to Portfolio
+            </a>
+            <a href="cv.html" class="btn btn--secondary">
+                View CV
+            </a>
+        </div>
+    </main>
+
+    <script>
+        (function() {
+            var STORAGE_KEY = 'jcv-theme';
+            var stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === 'light' || stored === 'dark') {
+                document.documentElement.setAttribute('data-theme', stored);
+            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</body>
+</html>

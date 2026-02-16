@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "testimonials": "Testimonios",
+    "contact": "Contacto",
+    "cv": "Ver CV"
+  },
+  "hero": {
+    "badge": "Abierto a oportunidades",
+    "intro": "Construyo sistemas backend resilientes que procesan miles de transacciones de pago. Especializado en NestJS, Node.js y PostgreSQL — con talento para convertir problemas complejos en soluciones elegantes y escalables.",
+    "cta_explore": "Explorar mi trabajo",
+    "cta_cv": "Ver CV",
+    "typing": [
+      "Ingeniero Backend Senior",
+      "Construyendo sistemas de pago a escala",
+      "NestJS • Node.js • PostgreSQL",
+      "Explorando IA con LangChain"
+    ]
+  },
+  "about": {
+    "label": "// sobre-mi",
+    "title": "Sobre mí",
+    "subtitle": "Ingeniero backend con pasión por la arquitectura escalable",
+    "filename": "LEEME.md",
+    "p1": "Soy Ingeniero Backend Senior con más de 6 años de experiencia profesional y más de una década programando. Durante los últimos 4+ años, he construido la infraestructura de pagos y gestión de eventos en Blackthorn.io, trabajando con todo el stack backend — microservicios NestJS, PostgreSQL, MongoDB, Redis — diseñando sistemas que manejan miles de transacciones diarias de forma confiable.",
+    "p2": "Lo que me distingue es mi capacidad de adaptarme rápidamente a nuevas tecnologías y aportar soluciones innovadoras. Desde migrar 48 clases de Salesforce a almacenamiento externo hasta implementar analíticas de embudo de compra con Google Tag Manager — no solo escribo código, resuelvo problemas de negocio.",
+    "p3": "Antes de Blackthorn, adquirí experiencia versátil en desarrollo Salesforce, integraciones cloud en Azure (más de 40 flujos de integración empresarial) y desarrollo full-stack. Creo que los mejores ingenieros son los que nunca dejan de aprender — por eso actualmente estoy explorando LangChain, LangGraph y Agentes de IA.",
+    "learning_label": "Explorando actualmente",
+    "learning_items": "LangChain · LangGraph · Agentes IA · Arquitectura de Software"
+  },
+  "experience": {
+    "label": "// trayectoria",
+    "title": "Experiencia",
+    "subtitle": "Construyendo software de impacto en pagos, cloud y sistemas empresariales",
+    "roles": [
+      {
+        "title": "Ingeniero Backend Senior",
+        "company": "Blackthorn.io",
+        "period": "Abr 2022 — Presente",
+        "location": "Estados Unidos (Remoto)",
+        "bullets": [
+          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad sin comprometer las políticas de seguridad",
+          "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
+          "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
+          "Co-creé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y la desplegabilidad independiente",
+          "Brindo soporte multifuncional: mentoreo desarrolladores, asisto al equipo de QA y gestiono escalaciones de producción Tier 3",
+          "Participo en rotación de guardia, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
+        ]
+      },
+      {
+        "title": "Desarrollador Salesforce",
+        "company": "Folder IT",
+        "period": "Ago 2021 — Abr 2022",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Brindé soporte y mantenimiento de CPQ para sistemas de producción activos de clientes en la plataforma Salesforce",
+          "Resolví bugs de larga data en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
+          "Monitoreé y revisé handlers de triggers, trabajos batch y procesos programables para asegurar estabilidad operativa"
+        ]
+      },
+      {
+        "title": "Desarrollador de Integraciones Azure",
+        "company": "Folder IT",
+        "period": "Mar 2021 — Jul 2021",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Construí más de 40 flujos de integración empresarial usando Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
+          "Conecté Salesforce con Microsoft Dynamics 365 y otros sistemas empresariales para intercambio de datos fluido",
+          "Implementé monitoreo end-to-end vía Serverless360 con Business Activity Monitoring, brindando visibilidad completa del estado de las integraciones"
+        ]
+      },
+      {
+        "title": "Desarrollador Full Stack",
+        "company": "Digital Lab",
+        "period": "Sep 2020 — Feb 2021",
+        "location": "Esperanza, Santa Fe, Argentina",
+        "bullets": [
+          "Construí una plataforma de recursos gráficos full-stack desde cero usando Angular 9 en frontend y API RESTful en Node.js/Express",
+          "Traduje mockups de Adobe XD a interfaces listas para producción usando Bootstrap y Angular Material",
+          "Identifiqué y propuse mejoras arquitectónicas en porciones clave del código base"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "// stack-tecnológico",
+    "title": "Habilidades",
+    "subtitle": "Tecnologías con las que trabajo diariamente y tengo experiencia profunda",
+    "categories": [
+      {
+        "icon": "fas fa-server",
+        "title": "Backend",
+        "items": ["Node.js", "NestJS", "Express", "REST APIs", "Microservicios", "Redis"]
+      },
+      {
+        "icon": "fas fa-palette",
+        "title": "Frontend",
+        "items": ["Angular", "HTML5", "CSS3", "JavaScript", "TypeScript", "Bootstrap"]
+      },
+      {
+        "icon": "fas fa-cloud",
+        "title": "Cloud y DevOps",
+        "items": ["Azure", "Salesforce", "Docker", "Git", "GitHub", "CI/CD"]
+      },
+      {
+        "icon": "fas fa-database",
+        "title": "Bases de Datos",
+        "items": ["PostgreSQL", "MongoDB", "Redis", "SQL"]
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "// lo-que-dicen-mis-colegas",
+    "title": "Testimonios",
+    "subtitle": "De personas con las que tuve el placer de trabajar",
+    "items": [
+      {
+        "text": "Joaquín demuestra consistentemente habilidades técnicas excepcionales y un profundo entendimiento de nuestra industria. Su enfoque innovador y sus habilidades para resolver problemas han contribuido significativamente al éxito de nuestros proyectos. No solo es técnicamente competente, sino que también es un fantástico jugador de equipo. Siempre está dispuesto a dar una mano, compartir su conocimiento y colaborar para lograr los mejores resultados.",
+        "name": "Hugo Héctor Fernández",
+        "role": "Ingeniero de Software Senior, Blackthorn",
+        "initials": "HF"
+      },
+      {
+        "text": "Tuve la suerte de llamarlo mi compañero de trabajo. Consistentemente dio el 100 por ciento de esfuerzo al equipo y jugó un papel significativo en asegurar que completáramos las asignaciones a tiempo. Cualquier equipo tendría suerte de tener a Joaquín.",
+        "name": "Cristian Vizzarri",
+        "role": "Ingeniero Salesforce, Folder IT",
+        "initials": "CV"
+      }
+    ]
+  },
+  "contact": {
+    "label": "// contacto",
+    "title": "Contacto",
+    "subtitle": "Construyamos algo increíble juntos",
+    "intro": "Siempre estoy abierto a discutir nuevas oportunidades, proyectos interesantes, o simplemente conectar con otros desarrolladores. ¡No dudes en escribirme!",
+    "email_title": "Email",
+    "linkedin_label": "Joaquín Noguera",
+    "github_label": "joaquinnv",
+    "location_title": "Ubicación",
+    "location_value": "Paraná, Argentina (Remoto)"
+  },
+  "footer": {
+    "copyright": "Joaquín Noguera Velázquez. Construido con HTML, CSS y JS puro.",
+    "source": "Ver código fuente"
+  },
+  "cv": {
+    "title": "Joaquín Noguera Velázquez",
+    "subtitle": "Ingeniero Backend Senior",
+    "summary": "Ingeniero Backend Senior con más de 6 años de experiencia profesional y más de 10 años programando. Durante los últimos 4+ años en Blackthorn.io, he construido sistemas escalables de pagos y gestión de eventos con microservicios NestJS, PostgreSQL, MongoDB y Redis. Historial comprobado resolviendo desafíos complejos — desde migrar 48 clases de Salesforce hasta implementar caché Redis que redujo tiempos de consulta de 20s a menos de un segundo. Ingeniero adaptable que domina rápidamente nuevas tecnologías y entrega soluciones innovadoras. Actualmente explorando agentes de IA con LangChain y LangGraph.",
+    "print_btn": "Imprimir CV",
+    "download_btn": "Descargar PDF",
+    "sections": {
+      "experience": "Experiencia",
+      "education": "Educación",
+      "skills": "Habilidades Técnicas",
+      "languages": "Idiomas"
+    },
+    "roles": [
+      {
+        "title": "Ingeniero Backend Senior",
+        "company": "Blackthorn.io",
+        "period": "Abr 2022 — Presente",
+        "location": "Estados Unidos (Remoto)",
+        "bullets": [
+          "Migré 48 clases de Salesforce (eventos, tickets, datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad",
+          "Implementé caché Redis con TTLs dinámicos en endpoints no relacionados con pagos, reduciendo tiempos de consulta de 20s+ a menos de un segundo",
+          "Diseñé analíticas de embudo de compra con Google Tag Manager, rastreando puntos de abandono para decisiones basadas en datos",
+          "Co-creé microservicios dentro de una arquitectura NestJS de 10+ repositorios",
+          "Mentoreo desarrolladores, doy soporte a QA, gestiono escalaciones Tier 3 y rotación de guardia"
+        ]
+      },
+      {
+        "title": "Desarrollador Salesforce",
+        "company": "Folder IT",
+        "period": "Ago 2021 — Abr 2022",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Soporte y mantenimiento de CPQ para sistemas de producción activos en Salesforce",
+          "Resolví bugs de larga data mejorando la confiabilidad del sistema",
+          "Monitoreé handlers de triggers, trabajos batch y procesos programables"
+        ]
+      },
+      {
+        "title": "Desarrollador de Integraciones Azure",
+        "company": "Folder IT",
+        "period": "Mar 2021 — Jul 2021",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Construí 40+ flujos de integración empresarial con Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
+          "Conecté Salesforce con Microsoft Dynamics 365 para intercambio de datos fluido",
+          "Implementé monitoreo end-to-end vía Serverless360 con Business Activity Monitoring"
+        ]
+      },
+      {
+        "title": "Desarrollador Full Stack",
+        "company": "Digital Lab",
+        "period": "Sep 2020 — Feb 2021",
+        "location": "Esperanza, Santa Fe, Argentina",
+        "bullets": [
+          "Construí una plataforma de recursos gráficos full-stack desde cero (Angular 9 + API Node.js/Express)",
+          "Traduje diseños Adobe XD a interfaces de producción con Bootstrap y Angular Material"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Ingeniería Informática",
+        "school": "Universidad Nacional del Litoral",
+        "period": "2017 — 2019"
+      },
+      {
+        "degree": "Técnico en Computación",
+        "school": "Escuela de Educación Técnica Nro. 3 — Tte. Don Luis C. Candelaria",
+        "period": "2009 — 2016"
+      }
+    ],
+    "languages_list": [
+      { "name": "Español", "level": "Nativo / Bilingüe" },
+      { "name": "Inglés", "level": "Profesional" }
+    ]
+  }
+}

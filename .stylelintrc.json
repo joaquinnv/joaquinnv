@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "selector-class-pattern": "^[a-z][a-z0-9]*(?:(?:--|-|__)[a-z0-9]+)*$",
+    "custom-property-pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$",
+    "color-function-notation": "modern",
+    "alpha-value-notation": "percentage",
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": ["backdrop-filter", "text-size-adjust", "background-clip", "text-fill-color"]
+    }],
+    "media-feature-range-notation": null,
+    "value-keyword-case": ["lower", {
+      "ignoreKeywords": ["A4"]
+    }]
+  }
+}

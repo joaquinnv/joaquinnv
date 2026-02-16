@@ -1,0 +1,26 @@
+{
+  "name": "joaquin-cv",
+  "version": "1.0.0",
+  "description": "Interactive portfolio and CV for Joaquín Noguera Velázquez — Senior Backend Engineer",
+  "private": true,
+  "scripts": {
+    "serve": "npx serve@latest . -l 3000",
+    "build:pdf": "node scripts/generate-pdf.js",
+    "lint:html": "htmlhint index.html cv.html 404.html",
+    "lint:css": "stylelint 'css/**/*.css'",
+    "lint:js": "eslint 'js/**/*.js' 'tests/**/*.js'",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "test:smoke": "npx playwright test tests/smoke.spec.js",
+    "test:a11y": "npx playwright test tests/a11y.spec.js",
+    "test": "npm run lint && npm run test:smoke && npm run test:a11y",
+    "lighthouse": "npx lighthouse http://localhost:3000 --config-path=lighthouse.config.js --output=html --output-path=./lighthouse-report.html"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.8.0",
+    "@playwright/test": "^1.40.0",
+    "eslint": "^8.56.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Prevent FOUC: apply saved theme & language before first paint -->
+    <script>
+      (function(){
+        var root=document.documentElement;
+        var t='light';
+        var l='en';
+        try {
+          var storedTheme=localStorage.getItem('jcv-theme');
+          if(storedTheme==='dark'||storedTheme==='light'){
+            t=storedTheme;
+          } else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        } catch (_e) {
+          if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+            t='dark';
+          }
+        }
+        root.setAttribute('data-theme',t);
+
+        try {
+          var urlLang=new URLSearchParams(window.location.search).get('lang');
+          if(urlLang==='en'||urlLang==='es'){
+            l=urlLang;
+          } else {
+            var storedLang=localStorage.getItem('jcv-lang');
+            if(storedLang==='en'||storedLang==='es'){
+              l=storedLang;
+            } else {
+              var browserLang=(navigator.language||'en').slice(0,2);
+              l=(browserLang==='es')?'es':'en';
+            }
+          }
+        } catch (_err) {
+          var fallbackLang=(navigator.language||'en').slice(0,2);
+          l=(fallbackLang==='es')?'es':'en';
+        }
+
+        root.setAttribute('lang',l);
+        if(l==='es'){root.setAttribute('data-i18n-pending','true')}
+      })();
+    </script>
+    <style>html[data-i18n-pending="true"] body{visibility:hidden}</style>
+
+    <title>CV — Joaquín Noguera | Senior Backend Engineer</title>
+    <meta name="description" content="Professional CV of Joaquín Noguera Velázquez — Senior Backend Engineer with 6+ years of professional experience and 10+ years programming.">
+    <meta name="author" content="Joaquín Noguera Velázquez">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="CV — Joaquín Noguera | Senior Backend Engineer">
+    <meta property="og:description" content="Senior Backend Engineer — 6+ years professional experience. NestJS, Node.js, PostgreSQL.">
+    <meta property="og:image" content="assets/joaquin-og.jpg">
+    <meta property="og:url" content="https://joaquinnv.github.io/joaquin-cv/cv.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CV — Joaquín Noguera | Senior Backend Engineer">
+    <meta name="twitter:description" content="Senior Backend Engineer — 6+ years professional experience. NestJS, Node.js, PostgreSQL.">
+    <meta name="twitter:image" content="assets/joaquin-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="alternate icon" href="assets/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts (non-render-blocking) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Icons (non-render-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cv.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/print.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joaquín Noguera Velázquez",
+        "jobTitle": "Senior Backend Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Blackthorn.io"
+        },
+        "url": "https://joaquinnv.github.io/joaquin-cv/cv.html",
+        "sameAs": [
+            "https://www.linkedin.com/in/joaqu%C3%ADn-noguera-velazquez-043234138",
+            "https://github.com/joaquinnv"
+        ],
+        "email": "nvjoaquin@gmail.com",
+        "knowsAbout": ["Node.js", "NestJS", "PostgreSQL", "MongoDB", "Redis", "TypeScript", "Angular", "Azure", "Microservices"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- i18n Live Region -->
+    <div id="i18n-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav" id="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo" aria-label="Joaquín Noguera — Home">
+                <span class="nav__logo-bracket">{</span>
+                <span class="nav__logo-letter">J</span>
+                <span class="nav__logo-bracket">}</span>
+            </a>
+
+            <nav class="nav__links" id="nav-links" aria-label="Main navigation">
+                <a href="index.html#about" class="nav__link" data-i18n="nav.about">About</a>
+                <a href="index.html#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+                <a href="index.html#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+                <a href="index.html#testimonials" class="nav__link" data-i18n="nav.testimonials">Testimonials</a>
+                <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+                <a href="cv.html" class="nav__link nav__link--cv nav__link--current" data-nav-current aria-current="page" data-i18n="nav.cv">View CV</a>
+            </nav>
+
+            <div class="nav__actions">
+                <button class="nav__lang-toggle" data-lang-toggle aria-label="Switch language">
+                    <span>EN</span>
+                </button>
+                <button class="nav__theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+                    <i class="fas fa-sun nav__theme-icon nav__theme-icon--sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon nav__theme-icon nav__theme-icon--moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content" class="cv">
+        <div class="cv__container">
+
+            <!-- Actions -->
+            <div class="cv__actions">
+                <button class="btn btn--secondary" id="print-btn" data-i18n="cv.print_btn">
+                    <i class="fas fa-print" aria-hidden="true"></i> Print CV
+                </button>
+                <button class="btn btn--primary" id="download-btn" data-i18n="cv.download_btn">
+                    <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+                </button>
+            </div>
+
+            <!-- Header -->
+            <div class="card cv__header animate-on-scroll">
+                <div class="cv__header-grid">
+                    <div>
+                        <h1 class="cv__name" data-i18n="cv.title">Joaquín Noguera Velázquez</h1>
+                        <p class="cv__title" data-i18n="cv.subtitle">Senior Backend Engineer</p>
+                        <p class="cv__summary" data-i18n="cv.summary">
+                            Senior Backend Engineer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable engineer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph.
+                        </p>
+                        <div class="cv__contact-grid">
+                            <span class="cv__contact-item">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:nvjoaquin@gmail.com">nvjoaquin@gmail.com</a>
+                            </span>
+                            <span class="cv__contact-item">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                <a href="https://www.linkedin.com/in/joaqu%C3%ADn-noguera-velazquez-043234138" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </span>
+                            <span class="cv__contact-item">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <a href="https://github.com/joaquinnv" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </span>
+                            <span class="cv__contact-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                Paraná, Entre Ríos, Argentina
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two-column main -->
+            <div class="cv__main">
+                <!-- Left column: Experience -->
+                <div>
+                    <section class="card cv__section animate-on-scroll" aria-labelledby="cv-experience-title">
+                        <h2 class="cv__section-title" id="cv-experience-title">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            <span data-i18n="cv.sections.experience">Experience</span>
+                        </h2>
+
+                        <!-- Blackthorn -->
+                        <article class="cv__xp-item">
+                            <h3 class="cv__xp-role" data-i18n="cv.roles.0.title">Senior Backend Engineer</h3>
+                            <p class="cv__xp-company">Blackthorn.io</p>
+                            <div class="cv__xp-meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.0.period">Apr 2022 — Present</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.0.location">United States (Remote)</span></span>
+                            </div>
+                            <ul class="cv__xp-bullets">
+                                <li data-i18n="cv.roles.0.bullets.0">Migrated 48 Salesforce classes (events, tickets, system data) to external database storage, bypassing governor limits and improving scalability</li>
+                                <li data-i18n="cv.roles.0.bullets.1">Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing query times from 20s+ to sub-second</li>
+                                <li data-i18n="cv.roles.0.bullets.2">Designed purchase funnel analytics using Google Tag Manager, tracking user drop-off points for data-driven product decisions</li>
+                                <li data-i18n="cv.roles.0.bullets.3">Co-created microservices within a 10+ repository NestJS architecture</li>
+                                <li data-i18n="cv.roles.0.bullets.4">Mentor developers, support QA team, handle Tier 3 production escalations and on-call rotation</li>
+                            </ul>
+                        </article>
+
+                        <!-- Folder IT — Salesforce -->
+                        <article class="cv__xp-item">
+                            <h3 class="cv__xp-role" data-i18n="cv.roles.1.title">Salesforce Developer</h3>
+                            <p class="cv__xp-company">Folder IT</p>
+                            <div class="cv__xp-meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.1.period">Aug 2021 — Apr 2022</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.1.location">Santa Fe, Argentina</span></span>
+                            </div>
+                            <ul class="cv__xp-bullets">
+                                <li data-i18n="cv.roles.1.bullets.0">Provided CPQ support and maintenance for active client production systems on Salesforce</li>
+                                <li data-i18n="cv.roles.1.bullets.1">Resolved long-standing bugs improving system reliability for end users</li>
+                                <li data-i18n="cv.roles.1.bullets.2">Monitored trigger handlers, batch jobs, and schedulable processes</li>
+                            </ul>
+                        </article>
+
+                        <!-- Folder IT — Azure -->
+                        <article class="cv__xp-item">
+                            <h3 class="cv__xp-role" data-i18n="cv.roles.2.title">Azure Integration Developer</h3>
+                            <p class="cv__xp-company">Folder IT</p>
+                            <div class="cv__xp-meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.2.period">Mar 2021 — Jul 2021</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.2.location">Santa Fe, Argentina</span></span>
+                            </div>
+                            <ul class="cv__xp-bullets">
+                                <li data-i18n="cv.roles.2.bullets.0">Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake</li>
+                                <li data-i18n="cv.roles.2.bullets.1">Connected Salesforce with Microsoft Dynamics 365 for seamless data exchange</li>
+                                <li data-i18n="cv.roles.2.bullets.2">Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring</li>
+                            </ul>
+                        </article>
+
+                        <!-- Digital Lab -->
+                        <article class="cv__xp-item">
+                            <h3 class="cv__xp-role" data-i18n="cv.roles.3.title">Full Stack Developer</h3>
+                            <p class="cv__xp-company">Digital Lab</p>
+                            <div class="cv__xp-meta">
+                                <span><i class="fas fa-calendar-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.3.period">Sep 2020 — Feb 2021</span></span>
+                                <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.3.location">Esperanza, Santa Fe, Argentina</span></span>
+                            </div>
+                            <ul class="cv__xp-bullets">
+                                <li data-i18n="cv.roles.3.bullets.0">Built a full-stack graphic resources platform from scratch (Angular 9 + Node.js/Express API)</li>
+                                <li data-i18n="cv.roles.3.bullets.1">Translated Adobe XD designs into production interfaces with Bootstrap and Angular Material</li>
+                            </ul>
+                        </article>
+                    </section>
+                </div>
+
+                <!-- Right column: Education, Skills, Languages -->
+                <div>
+                    <!-- Education -->
+                    <section class="card cv__section animate-on-scroll" aria-labelledby="cv-education-title">
+                        <h2 class="cv__section-title" id="cv-education-title">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <span data-i18n="cv.sections.education">Education</span>
+                        </h2>
+
+                        <div class="cv__edu-item">
+                            <p class="cv__edu-degree" data-i18n="cv.education.0.degree">Informatics Engineering</p>
+                            <p class="cv__edu-school" data-i18n="cv.education.0.school">Universidad Nacional del Litoral</p>
+                            <p class="cv__edu-date" data-i18n="cv.education.0.period">2017 — 2019</p>
+                        </div>
+
+                        <div class="cv__edu-item">
+                            <p class="cv__edu-degree" data-i18n="cv.education.1.degree">Computer Technician</p>
+                            <p class="cv__edu-school" data-i18n="cv.education.1.school">Technical Education School No. 3 — Lt. Don Luis C. Candelaria</p>
+                            <p class="cv__edu-date" data-i18n="cv.education.1.period">2009 — 2016</p>
+                        </div>
+                    </section>
+
+                    <!-- Skills -->
+                    <section class="card cv__section animate-on-scroll" aria-labelledby="cv-skills-title">
+                        <h2 class="cv__section-title" id="cv-skills-title">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <span data-i18n="cv.sections.skills">Technical Skills</span>
+                        </h2>
+
+                        <div class="cv__skill-group">
+                            <p class="cv__skill-label" data-i18n="skills.categories.0.title">Backend</p>
+                            <div class="cv__skill-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">NestJS</span>
+                                <span class="tag">Express</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Microservices</span>
+                                <span class="tag">Redis</span>
+                            </div>
+                        </div>
+
+                        <div class="cv__skill-group">
+                            <p class="cv__skill-label" data-i18n="skills.categories.1.title">Frontend</p>
+                            <div class="cv__skill-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                            </div>
+                        </div>
+
+                        <div class="cv__skill-group">
+                            <p class="cv__skill-label" data-i18n="skills.categories.2.title">Cloud &amp; DevOps</p>
+                            <div class="cv__skill-tags">
+                                <span class="tag">Azure</span>
+                                <span class="tag">Salesforce</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">CI/CD</span>
+                            </div>
+                        </div>
+
+                        <div class="cv__skill-group">
+                            <p class="cv__skill-label" data-i18n="skills.categories.3.title">Databases</p>
+                            <div class="cv__skill-tags">
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Languages -->
+                    <section class="card cv__section animate-on-scroll" aria-labelledby="cv-languages-title">
+                        <h2 class="cv__section-title" id="cv-languages-title">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <span data-i18n="cv.sections.languages">Languages</span>
+                        </h2>
+
+                        <div class="cv__lang-item">
+                            <span data-i18n="cv.languages_list.0.name">Spanish</span>
+                            <span class="cv__lang-level" data-i18n="cv.languages_list.0.level">Native / Bilingual</span>
+                        </div>
+                        <div class="cv__lang-item">
+                            <span data-i18n="cv.languages_list.1.name">English</span>
+                            <span class="cv__lang-level" data-i18n="cv.languages_list.1.level">Professional Working</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">
+                &copy; <span id="copyright-year">2026</span> <span data-i18n="footer.copyright">Joaquín Noguera Velázquez. Built with vanilla HTML, CSS &amp; JS.</span>
+            </p>
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">← Back to Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script type="module" src="js/cv.js"></script>
+</body>
+</html>

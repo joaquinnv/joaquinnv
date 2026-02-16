@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "cv": "View CV"
+  },
+  "hero": {
+    "badge": "Open to opportunities",
+    "intro": "I build resilient backend systems that power thousands of payment transactions. Specialized in NestJS, Node.js, and PostgreSQL — with a knack for turning complex problems into elegant, scalable solutions.",
+    "cta_explore": "Explore My Work",
+    "cta_cv": "View CV",
+    "typing": [
+      "Senior Backend Engineer",
+      "Building payment systems at scale",
+      "NestJS • Node.js • PostgreSQL",
+      "Exploring AI with LangChain"
+    ]
+  },
+  "about": {
+    "label": "// about-me",
+    "title": "About Me",
+    "subtitle": "Backend engineer with a passion for scalable architecture",
+    "filename": "README.md",
+    "p1": "I'm a Senior Backend Engineer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
+    "p2": "What sets me apart is my ability to rapidly adapt to new technologies and bring innovative solutions to the table. From migrating 48 Salesforce classes to external storage to implementing purchase funnel analytics with Google Tag Manager — I don't just write code, I solve business problems.",
+    "p3": "Before Blackthorn, I gained versatile experience in Salesforce development, Azure cloud integrations (40+ enterprise integration flows), and full-stack development. I believe the best engineers are the ones who never stop learning — which is why I'm currently diving into LangChain, LangGraph, and AI Agents.",
+    "learning_label": "Currently exploring",
+    "learning_items": "LangChain · LangGraph · AI Agents · Software Architecture"
+  },
+  "experience": {
+    "label": "// career-path",
+    "title": "Experience",
+    "subtitle": "Building impactful software across payments, cloud, and enterprise systems",
+    "roles": [
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Blackthorn.io",
+        "period": "Apr 2022 — Present",
+        "location": "United States (Remote)",
+        "bullets": [
+          "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
+          "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
+          "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
+          "Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability",
+          "Provide cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
+          "Participate in on-call rotation, regularly resolving critical payment production incidents under pressure"
+        ]
+      },
+      {
+        "title": "Salesforce Developer",
+        "company": "Folder IT",
+        "period": "Aug 2021 — Apr 2022",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Provided CPQ support and maintenance for active client production systems on the Salesforce platform",
+          "Resolved long-standing bugs in client Salesforce applications, improving system reliability for end users",
+          "Monitored and reviewed trigger handlers, batch jobs, and schedulable processes to ensure operational stability"
+        ]
+      },
+      {
+        "title": "Azure Integration Developer",
+        "company": "Folder IT",
+        "period": "Mar 2021 — Jul 2021",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake",
+          "Connected Salesforce with Microsoft Dynamics 365 and other enterprise systems for seamless data exchange",
+          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring, providing full visibility into integration health"
+        ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "Digital Lab",
+        "period": "Sep 2020 — Feb 2021",
+        "location": "Esperanza, Santa Fe, Argentina",
+        "bullets": [
+          "Built a full-stack graphic resources platform from scratch using Angular 9 frontend and Node.js/Express RESTful API",
+          "Translated Adobe XD mockups into production-ready interfaces using Bootstrap and Angular Material",
+          "Identified and proposed architectural improvements to key portions of the codebase"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "label": "// tech-stack",
+    "title": "Skills",
+    "subtitle": "Technologies I work with daily and have deep experience in",
+    "categories": [
+      {
+        "icon": "fas fa-server",
+        "title": "Backend",
+        "items": ["Node.js", "NestJS", "Express", "REST APIs", "Microservices", "Redis"]
+      },
+      {
+        "icon": "fas fa-palette",
+        "title": "Frontend",
+        "items": ["Angular", "HTML5", "CSS3", "JavaScript", "TypeScript", "Bootstrap"]
+      },
+      {
+        "icon": "fas fa-cloud",
+        "title": "Cloud & DevOps",
+        "items": ["Azure", "Salesforce", "Docker", "Git", "GitHub", "CI/CD"]
+      },
+      {
+        "icon": "fas fa-database",
+        "title": "Databases",
+        "items": ["PostgreSQL", "MongoDB", "Redis", "SQL"]
+      }
+    ]
+  },
+  "testimonials": {
+    "label": "// what-colleagues-say",
+    "title": "Testimonials",
+    "subtitle": "From people I've had the pleasure of working with",
+    "items": [
+      {
+        "text": "Joaquín consistently demonstrates exceptional technical skills and a deep understanding of our industry. His innovative approach and problem-solving abilities have significantly contributed to the success of our projects. He is not only technically proficient but also a fantastic team player. He is always willing to lend a hand, share his knowledge, and collaborate to achieve the best results.",
+        "name": "Hugo Héctor Fernández",
+        "role": "Senior Software Engineer, Blackthorn",
+        "initials": "HF"
+      },
+      {
+        "text": "I was lucky to call him my coworker. He consistently gave 100 percent effort to the team and played a significant role in ensuring that we completed assignments on time. Any team would be lucky to have Joaquín.",
+        "name": "Cristian Vizzarri",
+        "role": "Salesforce Engineer, Folder IT",
+        "initials": "CV"
+      }
+    ]
+  },
+  "contact": {
+    "label": "// get-in-touch",
+    "title": "Contact",
+    "subtitle": "Let's build something great together",
+    "intro": "I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers. Feel free to reach out!",
+    "email_title": "Email",
+    "linkedin_label": "Joaquín Noguera",
+    "github_label": "joaquinnv",
+    "location_title": "Location",
+    "location_value": "Paraná, Argentina (Remote)"
+  },
+  "footer": {
+    "copyright": "Joaquín Noguera Velázquez. Built with vanilla HTML, CSS & JS.",
+    "source": "View Source"
+  },
+  "cv": {
+    "title": "Joaquín Noguera Velázquez",
+    "subtitle": "Senior Backend Engineer",
+    "summary": "Senior Backend Engineer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable engineer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph.",
+    "print_btn": "Print CV",
+    "download_btn": "Download PDF",
+    "sections": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "Technical Skills",
+      "languages": "Languages"
+    },
+    "roles": [
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Blackthorn.io",
+        "period": "Apr 2022 — Present",
+        "location": "United States (Remote)",
+        "bullets": [
+          "Migrated 48 Salesforce classes (events, tickets, system data) to external database storage, bypassing governor limits and improving scalability",
+          "Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing query times from 20s+ to sub-second",
+          "Designed purchase funnel analytics using Google Tag Manager, tracking user drop-off points for data-driven product decisions",
+          "Co-created microservices within a 10+ repository NestJS architecture",
+          "Mentor developers, support QA team, handle Tier 3 production escalations and on-call rotation"
+        ]
+      },
+      {
+        "title": "Salesforce Developer",
+        "company": "Folder IT",
+        "period": "Aug 2021 — Apr 2022",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Provided CPQ support and maintenance for active client production systems on Salesforce",
+          "Resolved long-standing bugs improving system reliability for end users",
+          "Monitored trigger handlers, batch jobs, and schedulable processes"
+        ]
+      },
+      {
+        "title": "Azure Integration Developer",
+        "company": "Folder IT",
+        "period": "Mar 2021 — Jul 2021",
+        "location": "Santa Fe, Argentina",
+        "bullets": [
+          "Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake",
+          "Connected Salesforce with Microsoft Dynamics 365 for seamless data exchange",
+          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring"
+        ]
+      },
+      {
+        "title": "Full Stack Developer",
+        "company": "Digital Lab",
+        "period": "Sep 2020 — Feb 2021",
+        "location": "Esperanza, Santa Fe, Argentina",
+        "bullets": [
+          "Built a full-stack graphic resources platform from scratch (Angular 9 + Node.js/Express API)",
+          "Translated Adobe XD designs into production interfaces with Bootstrap and Angular Material"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Informatics Engineering",
+        "school": "Universidad Nacional del Litoral",
+        "period": "2017 — 2019"
+      },
+      {
+        "degree": "Computer Technician",
+        "school": "Technical Education School No. 3 — Lt. Don Luis C. Candelaria",
+        "period": "2009 — 2016"
+      }
+    ],
+    "languages_list": [
+      { "name": "Spanish", "level": "Native / Bilingual" },
+      { "name": "English", "level": "Professional Working" }
+    ]
+  }
+}

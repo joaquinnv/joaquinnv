@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Scroll Animations — IntersectionObserver driven, reduced-motion safe
+   ========================================================================== */
+
+/* ── Base animation states (hidden before scroll reveal) ── */
+.animate-on-scroll {
+  opacity: 0%;
+  transform: translateY(1.5rem);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.animate-on-scroll--left {
+  opacity: 0%;
+  transform: translateX(-2rem);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.animate-on-scroll--right {
+  opacity: 0%;
+  transform: translateX(2rem);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.animate-on-scroll--scale {
+  opacity: 0%;
+  transform: scale(0.95);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+/* ── Revealed state ── */
+.animate-on-scroll--visible,
+.animate-on-scroll--left.animate-on-scroll--visible,
+.animate-on-scroll--right.animate-on-scroll--visible,
+.animate-on-scroll--scale.animate-on-scroll--visible {
+  opacity: 100%;
+  transform: translate(0, 0) scale(1);
+}
+
+/* ── Stagger delays for lists ── */
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+.stagger-5 { transition-delay: 500ms; }
+.stagger-6 { transition-delay: 600ms; }
+
+/* ── Typing cursor animation ── */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  margin-left: 2px;
+  background: var(--color-primary);
+  vertical-align: text-bottom;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 100%; }
+  50% { opacity: 0%; }
+}
+
+/* ── Skill bar fill animation ── */
+.skill-bar__fill {
+  width: 0;
+  transition: width 1s ease-out;
+}
+
+.skill-bar__fill--animated {
+  width: var(--skill-level);
+}
+
+/* ── Reduced motion — disable all animations ── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll,
+  .animate-on-scroll--left,
+  .animate-on-scroll--right,
+  .animate-on-scroll--scale {
+    opacity: 100%;
+    transform: none;
+    transition: none;
+  }
+
+  .typing-cursor {
+    animation: none;
+    opacity: 100%;
+  }
+
+  .badge__dot {
+    animation: none;
+    opacity: 100%;
+  }
+
+  .skill-bar__fill {
+    width: var(--skill-level);
+    transition: none;
+  }
+}
