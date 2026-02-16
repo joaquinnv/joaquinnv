@@ -7,6 +7,8 @@
 
 const STORAGE_KEY = 'jcv-lang';
 const CACHE_PREFIX = 'jcv-i18n-cache-';
+const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
+const CACHE_VERSION = '2026-02-16-1';
 const DEFAULT_LANG = 'en';
 const SUPPORTED_LANGS = ['en', 'es'];
 
@@ -69,20 +71,49 @@ async function loadTranslations(lang) {
     return translationCache[lang];
   }
 
+  const cacheKey = `${CACHE_PREFIX}${lang}`;
   let cached;
+  let staleFallback = null;
   try {
-    cached = localStorage.getItem(`${CACHE_PREFIX}${lang}`);
+    cached = localStorage.getItem(cacheKey);
   } catch (_error) {
     cached = null;
   }
   if (cached) {
     try {
       const parsed = JSON.parse(cached);
-      translationCache[lang] = parsed;
-      return parsed;
+
+      // New cache shape: { version, cachedAt, data }
+      if (
+        parsed &&
+        typeof parsed === 'object' &&
+        parsed.data &&
+        typeof parsed.cachedAt === 'number' &&
+        typeof parsed.version === 'string'
+      ) {
+        const isExpired = (Date.now() - parsed.cachedAt) > CACHE_TTL_MS;
+        const isSameVersion = parsed.version === CACHE_VERSION;
+
+        if (!isExpired && isSameVersion) {
+          translationCache[lang] = parsed.data;
+          return parsed.data;
+        }
+
+        // Keep stale data only as network-failure fallback.
+        staleFallback = parsed.data;
+      } else if (parsed && typeof parsed === 'object') {
+        // Legacy cache shape (raw translations): treat as stale.
+        staleFallback = parsed;
+      }
+
+      try {
+        localStorage.removeItem(cacheKey);
+      } catch (_err) {
+        /* Ignore localStorage cleanup failures */
+      }
     } catch (_error) {
       try {
-        localStorage.removeItem(`${CACHE_PREFIX}${lang}`);
+        localStorage.removeItem(cacheKey);
       } catch (_err) {
         /* Ignore localStorage cleanup failures */
       }
@@ -90,19 +121,28 @@ async function loadTranslations(lang) {
   }
 
   try {
-    const response = await fetch(`i18n/${lang}.json`);
+    const response = await fetch(`i18n/${lang}.json?v=${CACHE_VERSION}`, { cache: 'no-cache' });
     if (!response.ok) {
       throw new Error(`Failed to load ${lang}.json: ${response.status}`);
     }
     const data = await response.json();
     translationCache[lang] = data;
     try {
-      localStorage.setItem(`${CACHE_PREFIX}${lang}`, JSON.stringify(data));
+      const wrappedCache = {
+        version: CACHE_VERSION,
+        cachedAt: Date.now(),
+        data,
+      };
+      localStorage.setItem(cacheKey, JSON.stringify(wrappedCache));
     } catch (_error) {
       /* Ignore cache write failures (quota/privacy mode) */
     }
     return data;
   } catch (error) {
+    if (staleFallback && typeof staleFallback === 'object') {
+      translationCache[lang] = staleFallback;
+      return staleFallback;
+    }
     if (lang !== DEFAULT_LANG) {
       return loadTranslations(DEFAULT_LANG);
     }
