@@ -13,7 +13,7 @@
     "cta_explore": "Explorar mi trabajo",
     "cta_cv": "Ver CV",
     "typing": [
-      "Desarrollador de Software",
+      "Desarrollador de Software Senior",
       "Construyendo sistemas de pago a escala",
       "NestJS • Node.js • PostgreSQL",
       "Explorando IA con LangChain"
@@ -24,7 +24,7 @@
     "title": "Sobre mí",
     "subtitle": "Desarrollador backend con pasión por la arquitectura escalable",
     "filename": "LEEME.md",
-    "p1": "Soy Desarrollador de Software con más de 6 años de experiencia profesional y más de una década programando. Durante los últimos 4+ años, he construido la infraestructura de pagos y gestión de eventos en Blackthorn.io, trabajando con todo el stack backend — microservicios NestJS, PostgreSQL, MongoDB, Redis — diseñando sistemas que manejan miles de transacciones diarias de forma confiable.",
+    "p1": "Soy Desarrollador de Software Senior con más de 6 años de experiencia profesional y más de una década programando. Durante los últimos 4+ años, he construido la infraestructura de pagos y gestión de eventos en Blackthorn.io, trabajando con todo el stack backend — microservicios NestJS, PostgreSQL, MongoDB, Redis — diseñando sistemas que manejan miles de transacciones diarias de forma confiable.",
     "p2": "Mi visión del rol va más allá de una tecnología puntual: no me veo encasillado como desarrollador Angular o TypeScript. Me veo como un creador de productos y experiencias digitales, siempre apoyándome en la tecnología y el desarrollo de software para generar impacto real en el usuario y el negocio.",
     "p3": "De cara al futuro, quiero seguir profundizando en productos impulsados por IA y, además, incursionar en el desarrollo mobile para construir experiencias consistentes de punta a punta.",
     "learning_label": "Explorando actualmente",
@@ -119,7 +119,7 @@
       {
         "text": "Joaquín demuestra consistentemente habilidades técnicas excepcionales y un profundo entendimiento de nuestra industria. Su enfoque innovador y sus habilidades para resolver problemas han contribuido significativamente al éxito de nuestros proyectos. No solo es técnicamente competente, sino que también es un fantástico jugador de equipo. Siempre está dispuesto a dar una mano, compartir su conocimiento y colaborar para lograr los mejores resultados.",
         "name": "Hugo Héctor Fernández",
-        "role": "Desarrollador de Software, Blackthorn",
+        "role": "Desarrollador de Software Senior, Blackthorn",
         "initials": "HF"
       },
       {
@@ -147,8 +147,8 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Desarrollador de Software",
-    "summary": "Desarrollador de Software con más de 6 años de experiencia profesional y más de 10 años programando. Durante los últimos 4+ años en Blackthorn.io, he construido sistemas escalables de pagos y gestión de eventos con microservicios NestJS, PostgreSQL, MongoDB y Redis. Historial comprobado resolviendo desafíos complejos — desde migrar 48 clases de Salesforce hasta implementar caché Redis que redujo tiempos de consulta de 20s a menos de un segundo. Desarrollador adaptable que domina rápidamente nuevas tecnologías y entrega soluciones innovadoras. Actualmente exploro agentes de IA con LangChain y LangGraph, mientras profundizo en arquitectura de software e incursiono en desarrollo mobile.",
+    "subtitle": "Desarrollador de Software Senior",
+    "summary": "Desarrollador de Software Senior con más de 6 años de experiencia profesional y más de 10 años programando. Durante los últimos 4+ años en Blackthorn.io, he construido sistemas escalables de pagos y gestión de eventos con microservicios NestJS, PostgreSQL, MongoDB y Redis. Historial comprobado resolviendo desafíos complejos — desde migrar 48 clases de Salesforce hasta implementar caché Redis que redujo tiempos de consulta de 20s a menos de un segundo. Desarrollador adaptable que domina rápidamente nuevas tecnologías y entrega soluciones innovadoras. Actualmente exploro agentes de IA con LangChain y LangGraph, mientras profundizo en arquitectura de software e incursiono en desarrollo mobile.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
     "sections": {

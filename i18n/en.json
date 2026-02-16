@@ -13,7 +13,7 @@
     "cta_explore": "Explore My Work",
     "cta_cv": "View CV",
     "typing": [
-      "Software Developer",
+      "Senior Software Developer",
       "Building payment systems at scale",
       "NestJS • Node.js • PostgreSQL",
       "Exploring AI with LangChain"
@@ -24,7 +24,7 @@
     "title": "About Me",
     "subtitle": "Backend developer with a passion for scalable architecture",
     "filename": "README.md",
-    "p1": "I'm a Software Developer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
+    "p1": "I'm a Senior Software Developer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
     "p2": "My view of this role goes beyond any single technology: I don't see myself boxed in as an Angular or TypeScript developer. I see myself as a builder of products and digital experiences, always leveraging technology and software development to create real impact for users and the business.",
     "p3": "Looking ahead, I want to keep deepening my work in AI-driven products and also move into mobile development to build cohesive end-to-end experiences.",
     "learning_label": "Currently exploring",
@@ -119,7 +119,7 @@
       {
         "text": "Joaquín consistently demonstrates exceptional technical skills and a deep understanding of our industry. His innovative approach and problem-solving abilities have significantly contributed to the success of our projects. He is not only technically proficient but also a fantastic team player. He is always willing to lend a hand, share his knowledge, and collaborate to achieve the best results.",
         "name": "Hugo Héctor Fernández",
-        "role": "Software Developer, Blackthorn",
+        "role": "Senior Software Developer, Blackthorn",
         "initials": "HF"
       },
       {
@@ -147,8 +147,8 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Software Developer",
-    "summary": "Software Developer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable developer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph, while deepening software architecture and moving into mobile development.",
+    "subtitle": "Senior Software Developer",
+    "summary": "Senior Software Developer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable developer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph, while deepening software architecture and moving into mobile development.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
     "sections": {
