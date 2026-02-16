@@ -30,7 +30,7 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 
 ## 📬 Let's connect
 
-- 🌐 [Portfolio](https://joaquinnv.github.io/joaquin-cv/)
+- 🌐 [Portfolio](https://joaquinnv.github.io/joaquinnv/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/joaqu%C3%ADn-noguera-velazquez-043234138)
 - ✉️ nvjoaquin@gmail.com
 
