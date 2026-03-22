@@ -137,13 +137,13 @@
       {
         "text": "I had the pleasure of working with Joaquin at Blackthorn and can confidently say he's a fantastic developer and collaborator. He approaches problems with both technical depth and an architectural perspective, always aiming for robust and scalable solutions. He was always open to feedback, quick to address issues, and proactive in improving the overall quality of the system.",
         "name": "Franco Bianucci",
-        "role": "Sr. QA Automation Engineer, Outcoding",
+        "role": "Sr. QA Automation Engineer, Blackthorn",
         "initials": "FB"
       },
       {
         "text": "Joaquin is out of this world. He has the right skills to propose good solutions, knows how to solve complex problems, and is a full-stack engineer with a lot of knowledge. He interviewed me when I joined Blackthorn, and he designed a very strong, complex project that integrates a PostgreSQL database with Salesforce to calculate rules for permissions in events without using PII, which was a major requirement. I can recommend Joaquin for future projects — he's very capable of creating software architecture from scratch!",
         "name": "Fernando Zamperin",
-        "role": "IT Swiss Knife Expert, Blackthorn",
+        "role": "Senior Software Developer, Blackthorn",
         "initials": "FZ"
       }
     ]
