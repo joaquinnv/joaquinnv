@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "Abierto a oportunidades",
-    "intro": "Construyo sistemas backend resilientes que procesan miles de transacciones de pago. Especializado en NestJS, Node.js y PostgreSQL — con talento para convertir problemas complejos en soluciones elegantes y escalables.",
+    "intro": "Desarrollo sistemas backend resilientes que procesan miles de transacciones de pago. Me especializo en NestJS, Node.js y PostgreSQL, con capacidad para convertir problemas complejos en soluciones claras y escalables.",
     "cta_explore": "Explorar mi trabajo",
     "cta_cv": "Ver CV",
     "typing": [
@@ -22,18 +22,18 @@
   "about": {
     "label": "// sobre-mi",
     "title": "Sobre mí",
-    "subtitle": "Backend: me importa que el cobro funcione cuando hay presión de verdad",
+    "subtitle": "Backend: priorizo que los pagos funcionen cuando la presión es real",
     "filename": "LEEME.md",
-    "p1": "Llevo más de diez años programando y unos seis ya en laburos formales. Desde 2022 estoy en Blackthorn.io con el backend como base: NestJS, PostgreSQL, MongoDB, Redis. El día a día son pagos y eventos: mantener ese flujo estable, detectar regresiones y ajustar cosas antes de que se prendan fuego.",
-    "p2": "Donde más me siento sólido es el backend, pero en este trabajo toco lo que haga falta para que salga: APIs y datos primero, y Angular o el resto del stack cuando el ticket lo pide. Igual me gusta estar con producto o soporte cuando producción se pone rara, bajar una consulta lenta, o refactorizar para que el próximo que abra el archivo no tenga que adivinar.",
-    "p3": "Sigo viendo cómo la IA puede sacar trabajo repetitivo de verdad del día a día como desarrollador: tiempo y pasos que recupero, no otra moda más. Fuera de eso, en otro plan, a veces armo apps mobile chicas como hobby. No busco roles de mobile; para mí mobile es lo que mejor encaja cuando soy yo solo llevando el proyecto, de una idea chica a algo que funciona en el teléfono.",
-    "learning_label": "Aparte estoy viendo",
+    "p1": "Llevo más de diez años programando y unos seis en trabajos formales. Desde 2022 formo parte de Blackthorn.io con el backend como base: NestJS, PostgreSQL, MongoDB, Redis. El día a día son pagos y eventos: mantener la estabilidad del flujo, detectar regresiones y actuar antes de que los problemas escalen.",
+    "p2": "Donde tengo mayor solidez es en el backend; no obstante, en mi rol actual participo en lo necesario para cada entrega: primero APIs y datos, y también Angular o el resto del stack cuando el ticket lo requiere. También colaboro con producto o soporte cuando hay incidencias en producción, optimizo consultas lentas y refactorizo para que quien continúe el código no pierda tiempo.",
+    "p3": "Sigo evaluando cómo la inteligencia artificial puede reducir el trabajo repetitivo en el día a día del desarrollo: tiempo recuperado, no una moda pasajera. Además, desarrollo aplicaciones móviles de forma ocasional como hobby; no busco roles de desarrollo móvil. Ese ámbito me resulta adecuado para proyectos en los que avanzo de forma autónoma desde la idea hasta un producto funcional en el dispositivo.",
+    "learning_label": "También exploro",
     "learning_tags": {
       "langchain": "LangChain",
       "langgraph": "LangGraph",
       "ai_agents": "Agentes IA",
       "architecture": "Arquitectura de Software",
-      "mobile": "Desarrollo Mobile"
+      "mobile": "Desarrollo móvil"
     }
   },
   "experience": {
@@ -50,8 +50,8 @@
           "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
           "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
-          "Co-creé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y la desplegabilidad independiente",
-          "Brindo soporte multifuncional: mentoreo desarrolladores, asisto al equipo de QA y gestiono escalaciones de producción Tier 3",
+          "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y el despliegue independiente",
+          "Brindo soporte multifuncional: ofrezco mentoría a desarrolladores, colaboro con el equipo de QA y gestiono escalaciones de producción de nivel tres",
           "Participo en rotación de guardia, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
         ]
       },
@@ -62,7 +62,7 @@
         "location": "Santa Fe, Argentina",
         "bullets": [
           "Brindé soporte y mantenimiento de CPQ para sistemas de producción activos de clientes en la plataforma Salesforce",
-          "Resolví bugs de larga data en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
+          "Resolví errores persistentes en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
           "Monitoreé y revisé handlers de triggers, trabajos batch y procesos programables para asegurar estabilidad operativa"
         ]
       },
@@ -72,9 +72,9 @@
         "period": "Mar 2021 — Jul 2021",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Construí más de 40 flujos de integración empresarial usando Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
+          "Desarrollé más de 40 flujos de integración empresarial con Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
           "Conecté Salesforce con Microsoft Dynamics 365 y otros sistemas empresariales para intercambio de datos fluido",
-          "Implementé monitoreo end-to-end vía Serverless360 con Business Activity Monitoring, brindando visibilidad completa del estado de las integraciones"
+          "Implementé monitoreo de extremo a extremo mediante Serverless360 con Business Activity Monitoring, brindando visibilidad completa del estado de las integraciones"
         ]
       },
       {
@@ -83,7 +83,7 @@
         "period": "Sep 2020 — Feb 2021",
         "location": "Esperanza, Santa Fe, Argentina",
         "bullets": [
-          "Construí una plataforma de recursos gráficos full-stack desde cero usando Angular 9 en frontend y API RESTful en Node.js/Express",
+          "Desarrollé una plataforma de recursos gráficos full-stack desde cero con Angular 9 en el frontend y una API REST en Node.js/Express",
           "Traduje mockups de Adobe XD a interfaces listas para producción usando Bootstrap y Angular Material",
           "Identifiqué y propuse mejoras arquitectónicas en porciones clave del código base"
         ]
@@ -93,7 +93,7 @@
   "skills": {
     "label": "// stack-tecnológico",
     "title": "Habilidades",
-    "subtitle": "Tecnologías con las que trabajo diariamente y tengo experiencia profunda",
+    "subtitle": "Tecnologías que uso a diario y en las que tengo experiencia sólida",
     "categories": [
       {
         "icon": "fas fa-server",
@@ -123,25 +123,25 @@
     "subtitle": "De personas con las que tuve el placer de trabajar",
     "items": [
       {
-        "text": "Joaquín demuestra consistentemente habilidades técnicas excepcionales y un profundo entendimiento de nuestra industria. Su enfoque innovador y sus habilidades para resolver problemas han contribuido significativamente al éxito de nuestros proyectos. No solo es técnicamente competente, sino que también es un fantástico jugador de equipo. Siempre está dispuesto a dar una mano, compartir su conocimiento y colaborar para lograr los mejores resultados.",
+        "text": "Joaquín demuestra de forma constante habilidades técnicas excepcionales y una comprensión profunda de nuestra industria. Su enfoque innovador y su capacidad para resolver problemas han contribuido de manera significativa al éxito de nuestros proyectos. No solo es técnicamente competente, sino también un excelente compañero de equipo. Siempre está dispuesto a brindar apoyo, compartir su conocimiento y colaborar para lograr los mejores resultados.",
         "name": "Hugo Héctor Fernández",
         "role": "Desarrollador de Software Senior, Blackthorn",
         "initials": "HF"
       },
       {
-        "text": "Tuve la suerte de llamarlo mi compañero de trabajo. Consistentemente dio el 100 por ciento de esfuerzo al equipo y jugó un papel significativo en asegurar que completáramos las asignaciones a tiempo. Cualquier equipo tendría suerte de tener a Joaquín.",
+        "text": "Tuve el privilegio de ser su compañero de trabajo. Aportó siempre el máximo esfuerzo al equipo y tuvo un papel relevante para que completáramos las asignaciones a tiempo. Cualquier equipo se beneficiaría de contar con Joaquín.",
         "name": "Cristian Vizzarri",
         "role": "Desarrollador Salesforce, Folder IT",
         "initials": "CV"
       },
       {
-        "text": "Tuve el placer de trabajar con Joaquín en Blackthorn y puedo decir con seguridad que es un desarrollador y colaborador fantástico. Aborda los problemas con profundidad técnica y mirada de arquitectura, siempre apuntando a soluciones robustas y escalables. Siempre estuvo abierto al feedback, rápido para resolver temas y proactivo para mejorar la calidad general del sistema.",
+        "text": "Tuve el placer de trabajar con Joaquín en Blackthorn y puedo afirmar con confianza que es un desarrollador y colaborador excepcional. Aborda los problemas con profundidad técnica y visión de arquitectura, orientado a soluciones robustas y escalables. Se mostró siempre abierto a la retroalimentación, ágil para resolver incidencias y proactivo para mejorar la calidad general del sistema.",
         "name": "Franco Bianucci",
         "role": "Sr. QA Automation Engineer, Outcoding",
         "initials": "FB"
       },
       {
-        "text": "Joaquín es de otro mundo. Tiene las habilidades para proponer buenas soluciones, sabe resolver problemas complejos y es un ingeniero full stack con mucho conocimiento. Me entrevistó cuando entré a Blackthorn, y además diseñó un proyecto muy sólido y complejo que integra una base PostgreSQL con Salesforce para calcular reglas de permisos en eventos sin usar PII, que era un requisito clave. Recomiendo a Joaquín para proyectos futuros: es muy capaz de crear arquitectura de software desde cero.",
+        "text": "Joaquín tiene un nivel sobresaliente. Cuenta con las habilidades para proponer buenas soluciones, resolver problemas complejos y aporta una sólida experiencia como ingeniero full stack. Me entrevistó cuando ingresé a Blackthorn y, además, diseñó un proyecto exigente y bien estructurado que integra una base PostgreSQL con Salesforce para calcular reglas de permisos en eventos sin usar PII, un requisito clave. Recomiendo a Joaquín para proyectos futuros: es muy capaz de definir arquitectura de software desde cero.",
         "name": "Fernando Zamperin",
         "role": "IT Swiss Knife Expert, Blackthorn",
         "initials": "FZ"
@@ -151,8 +151,8 @@
   "contact": {
     "label": "// contacto",
     "title": "Contacto",
-    "subtitle": "Construyamos algo increíble juntos",
-    "intro": "Siempre estoy abierto a discutir nuevas oportunidades, proyectos interesantes, o simplemente conectar con otros desarrolladores. ¡No dudes en escribirme!",
+    "subtitle": "Exploremos juntos nuevas oportunidades",
+    "intro": "Estoy abierto a conversar sobre nuevas oportunidades, proyectos interesantes o a conectar con otros profesionales del desarrollo. Puedes escribirme cuando quieras.",
     "email_title": "Email",
     "linkedin_label": "Joaquín Noguera",
     "github_label": "joaquinnv",
@@ -160,15 +160,16 @@
     "location_value": "Paraná, Argentina (Remoto)"
   },
   "footer": {
-    "copyright": "Joaquín Noguera Velázquez. Construido con HTML, CSS y JS puro.",
+    "copyright": "Joaquín Noguera Velázquez. Sitio desarrollado con HTML, CSS y JavaScript.",
     "source": "Ver código fuente"
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Desarrollador de Software Senior",
-    "summary": "Desarrollador de Software Senior con más de 10 años programando y 6+ en roles profesionales. En Blackthorn.io (2022–presente) me centro en backend de pagos y eventos: NestJS, PostgreSQL, MongoDB y Redis. Lo más sólido son APIs y datos, pero trabajo en todo el stack—incluido Angular—cuando el ticket lo requiere. Hitos: migré 48 clases de Salesforce a almacenamiento externo; caché Redis que pasó consultas de 20+ s a menos de un segundo; co-creé microservicios en arquitectura NestJS de 10+ repos; mentoreo, soporte a QA, escalaciones Tier 3 y guardia en pagos. Exploro dónde la IA ahorra tiempo real en ingeniería; mobile es hobby fuera de horario (proyectos chicos en solitario), no busco rol mobile.",
+    "summary": "Llevo más de diez años programando y unos seis en roles profesionales. Desde 2022 trabajo en Blackthorn.io con el backend como eje principal (NestJS, PostgreSQL, MongoDB y Redis). El día a día se centra en pagos y eventos, y en mantener la estabilidad del sistema cuando aumenta la carga o se presentan incidencias en producción. Donde tengo más solidez es en APIs y datos; no obstante, también participo en el resto del stack que requiera cada entrega, incluido Angular cuando el ticket lo solicita. Entre los resultados destacados figuran la migración de 48 clases de Salesforce a almacenamiento externo, la implementación de Redis, que redujo consultas de más de veinte segundos a menos de un segundo, y la co-creación de microservicios dentro de una arquitectura NestJS distribuida en más de diez repositorios. También realizo mentorías, colaboro con el equipo de QA, gestiono escalaciones de producción de nivel tres y participo en la guardia de pagos. Exploro de manera práctica cómo la inteligencia artificial puede reducir el trabajo repetitivo en la ingeniería de software.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
+    "website_label": "Sitio web",
     "sections": {
       "experience": "Experiencia",
       "education": "Educación",
@@ -185,8 +186,8 @@
           "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
           "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
-          "Co-creé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y la desplegabilidad independiente",
-          "Brindo soporte multifuncional: mentoreo desarrolladores, asisto al equipo de QA y gestiono escalaciones de producción Tier 3",
+          "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y el despliegue independiente",
+          "Brindo soporte multifuncional: ofrezco mentoría a desarrolladores, colaboro con el equipo de QA y gestiono escalaciones de producción de nivel tres",
           "Participo en rotación de guardia, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
         ]
       },
@@ -197,7 +198,7 @@
         "location": "Santa Fe, Argentina",
         "bullets": [
           "Brindé soporte y mantenimiento de CPQ para sistemas de producción activos de clientes en la plataforma Salesforce",
-          "Resolví bugs de larga data en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
+          "Resolví errores persistentes en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
           "Monitoreé y revisé handlers de triggers, trabajos batch y procesos programables para asegurar estabilidad operativa"
         ]
       },
@@ -207,9 +208,9 @@
         "period": "Mar 2021 — Jul 2021",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Construí más de 40 flujos de integración empresarial usando Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
+          "Desarrollé más de 40 flujos de integración empresarial con Azure Logic Apps, Function Apps, Service Bus, Data Factory y Data Lake",
           "Conecté Salesforce con Microsoft Dynamics 365 y otros sistemas empresariales para intercambio de datos fluido",
-          "Implementé monitoreo end-to-end vía Serverless360 con Business Activity Monitoring, brindando visibilidad completa del estado de las integraciones"
+          "Implementé monitoreo de extremo a extremo mediante Serverless360 con Business Activity Monitoring, brindando visibilidad completa del estado de las integraciones"
         ]
       },
       {
@@ -218,7 +219,7 @@
         "period": "Sep 2020 — Feb 2021",
         "location": "Esperanza, Santa Fe, Argentina",
         "bullets": [
-          "Construí una plataforma de recursos gráficos full-stack desde cero usando Angular 9 en frontend y API RESTful en Node.js/Express",
+          "Desarrollé una plataforma de recursos gráficos full-stack desde cero con Angular 9 en el frontend y una API REST en Node.js/Express",
           "Traduje mockups de Adobe XD a interfaces listas para producción usando Bootstrap y Angular Material",
           "Identifiqué y propuse mejoras arquitectónicas en porciones clave del código base"
         ]

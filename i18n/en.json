@@ -166,9 +166,10 @@
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Senior Software Developer",
-    "summary": "Senior Software Developer with 10+ years of coding and 6+ years professionally. At Blackthorn.io (2022–present) I focus on backend payments and events: NestJS, PostgreSQL, MongoDB, and Redis. I'm strongest on APIs and data, but I work across the stack—including Angular—when the ticket needs it. Key work: migrated 48 Salesforce classes to external storage; Redis caching that cut 20+ second list queries to sub-second; co-created microservices in a 10+ repo NestJS architecture; mentoring, QA support, Tier-3 production escalations, and on-call for payments. I'm exploring where AI saves real time in engineering; mobile is an off-hours hobby (solo end-to-end builds), not a role I'm pursuing.",
+    "summary": "I have more than ten years of programming experience, including about six years in professional roles. Since 2022 I have worked at Blackthorn.io with backend as my primary focus — NestJS, PostgreSQL, MongoDB, and Redis — on payments and events, and on keeping systems stable as traffic grows or incidents occur in production. I am strongest in APIs and data, but I also contribute across the stack as each delivery requires, including Angular when the ticket calls for it. I migrated 48 Salesforce classes to external storage, implemented Redis to bring queries from over twenty seconds down to under one second, and co-created microservices within a NestJS architecture spanning more than ten repositories. I also mentor colleagues, work closely with QA, manage Tier-3 production escalations, and take part in on-call coverage for payments. I am exploring in a practical way how artificial intelligence can reduce repetitive work in day-to-day software engineering.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
+    "website_label": "Portfolio",
     "sections": {
       "experience": "Experience",
       "education": "Education",

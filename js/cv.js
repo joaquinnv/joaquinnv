@@ -12,6 +12,8 @@ import { initMobileNav, updateCopyrightYear } from './utils.js';
 /* ── Constants ── */
 const PDF_FILENAME = 'Joaquin-Noguera-CV.pdf';
 const PDF_PATH = 'assets/joaquin-noguera-cv.pdf';
+/** Bust browser/CDN cache when the pre-built PDF is regenerated (`npm run build:pdf`). */
+const PDF_CACHE_BUST = '20260322e';
 
 /** Handles print button — opens the browser print dialog. */
 function initPrintButton() {
@@ -30,7 +32,7 @@ function initDownloadButton() {
   if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
       const link = document.createElement('a');
-      link.href = PDF_PATH;
+      link.href = `${PDF_PATH}?v=${PDF_CACHE_BUST}`;
       link.download = PDF_FILENAME;
       document.body.appendChild(link);
       link.click();

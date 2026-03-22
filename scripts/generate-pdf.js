@@ -4,6 +4,9 @@
  * Run: npm run build:pdf
  *
  * First-time setup (if launch fails): npx playwright install chromium
+ *
+ * After publishing a new PDF, bump `PDF_CACHE_BUST` in js/cv.js so the
+ * download button does not serve a stale file from the browser cache.
  */
 
 const { chromium } = require('playwright');
@@ -40,20 +43,19 @@ async function main() {
       document.documentElement.setAttribute('data-theme', 'light');
     });
 
-    /* Hide nav, footer, action buttons for PDF and set proper page margins */
+    /* Hide chrome only — spacing comes from css/print.css (@page + body padding).
+       Do not set PDF margins here: doubling Playwright margins + CSS caused a blank first page. */
     await page.addStyleTag({
       content: `
-        @page { size: A4; margin: 12mm 15mm !important; }
         .nav, .footer, .cv__actions, .badge, .badge__dot { display: none !important; }
         .animate-on-scroll { opacity: 1 !important; transform: none !important; }
-        body { padding: 0 !important; margin: 0 !important; }
       `,
     });
 
     await page.pdf({
       path: OUTPUT_PATH,
       format: 'A4',
-      margin: { top: '12mm', right: '15mm', bottom: '12mm', left: '15mm' },
+      margin: { top: '0', right: '0', bottom: '0', left: '0' },
       printBackground: true,
     });
 
