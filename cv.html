@@ -122,43 +122,13 @@
 </head>
 <body>
     <!-- Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link" data-i18n="nav.skip_main">Skip to main content</a>
 
     <!-- i18n Live Region -->
     <div id="i18n-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- ========== NAVIGATION ========== -->
-    <header class="nav" id="nav">
-        <div class="nav__container">
-            <a href="index.html" class="nav__logo" aria-label="Joaquín Noguera — Home">
-                <span class="nav__logo-bracket">{</span>
-                <span class="nav__logo-letter">J</span>
-                <span class="nav__logo-bracket">}</span>
-            </a>
-
-            <nav class="nav__links" id="nav-links" aria-label="Main navigation">
-                <a href="index.html#about" class="nav__link" data-i18n="nav.about">About</a>
-                <a href="index.html#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
-                <a href="index.html#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
-                <a href="index.html#testimonials" class="nav__link" data-i18n="nav.testimonials">Testimonials</a>
-                <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
-                <a href="cv.html" class="nav__link nav__link--cv nav__link--current" data-nav-current aria-current="page" data-i18n="nav.cv">View CV</a>
-            </nav>
-
-            <div class="nav__actions">
-                <button class="nav__lang-toggle" data-lang-toggle aria-label="Switch language">
-                    <span>EN</span>
-                </button>
-                <button class="nav__theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
-                    <i class="fas fa-sun nav__theme-icon nav__theme-icon--sun" aria-hidden="true"></i>
-                    <i class="fas fa-moon nav__theme-icon nav__theme-icon--moon" aria-hidden="true"></i>
-                </button>
-                <button class="nav__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- ========== NAVIGATION (markup from js/site-nav.js) ========== -->
+    <header class="nav" id="nav"></header>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main id="main-content" class="cv">
@@ -172,6 +142,10 @@
                 <button class="btn btn--primary" id="download-btn" data-i18n="cv.download_btn">
                     <i class="fas fa-download" aria-hidden="true"></i> Download PDF
                 </button>
+                <a href="banner.html" class="btn btn--secondary">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span data-i18n="cv.linkedin_banner_link">LinkedIn cover banner</span>
+                </a>
             </div>
 
             <!-- Header -->
@@ -310,7 +284,7 @@
                         <div class="cv__edu-item">
                             <p class="cv__edu-degree" data-i18n="cv.education.1.degree">Computer Technician</p>
                             <p class="cv__edu-school" data-i18n="cv.education.1.school">Technical Education School No. 3 — Lt. Don Luis C. Candelaria</p>
-                            <p class="cv__edu-date" data-i18n="cv.education.1.period">2009 — 2016</p>
+                            <p class="cv__edu-date" data-i18n="cv.education.1.period">2010 — 2016</p>
                         </div>
                     </section>
 

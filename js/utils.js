@@ -7,6 +7,16 @@
  * Sets up the mobile hamburger menu toggle.
  * Handles open/close state, accessibility attributes, and Escape key.
  */
+/** Prevents redundant navigation for the current-page nav item (`[data-nav-current]`). */
+export function initCurrentPageNavLink() {
+  const current = document.querySelector('[data-nav-current]');
+  if (current) {
+    current.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  }
+}
+
 export function initMobileNav() {
   const toggle = document.getElementById('mobile-toggle');
   const links = document.querySelector('.nav__links');

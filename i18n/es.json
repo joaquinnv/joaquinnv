@@ -5,7 +5,24 @@
     "skills": "Habilidades",
     "testimonials": "Testimonios",
     "contact": "Contacto",
-    "cv": "Ver CV"
+    "cv": "Ver CV",
+    "banner": "Banner LinkedIn",
+    "skip_main": "Ir al contenido principal"
+  },
+  "banner": {
+    "page_title": "Banner LinkedIn — Joaquín Noguera",
+    "meta_description": "Generador de portada para LinkedIn (1584×396 px), con la misma estética del portfolio.",
+    "studio_heading": "Banner para perfil de LinkedIn",
+    "studio_lead": "Vista previa en el tamaño real de exportación. Cambiá tema e idioma, descargá el PNG generado o regeneralo en tu máquina.",
+    "dimensions": "LinkedIn recomienda 1584 × 396 px. En móvil se recortan los laterales — mantené nombre y titular cerca del centro.",
+    "build_hint": "Para regenerar los PNG desde la raíz del proyecto:",
+    "preview_label": "Lienzo (área de exportación)",
+    "download_dark": "Descargar PNG — oscuro",
+    "download_light": "Descargar PNG — claro",
+    "canvas_role": "Desarrollador de Software Senior",
+    "canvas_stack": "NestJS · Node.js · PostgreSQL · TypeScript",
+    "canvas_location": "Paraná, Argentina · Remoto",
+    "canvas_aria": "Banner para LinkedIn: Joaquín Noguera Velázquez, desarrollador de software senior"
   },
   "hero": {
     "badge": "Abierto a oportunidades",
@@ -22,7 +39,6 @@
   "about": {
     "label": "// sobre-mi",
     "title": "Sobre mí",
-    "subtitle": "Backend: priorizo que los pagos funcionen cuando la presión es real",
     "filename": "LEEME.md",
     "p1": "Llevo más de diez años programando y unos seis en trabajos formales. Desde 2022 formo parte de Blackthorn.io con el backend como base: NestJS, PostgreSQL, MongoDB, Redis. El día a día son pagos y eventos: mantener la estabilidad del flujo, detectar regresiones y actuar antes de que los problemas escalen.",
     "p2": "Donde tengo mayor solidez es en el backend; no obstante, en mi rol actual participo en lo necesario para cada entrega: primero APIs y datos, y también Angular o el resto del stack cuando el ticket lo requiere. También colaboro con producto o soporte cuando hay incidencias en producción, optimizo consultas lentas y refactorizo para que quien continúe el código no pierda tiempo.",
@@ -169,6 +185,7 @@
     "summary": "Llevo más de diez años programando y unos seis en roles profesionales. Desde 2022 trabajo en Blackthorn.io con el backend como eje principal (NestJS, PostgreSQL, MongoDB y Redis). El día a día se centra en pagos y eventos, y en mantener la estabilidad del sistema cuando aumenta la carga o se presentan incidencias en producción. Donde tengo más solidez es en APIs y datos; no obstante, también participo en el resto del stack que requiera cada entrega, incluido Angular cuando el ticket lo solicita. Entre los resultados destacados figuran la migración de 48 clases de Salesforce a almacenamiento externo, la implementación de Redis, que redujo consultas de más de veinte segundos a menos de un segundo, y la co-creación de microservicios dentro de una arquitectura NestJS distribuida en más de diez repositorios. También realizo mentorías, colaboro con el equipo de QA, gestiono escalaciones de producción de nivel tres y participo en la guardia de pagos. Exploro de manera práctica cómo la inteligencia artificial puede reducir el trabajo repetitivo en la ingeniería de software.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
+    "linkedin_banner_link": "Banner para LinkedIn",
     "website_label": "Sitio web",
     "sections": {
       "experience": "Experiencia",
@@ -234,7 +251,7 @@
       {
         "degree": "Técnico en Computación",
         "school": "Escuela de Educación Técnica Nro. 3 — Tte. Don Luis C. Candelaria",
-        "period": "2009 — 2016"
+        "period": "2010 — 2016"
       }
     ],
     "languages_list": [

@@ -9,6 +9,7 @@ import { initI18n, onLangChange } from './i18n.js';
 import { initParticles } from './particles.js';
 import { initAnimations } from './animations.js';
 import { initMobileNav, updateCopyrightYear } from './utils.js';
+import { renderSiteNav } from './site-nav.js';
 
 /* ── Constants ── */
 const TYPING_SPEED_MS = 80;
@@ -112,6 +113,7 @@ function initSmoothScroll() {
 
 /* ── Initialize Everything ── */
 async function init() {
+  renderSiteNav('home');
   initTheme();
   await initI18n();
   initParticles();

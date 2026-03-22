@@ -13,9 +13,27 @@ const THEME_LIGHT = 'light';
  * @returns {'dark'|'light'} The resolved theme
  */
 function getInitialTheme() {
+  try {
+    const urlTheme = new URLSearchParams(window.location.search).get('theme');
+    if (urlTheme === THEME_DARK || urlTheme === THEME_LIGHT) {
+      return urlTheme;
+    }
+  } catch (_error) {
+    /* Ignore invalid URL */
+  }
+
   const stored = localStorage.getItem(STORAGE_KEY);
   if (stored === THEME_DARK || stored === THEME_LIGHT) {
     return stored;
+  }
+
+  try {
+    const path = window.location.pathname || '';
+    if (path.endsWith('banner.html')) {
+      return THEME_DARK;
+    }
+  } catch (_error) {
+    /* Ignore */
   }
 
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -64,8 +82,17 @@ export function initTheme() {
   });
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem(STORAGE_KEY)) {
-      applyTheme(e.matches ? THEME_DARK : THEME_LIGHT);
+    if (localStorage.getItem(STORAGE_KEY)) {
+      return;
     }
+    try {
+      const path = window.location.pathname || '';
+      if (path.endsWith('banner.html')) {
+        return;
+      }
+    } catch (_error) {
+      /* Ignore */
+    }
+    applyTheme(e.matches ? THEME_DARK : THEME_LIGHT);
   });
 }

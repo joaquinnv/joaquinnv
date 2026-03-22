@@ -1,0 +1,337 @@
+/* ==========================================================================
+   LinkedIn banner studio page + fixed-size export canvas (1584 × 396)
+   ========================================================================== */
+
+.banner-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Fixed nav (components.css) — match CV/main offset so content clears the bar */
+.banner-page #main-content {
+  padding-top: calc(var(--nav-height) + var(--space-8));
+}
+
+/* ── Headless / Playwright export: no studio chrome, full 1584px banner (no 72rem clip) ── */
+html.banner-export {
+  scroll-padding-top: 0;
+  overflow-x: visible !important;
+}
+
+html.banner-export body {
+  /* base.css uses overflow-x: hidden — that was clipping the 1584px card inside a ~72rem-wide studio */
+  overflow-x: visible !important;
+  min-height: 0;
+}
+
+html.banner-export[data-theme="dark"] body {
+  background-color: #010409;
+}
+
+html.banner-export[data-theme="light"] body {
+  background-color: var(--color-bg);
+}
+
+html.banner-export .nav,
+html.banner-export .skip-link,
+html.banner-export #banner-page-title-src,
+html.banner-export #i18n-live {
+  display: none !important;
+}
+
+html.banner-export .banner-studio > *:not(.banner-preview-wrap) {
+  display: none !important;
+}
+
+html.banner-export #main-content {
+  width: 1584px !important;
+  min-width: 1584px !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html.banner-export .banner-studio {
+  width: 1584px !important;
+  min-width: 1584px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+html.banner-export .banner-preview-wrap {
+  width: 1584px !important;
+  min-width: 1584px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+html.banner-export #linkedin-banner {
+  width: 1584px !important;
+  min-width: 1584px !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.banner-studio {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-8) var(--container-padding) var(--space-6);
+}
+
+.banner-studio__heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3);
+  color: var(--color-text);
+}
+
+.banner-studio__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: var(--container-narrow);
+  margin: 0 0 var(--space-6);
+  line-height: var(--leading-normal);
+}
+
+.banner-studio__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  max-width: 42rem;
+  margin: 0 0 var(--space-2);
+  line-height: var(--leading-snug);
+}
+
+.banner-studio__cmd {
+  display: block;
+  margin: var(--space-2) 0 var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.banner-studio__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.banner-studio__preview-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-tertiary);
+  margin: 0 0 var(--space-3);
+}
+
+.banner-preview-wrap {
+  overflow-x: auto;
+  padding-bottom: var(--space-16);
+  margin: 0 calc(-1 * var(--container-padding)) 0;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* ── Export target: exact LinkedIn cover dimensions ── */
+#linkedin-banner {
+  position: relative;
+  width: 1584px;
+  min-width: 1584px;
+  max-width: none;
+  height: 396px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Deeper than page --color-bg so the export reads clearly as “dark mode” */
+[data-theme="dark"] #linkedin-banner {
+  background-color: #010409;
+  background-image: radial-gradient(
+    ellipse 75% 160% at 100% 50%,
+    rgb(15 23 42 / 85%) 0%,
+    transparent 58%
+  );
+  border-color: rgb(30 41 59 / 55%);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 35%),
+    var(--shadow-xl);
+}
+
+/*
+ * Particle canvas: explicit 1584×396 (not width:100% / inset:0).
+ * With a narrow parent, 100% made the *display* smaller than the bitmap → right band looked empty.
+ */
+.banner-particle-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1584px;
+  height: 396px;
+  z-index: 0;
+  max-width: none !important;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.banner-canvas__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      135deg,
+      var(--color-primary-subtle) 0%,
+      transparent 45%,
+      transparent 55%,
+      var(--color-secondary-light) 100%
+    ),
+    linear-gradient(
+      rgb(148 163 184 / 8%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(148 163 184 / 8%) 1px,
+      transparent 1px
+    );
+  background-size:
+    auto,
+    48px 48px,
+    48px 48px;
+  opacity: 0.55;
+}
+
+[data-theme="dark"] .banner-canvas__decor {
+  opacity: 0.38;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgb(37 99 235 / 10%) 0%,
+      transparent 44%,
+      transparent 56%,
+      rgb(20 184 166 / 6%) 100%
+    ),
+    linear-gradient(
+      rgb(148 163 184 / 4%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgb(148 163 184 / 4%) 1px,
+      transparent 1px
+    );
+  background-size:
+    auto,
+    40px 40px,
+    40px 40px;
+}
+
+.banner-canvas__glow {
+  position: absolute;
+  z-index: 2;
+  width: 420px;
+  height: 420px;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgb(96 165 250 / 22%) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+[data-theme="dark"] .banner-canvas__glow {
+  background: radial-gradient(
+    circle,
+    rgb(59 130 246 / 12%) 0%,
+    rgb(37 99 235 / 4%) 35%,
+    transparent 72%
+  );
+}
+
+[data-theme="light"] .banner-canvas__glow {
+  background: radial-gradient(
+    circle,
+    rgb(30 64 175 / 18%) 0%,
+    transparent 70%
+  );
+}
+
+.banner-canvas__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 72px;
+  max-width: 980px;
+}
+
+.banner-canvas__logo {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.02em;
+}
+
+.banner-canvas__logo-bracket {
+  color: var(--color-text-tertiary);
+}
+
+.banner-canvas__name {
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-3);
+  color: var(--color-text);
+}
+
+.banner-canvas__role {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.banner-canvas__stack {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+.banner-canvas__location {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}

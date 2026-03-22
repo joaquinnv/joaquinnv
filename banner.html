@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+      (function(){
+        var root=document.documentElement;
+        try {
+          if(new URLSearchParams(location.search).get('export')==='1'){
+            root.classList.add('banner-export');
+          }
+        } catch(_ex) { /* ignore */ }
+        /* Dark by default here; ?theme= and saved preference override (see theme.js) */
+        var t='dark';
+        var l='en';
+        try {
+          var urlTh=new URLSearchParams(location.search).get('theme');
+          if(urlTh==='dark'||urlTh==='light'){
+            t=urlTh;
+          } else {
+            var storedTheme=localStorage.getItem('jcv-theme');
+            if(storedTheme==='dark'||storedTheme==='light'){
+              t=storedTheme;
+            }
+          }
+        } catch (_e) {
+          /* keep t = dark */
+        }
+        root.setAttribute('data-theme',t);
+
+        try {
+          var urlLang=new URLSearchParams(location.search).get('lang');
+          if(urlLang==='en'||urlLang==='es'){
+            l=urlLang;
+          } else {
+            var storedLang=localStorage.getItem('jcv-lang');
+            if(storedLang==='en'||storedLang==='es'){
+              l=storedLang;
+            } else {
+              var browserLang=(navigator.language||'en').slice(0,2);
+              l=(browserLang==='es')?'es':'en';
+            }
+          }
+        } catch (_err) {
+          var fallbackLang=(navigator.language||'en').slice(0,2);
+          l=(fallbackLang==='es')?'es':'en';
+        }
+
+        root.setAttribute('lang',l);
+        if(l==='es'){root.setAttribute('data-i18n-pending','true')}
+      })();
+    </script>
+    <style>html[data-i18n-pending="true"] body{visibility:hidden}</style>
+
+    <title>LinkedIn banner — Joaquín Noguera</title>
+    <meta name="description" content="LinkedIn profile cover (1584×396 px) in portfolio style.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260216">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20260216">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/banner.css">
+</head>
+<body class="banner-page">
+    <span id="banner-page-title-src" class="sr-only" data-i18n="banner.page_title">LinkedIn banner — Joaquín Noguera</span>
+
+    <a href="#main-content" class="skip-link" data-i18n="nav.skip_main">Skip to main content</a>
+
+    <div id="i18n-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ========== NAVIGATION (markup from js/site-nav.js) ========== -->
+    <header class="nav" id="nav"></header>
+
+    <main id="main-content">
+        <div class="banner-studio">
+            <h1 class="banner-studio__heading" data-i18n="banner.studio_heading">LinkedIn profile banner</h1>
+            <p class="banner-studio__lead" data-i18n="banner.studio_lead">
+                Preview at the exact export size. Toggle theme and language, then download the pre-built PNG or regenerate files locally.
+            </p>
+            <p class="banner-studio__note" data-i18n="banner.dimensions">
+                LinkedIn recommends 1584 × 396 px. On mobile, the sides are cropped — keep your name and headline near the center.
+            </p>
+            <p class="banner-studio__note" data-i18n="banner.build_hint">Regenerate PNG files from the project root:</p>
+            <code class="banner-studio__cmd">npm run build:banner</code>
+            <div class="banner-studio__actions">
+                <button type="button" class="btn btn--secondary" data-banner-download="dark" data-i18n="banner.download_dark">
+                    Download PNG — dark
+                </button>
+                <button type="button" class="btn btn--primary" data-banner-download="light" data-i18n="banner.download_light">
+                    Download PNG — light
+                </button>
+            </div>
+
+            <p class="banner-studio__preview-label" data-i18n="banner.preview_label">Canvas (export area)</p>
+            <div class="banner-preview-wrap">
+                <div id="linkedin-banner" data-i18n-aria="banner.canvas_aria" role="img"
+                     aria-label="LinkedIn profile banner: Joaquín Noguera Velázquez, Senior Software Developer">
+                    <canvas id="banner-particle-canvas" class="banner-particle-canvas" width="1584" height="396" aria-hidden="true"></canvas>
+                    <div class="banner-canvas__decor" aria-hidden="true"></div>
+                    <div class="banner-canvas__glow" aria-hidden="true"></div>
+                    <div class="banner-canvas__inner">
+                        <div class="banner-canvas__logo" aria-hidden="true">
+                            <span class="banner-canvas__logo-bracket">{</span>J<span class="banner-canvas__logo-bracket">}</span>
+                        </div>
+                        <h2 class="banner-canvas__name">Joaquín Noguera Velázquez</h2>
+                        <p class="banner-canvas__role" data-i18n="banner.canvas_role">Senior Software Developer</p>
+                        <p class="banner-canvas__stack" data-i18n="banner.canvas_stack">NestJS · Node.js · PostgreSQL · TypeScript</p>
+                        <p class="banner-canvas__location" data-i18n="banner.canvas_location">Paraná, Argentina · Remote</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/banner.js"></script>
+</body>
+</html>

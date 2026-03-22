@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const NAV_LINK_COUNT = 6;
+const NAV_LINK_COUNT = 7;
 const CONTACT_CARD_COUNT = 4;
 const MIN_EXPERIENCE_ENTRIES = 4;
 const MIN_SKILL_TAGS = 10;

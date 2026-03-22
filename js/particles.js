@@ -25,12 +25,35 @@ const PARTICLE_RADIUS_RANGE = 2;
 const SPEED_LIMIT_FACTOR = 2;
 const LINE_WIDTH = 1;
 const FULL_CIRCLE = Math.PI * 2;
+const MIN_PARTICLE_COUNT = 8;
+const BANNER_PIXELS_PER_PARTICLE = 3800;
+const BANNER_MAX_PARTICLES = 160;
+const BANNER_RELAYOUT_DELAY_MS = 400;
+/** LinkedIn cover — must match CSS `#linkedin-banner`; do not use `clientWidth` (often ~75% during layout). */
+const LINKEDIN_BANNER_SIZE = { width: 1584, height: 396 };
+
+/**
+ * @typedef {'viewport' | 'container'} ParticleBoundsMode
+ */
 
 /**
  * Creates and manages the particle canvas animation.
  * @param {HTMLCanvasElement} canvas - The target canvas element
+ * @param {{
+ *   bounds?: ParticleBoundsMode,
+ *   pixelsPerParticle?: number,
+ *   maxParticles?: number,
+ *   fixedLogicalSize?: { width: number, height: number },
+ * }} [options] - `container` uses parent size unless `fixedLogicalSize` is set (LinkedIn banner).
  */
-function createParticleSystem(canvas) {
+function createParticleSystem(canvas, options = {}) {
+  const boundsMode = options.bounds === 'container' ? 'container' : 'viewport';
+  const pixelBudget = typeof options.pixelsPerParticle === 'number'
+    ? options.pixelsPerParticle
+    : PIXELS_PER_PARTICLE;
+  const particleCap = typeof options.maxParticles === 'number'
+    ? options.maxParticles
+    : MAX_PARTICLES;
   const ctx = canvas.getContext('2d');
   if (!ctx) {
     return null;
@@ -41,6 +64,26 @@ function createParticleSystem(canvas) {
   let mouseY = MOUSE_OFFSCREEN;
   let animationId = null;
   let isVisible = true;
+
+  function getSize() {
+    if (boundsMode === 'viewport') {
+      return { width: window.innerWidth, height: window.innerHeight };
+    }
+    const fixed = options.fixedLogicalSize;
+    if (
+      fixed
+      && typeof fixed.width === 'number'
+      && typeof fixed.height === 'number'
+      && fixed.width > 0
+      && fixed.height > 0
+    ) {
+      return { width: fixed.width, height: fixed.height };
+    }
+    const parent = canvas.parentElement;
+    const width = parent ? parent.clientWidth : 0;
+    const height = parent ? parent.clientHeight : 0;
+    return { width: width > 0 ? width : 1, height: height > 0 ? height : 1 };
+  }
 
   /**
    * Reads current theme colors from CSS custom properties.
@@ -54,21 +97,23 @@ function createParticleSystem(canvas) {
     };
   }
 
-  /** Resizes canvas to match viewport. */
+  /** Resizes canvas to match viewport or parent box. */
   function resize() {
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = window.innerWidth * dpr;
-    canvas.height = window.innerHeight * dpr;
-    ctx.scale(dpr, dpr);
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+    const { width, height } = getSize();
+    canvas.width = Math.max(1, Math.floor(width * dpr));
+    canvas.height = Math.max(1, Math.floor(height * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
   }
 
   /** Creates a single particle with random position and velocity. */
   function createParticle() {
+    const { width, height } = getSize();
     return {
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
+      x: Math.random() * width,
+      y: Math.random() * height,
       vx: (Math.random() - VELOCITY_CENTER) * PARTICLE_SPEED,
       vy: (Math.random() - VELOCITY_CENTER) * PARTICLE_SPEED,
       radius: Math.random() * PARTICLE_RADIUS_RANGE + PARTICLE_RADIUS_BASE,
@@ -76,15 +121,16 @@ function createParticleSystem(canvas) {
   }
 
   /** Initializes the particle array. */
-  function initParticles() {
-    const count = Math.min(MAX_PARTICLES, Math.floor(window.innerWidth * window.innerHeight / PIXELS_PER_PARTICLE));
+  function resetParticleArray() {
+    const { width, height } = getSize();
+    const raw = Math.floor((width * height) / pixelBudget);
+    const count = Math.min(particleCap, Math.max(raw, MIN_PARTICLE_COUNT));
     particles = Array.from({ length: count }, createParticle);
   }
 
   /** Updates particle positions and handles boundary wrapping. */
   function updateParticles() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const { width, height } = getSize();
 
     particles.forEach((p) => {
       const dx = p.x - mouseX;
@@ -116,7 +162,8 @@ function createParticleSystem(canvas) {
   /** Renders particles and connecting lines. */
   function draw() {
     const colors = getColors();
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    const { width, height } = getSize();
+    ctx.clearRect(0, 0, width, height);
 
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -175,25 +222,32 @@ function createParticleSystem(canvas) {
     }
   }
 
-  resize();
-  initParticles();
+  function relayout() {
+    resize();
+    resetParticleArray();
+  }
+
+  relayout();
 
   const debouncedResize = debounce(() => {
-    resize();
-    initParticles();
+    relayout();
   }, RESIZE_DEBOUNCE_MS);
 
   window.addEventListener('resize', debouncedResize);
 
-  canvas.parentElement.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+  const moveRoot = canvas.parentElement;
+  if (moveRoot) {
+    moveRoot.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
 
-  canvas.parentElement.addEventListener('mouseleave', () => {
-    mouseX = MOUSE_OFFSCREEN;
-    mouseY = MOUSE_OFFSCREEN;
-  });
+    moveRoot.addEventListener('mouseleave', () => {
+      mouseX = MOUSE_OFFSCREEN;
+      mouseY = MOUSE_OFFSCREEN;
+    });
+  }
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
@@ -203,7 +257,7 @@ function createParticleSystem(canvas) {
     }
   });
 
-  return { start, stop, resize };
+  return { start, stop, resize: relayout };
 }
 
 /**
@@ -221,8 +275,45 @@ export function initParticles() {
     return;
   }
 
-  const system = createParticleSystem(canvas);
+  const system = createParticleSystem(canvas, { bounds: 'viewport' });
   if (system) {
     system.start();
+  }
+}
+
+/**
+ * Particles inside the LinkedIn banner export area (same logic as the homepage, bounded to the card).
+ */
+export function initBannerParticles() {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    return;
+  }
+
+  const canvas = document.getElementById('banner-particle-canvas');
+  if (!canvas) {
+    return;
+  }
+
+  const system = createParticleSystem(canvas, {
+    bounds: 'container',
+    fixedLogicalSize: LINKEDIN_BANNER_SIZE,
+    pixelsPerParticle: BANNER_PIXELS_PER_PARTICLE,
+    maxParticles: BANNER_MAX_PARTICLES,
+  });
+  if (system) {
+    system.start();
+    /* Late layout: parent width can be wrong on first paint; Playwright also calls this. */
+    if (typeof window !== 'undefined') {
+      window.__jcvBannerParticleResize = () => {
+        system.resize();
+      };
+    }
+    requestAnimationFrame(() => {
+      system.resize();
+    });
+    setTimeout(() => {
+      system.resize();
+    }, BANNER_RELAYOUT_DELAY_MS);
   }
 }

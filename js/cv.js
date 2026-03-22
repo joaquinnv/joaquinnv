@@ -7,7 +7,8 @@
 import { initTheme } from './theme.js';
 import { initI18n } from './i18n.js';
 import { initAnimations } from './animations.js';
-import { initMobileNav, updateCopyrightYear } from './utils.js';
+import { initCurrentPageNavLink, initMobileNav, updateCopyrightYear } from './utils.js';
+import { renderSiteNav } from './site-nav.js';
 
 /* ── Constants ── */
 const PDF_FILENAME = 'Joaquin-Noguera-CV.pdf';
@@ -41,18 +42,9 @@ function initDownloadButton() {
   }
 }
 
-/** Prevents redundant navigation for the current-page nav item. */
-function initCurrentPageNavLink() {
-  const currentCvLink = document.querySelector('[data-nav-current]');
-  if (currentCvLink) {
-    currentCvLink.addEventListener('click', (event) => {
-      event.preventDefault();
-    });
-  }
-}
-
 /** Initializes all CV page modules and features. */
 async function init() {
+  renderSiteNav('cv');
   initTheme();
   await initI18n();
   initAnimations();

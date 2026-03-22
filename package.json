@@ -6,7 +6,8 @@
   "scripts": {
     "serve": "npx serve@latest . -l 3000",
     "build:pdf": "node scripts/generate-pdf.js",
-    "lint:html": "htmlhint index.html cv.html 404.html",
+    "build:banner": "node scripts/generate-banner.js",
+    "lint:html": "htmlhint index.html cv.html banner.html 404.html",
     "lint:css": "stylelint \"css/**/*.css\"",
     "lint:js": "eslint \"js/**/*.js\" \"tests/**/*.js\"",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
