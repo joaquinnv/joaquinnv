@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
  * Generates a PDF of the CV page using Playwright.
- * Run: node scripts/generate-pdf.js
+ * Run: npm run build:pdf
+ *
+ * First-time setup (if launch fails): npx playwright install chromium
  */
 
 const { chromium } = require('playwright');
@@ -9,14 +11,16 @@ const { execSync, spawn } = require('child_process');
 const path = require('path');
 
 const PORT = 3099;
-const CV_URL = `http://localhost:${PORT}/cv.html`;
+/* Force EN + light theme so PDF matches canonical CV regardless of localStorage */
+const CV_URL = `http://127.0.0.1:${PORT}/cv.html?lang=en`;
 const OUTPUT_PATH = path.resolve(__dirname, '..', 'assets', 'joaquin-noguera-cv.pdf');
 
 async function main() {
-  /* Start a temporary local server */
+  /* Start a temporary local server (shell: true helps Windows find npx) */
   const server = spawn('npx', ['serve', '.', '-l', String(PORT), '--no-clipboard'], {
     cwd: path.resolve(__dirname, '..'),
     stdio: 'ignore',
+    shell: true,
   });
 
   /* Wait for server to be ready */
@@ -27,7 +31,14 @@ async function main() {
     const context = await browser.newContext({ colorScheme: 'light' });
     const page = await context.newPage();
 
-    await page.goto(CV_URL, { waitUntil: 'networkidle' });
+    await page.goto(CV_URL, { waitUntil: 'networkidle', timeout: 60_000 });
+    await page.waitForFunction(
+      () => !document.documentElement.hasAttribute('data-i18n-pending'),
+      { timeout: 15_000 },
+    );
+    await page.evaluate(() => {
+      document.documentElement.setAttribute('data-theme', 'light');
+    });
 
     /* Hide nav, footer, action buttons for PDF and set proper page margins */
     await page.addStyleTag({

@@ -22,13 +22,19 @@
   "about": {
     "label": "// about-me",
     "title": "About Me",
-    "subtitle": "Backend developer with a passion for scalable architecture",
+    "subtitle": "Backend engineer — I care that payments work when it matters",
     "filename": "README.md",
-    "p1": "I'm a Senior Software Developer with 6+ years of professional experience and over a decade writing code. For the past 4+ years, I've been building the payment and event management infrastructure at Blackthorn.io, working across the full backend stack — NestJS microservices, PostgreSQL, MongoDB, Redis — designing systems that handle thousands of daily transactions reliably.",
-    "p2": "My view of this role goes beyond any single technology: I don't see myself boxed in as an Angular or TypeScript developer. I see myself as a builder of products and digital experiences, always leveraging technology and software development to create real impact for users and the business.",
-    "p3": "Looking ahead, I want to keep deepening my work in AI-driven products and also move into mobile development to build cohesive end-to-end experiences.",
-    "learning_label": "Currently exploring",
-    "learning_items": "LangChain · LangGraph · AI Agents · Software Architecture · Mobile Development"
+    "p1": "I've been coding for well over ten years, and about six of those in real jobs. Since 2022 I've been at Blackthorn.io with the backend as my home base: NestJS services, PostgreSQL, MongoDB, Redis. Most days it's payments and events — keeping that flow steady, watching for regressions, and tightening things before they turn into fires.",
+    "p2": "Backend is where I'm strongest, but in this job I work across whatever ships the feature: APIs and data first, and Angular or the rest of the stack when that's what the ticket needs. I still like being with product or support when production acts up, chasing a slow query, or refactoring so the next person who opens the file isn't guessing.",
+    "p3": "I'm paying attention to where AI can cut real repetitive work out of day-to-day engineering — time and steps I actually get back, not another trend to chase. After work, in a totally different spirit, I sometimes build small mobile apps as a hobby. I'm not looking for mobile roles; mobile just feels like the best fit when I'm the only one carrying a project from a small idea to something that runs on my phone.",
+    "learning_label": "On the side I'm exploring",
+    "learning_tags": {
+      "langchain": "LangChain",
+      "langgraph": "LangGraph",
+      "ai_agents": "AI Agents",
+      "architecture": "Software Architecture",
+      "mobile": "Mobile Development"
+    }
   },
   "experience": {
     "label": "// career-path",
@@ -127,6 +133,18 @@
         "name": "Cristian Vizzarri",
         "role": "Salesforce Developer, Folder IT",
         "initials": "CV"
+      },
+      {
+        "text": "I had the pleasure of working with Joaquin at Blackthorn and can confidently say he's a fantastic developer and collaborator. He approaches problems with both technical depth and an architectural perspective, always aiming for robust and scalable solutions. He was always open to feedback, quick to address issues, and proactive in improving the overall quality of the system.",
+        "name": "Franco Bianucci",
+        "role": "Sr. QA Automation Engineer, Outcoding",
+        "initials": "FB"
+      },
+      {
+        "text": "Joaquin is out of this world. He has the right skills to propose good solutions, knows how to solve complex problems, and is a full-stack engineer with a lot of knowledge. He interviewed me when I joined Blackthorn, and he designed a very strong, complex project that integrates a PostgreSQL database with Salesforce to calculate rules for permissions in events without using PII, which was a major requirement. I can recommend Joaquin for future projects — he's very capable of creating software architecture from scratch!",
+        "name": "Fernando Zamperin",
+        "role": "IT Swiss Knife Expert, Blackthorn",
+        "initials": "FZ"
       }
     ]
   },
@@ -148,7 +166,7 @@
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Senior Software Developer",
-    "summary": "Senior Software Developer with 6+ years of professional experience and 10+ years programming. For the past 4+ years at Blackthorn.io, I've built scalable payment and event management systems using NestJS microservices, PostgreSQL, MongoDB, and Redis. Proven track record of solving complex challenges — from migrating 48 Salesforce classes to implementing Redis caching that reduced query times from 20s to sub-second. Adaptable developer who rapidly masters new technologies and delivers innovative solutions. Currently exploring AI agents with LangChain and LangGraph, while deepening software architecture and moving into mobile development.",
+    "summary": "Senior Software Developer with 10+ years of coding and 6+ years professionally. At Blackthorn.io (2022–present) I focus on backend payments and events: NestJS, PostgreSQL, MongoDB, and Redis. I'm strongest on APIs and data, but I work across the stack—including Angular—when the ticket needs it. Key work: migrated 48 Salesforce classes to external storage; Redis caching that cut 20+ second list queries to sub-second; co-created microservices in a 10+ repo NestJS architecture; mentoring, QA support, Tier-3 production escalations, and on-call for payments. I'm exploring where AI saves real time in engineering; mobile is an off-hours hobby (solo end-to-end builds), not a role I'm pursuing.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
     "sections": {
@@ -164,11 +182,12 @@
         "period": "Apr 2022 — Present",
         "location": "United States (Remote)",
         "bullets": [
-          "Migrated 48 Salesforce classes (events, tickets, system data) to external database storage, bypassing governor limits and improving scalability",
-          "Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing query times from 20s+ to sub-second",
-          "Designed purchase funnel analytics using Google Tag Manager, tracking user drop-off points for data-driven product decisions",
-          "Co-created microservices within a 10+ repository NestJS architecture",
-          "Mentor developers, support QA team, handle Tier 3 production escalations and on-call rotation"
+          "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
+          "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
+          "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
+          "Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability",
+          "Provide cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
+          "Participate in on-call rotation, regularly resolving critical payment production incidents under pressure"
         ]
       },
       {
@@ -177,9 +196,9 @@
         "period": "Aug 2021 — Apr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Provided CPQ support and maintenance for active client production systems on Salesforce",
-          "Resolved long-standing bugs improving system reliability for end users",
-          "Monitored trigger handlers, batch jobs, and schedulable processes"
+          "Provided CPQ support and maintenance for active client production systems on the Salesforce platform",
+          "Resolved long-standing bugs in client Salesforce applications, improving system reliability for end users",
+          "Monitored and reviewed trigger handlers, batch jobs, and schedulable processes to ensure operational stability"
         ]
       },
       {
@@ -189,8 +208,8 @@
         "location": "Santa Fe, Argentina",
         "bullets": [
           "Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake",
-          "Connected Salesforce with Microsoft Dynamics 365 for seamless data exchange",
-          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring"
+          "Connected Salesforce with Microsoft Dynamics 365 and other enterprise systems for seamless data exchange",
+          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring, providing full visibility into integration health"
         ]
       },
       {
@@ -199,8 +218,9 @@
         "period": "Sep 2020 — Feb 2021",
         "location": "Esperanza, Santa Fe, Argentina",
         "bullets": [
-          "Built a full-stack graphic resources platform from scratch (Angular 9 + Node.js/Express API)",
-          "Translated Adobe XD designs into production interfaces with Bootstrap and Angular Material"
+          "Built a full-stack graphic resources platform from scratch using Angular 9 frontend and Node.js/Express RESTful API",
+          "Translated Adobe XD mockups into production-ready interfaces using Bootstrap and Angular Material",
+          "Identified and proposed architectural improvements to key portions of the codebase"
         ]
       }
     ],

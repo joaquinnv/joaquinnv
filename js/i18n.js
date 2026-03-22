@@ -8,7 +8,7 @@
 const STORAGE_KEY = 'jcv-lang';
 const CACHE_PREFIX = 'jcv-i18n-cache-';
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
-const CACHE_VERSION = '2026-02-16-1';
+const CACHE_VERSION = '2026-03-22-8';
 const DEFAULT_LANG = 'en';
 const SUPPORTED_LANGS = ['en', 'es'];
 
