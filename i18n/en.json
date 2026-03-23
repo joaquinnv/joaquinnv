@@ -181,8 +181,8 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Senior Software Developer",
-    "summary": "I have more than ten years of programming experience, including about six years in professional roles. Since 2022 I have worked at Blackthorn.io with backend as my primary focus — NestJS, PostgreSQL, MongoDB, and Redis — on payments and events, and on keeping systems stable as traffic grows or incidents occur in production. I am strongest in APIs and data, but I also contribute across the stack as each delivery requires, including Angular when the ticket calls for it. I migrated 48 Salesforce classes to external storage, implemented Redis to bring queries from over twenty seconds down to under one second, and co-created microservices within a NestJS architecture spanning more than ten repositories. I also mentor colleagues, work closely with QA, manage Tier-3 production escalations, and take part in on-call coverage for payments. I am exploring in a practical way how artificial intelligence can reduce repetitive work in day-to-day software engineering.",
+    "subtitle": "Senior Backend Software Developer",
+    "summary": "Senior backend developer with 10+ years in programming and 6+ years in professional software delivery. I build and operate payment and event systems with NestJS, Node.js/TypeScript, PostgreSQL, MongoDB, and Redis, with strong ownership of APIs, data modeling, performance, and production reliability. Key outcomes include migrating 48 Salesforce classes to external storage, cutting heavy query latency from 20+ seconds to sub-second with Redis, and co-building microservices across a 10+ repository architecture. I also mentor developers, partner with QA and product, handle Tier-3 incidents, and support on-call operations for payment-critical flows.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
     "linkedin_banner_link": "LinkedIn cover banner",
@@ -195,17 +195,17 @@
     },
     "roles": [
       {
-        "title": "Software Developer",
+        "title": "Software Developer (Backend)",
         "company": "Blackthorn.io",
         "period": "Apr 2022 — Present",
         "location": "United States (Remote)",
         "bullets": [
           "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
-          "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
-          "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
-          "Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability",
-          "Provide cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
-          "Participate in on-call rotation, regularly resolving critical payment production incidents under pressure"
+          "Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing heavy list query latency from 20+ seconds to sub-second",
+          "Built purchase-funnel analytics with Google Tag Manager to track drop-off and event engagement, enabling data-driven product decisions",
+          "Co-developed NestJS microservices in a 10+ repository architecture, improving service isolation and independent deployability",
+          "Provided cross-functional leadership through developer mentoring, QA collaboration, and Tier-3 production escalation support",
+          "Participated in on-call rotation and resolved critical payment incidents under high-pressure production conditions"
         ]
       },
       {
