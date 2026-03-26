@@ -63,12 +63,12 @@
         "period": "Abr 2022 — Presente",
         "location": "Estados Unidos (Remoto)",
         "bullets": [
-          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad sin comprometer las políticas de seguridad",
+          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
           "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
           "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y el despliegue independiente",
           "Brindo soporte multifuncional: ofrezco mentoría a desarrolladores, colaboro con el equipo de QA y gestiono escalaciones de producción de nivel tres",
-          "Participo en rotación de guardia, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
+          "Participo en rotación on-call, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
         ]
       },
       {
@@ -79,7 +79,7 @@
         "bullets": [
           "Brindé soporte y mantenimiento de CPQ para sistemas de producción activos de clientes en la plataforma Salesforce",
           "Resolví errores persistentes en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
-          "Monitoreé y revisé handlers de triggers, trabajos batch y procesos programables para asegurar estabilidad operativa"
+          "Monitoreé y revisé trigger handlers, batch jobs y procesos schedulable para asegurar estabilidad operativa"
         ]
       },
       {
@@ -161,6 +161,12 @@
         "name": "Fernando Zamperin",
         "role": "Desarrollador de Software Senior, Blackthorn",
         "initials": "FZ"
+      },
+      {
+        "text": "Tuve la oportunidad de trabajar con Joaquín en Digital Lab, donde ambos comenzamos nuestras carreras. Desde el primer día, se destacó por ser una persona confiable, fácil de tratar y siempre dispuesta a ayudar. Colaboramos de cerca en varias tareas, y valoré mucho su forma de abordar los problemas: con calma, criterio y siempre buscando una buena solución. Es un gran jugador de equipo y alguien en quien se puede confiar cuando las cosas se complican. Me alegra haber tenido la oportunidad de trabajar con él al inicio de nuestras carreras, y estoy seguro de que seguirá teniendo excelentes resultados donde sea que vaya.",
+        "name": "Hernan Llul",
+        "role": "Full Stack Developer, DigitalLab",
+        "initials": "HL"
       }
     ]
   },
@@ -182,7 +188,7 @@
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Desarrollador Backend Senior",
-    "summary": "Desarrollador backend senior con 10+ años programando y 6+ años en entrega de software profesional. Diseño, desarrollo y opero sistemas de pagos y eventos con NestJS, Node.js/TypeScript, PostgreSQL, MongoDB y Redis, con foco en APIs, modelado de datos, performance y estabilidad en producción. Logros clave: migración de 48 clases de Salesforce a almacenamiento externo, reducción de latencia de consultas pesadas de 20+ segundos a menos de un segundo con Redis y co-creación de microservicios en una arquitectura de más de 10 repositorios. Además, realizo mentorías, trabajo en conjunto con QA y producto, gestiono incidentes de nivel 3 y participo en guardias para flujos críticos de pagos.",
+    "summary": "Desarrollador backend senior con 10+ años programando y 6+ años en entrega de software profesional. Diseño, desarrollo y opero sistemas de pagos y eventos con NestJS, Node.js/TypeScript, PostgreSQL, MongoDB y Redis, con foco en APIs, modelado de datos, performance y estabilidad en producción. Logros clave: migración de 48 clases de Salesforce a almacenamiento externo, reducción de latencia de consultas pesadas de 20+ segundos a menos de un segundo con Redis y co-creación de microservicios en una arquitectura de más de 10 repositorios. Además, realizo mentorías, trabajo en conjunto con QA y producto, gestiono incidentes de nivel 3 y participo en rotación on-call para flujos críticos de pagos.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
     "linkedin_banner_link": "Banner para LinkedIn",
@@ -200,12 +206,12 @@
         "period": "Abr 2022 — Presente",
         "location": "Estados Unidos (Remoto)",
         "bullets": [
-          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los límites de gobernador y mejorando la escalabilidad sin comprometer las políticas de seguridad",
+          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé caché Redis con TTLs dinámicos en endpoints no relacionados con pagos, reduciendo la latencia de consultas pesadas de 20+ segundos a menos de un segundo",
           "Diseñé analíticas de embudo de compra con Google Tag Manager para medir abandono y engagement, habilitando decisiones de producto basadas en datos",
           "Co-desarrollé microservicios en NestJS dentro de una arquitectura de más de 10 repositorios, mejorando aislamiento y despliegue independiente",
           "Brindé liderazgo multifuncional mediante mentoría a desarrolladores, colaboración con QA y gestión de escalaciones de producción de nivel 3",
-          "Participé en rotación de guardia y resolví incidentes críticos de pagos bajo condiciones de alta presión"
+          "Participé en rotación on-call y resolví incidentes críticos de pagos bajo condiciones de alta presión"
         ]
       },
       {
@@ -216,7 +222,7 @@
         "bullets": [
           "Brindé soporte y mantenimiento de CPQ para sistemas de producción activos de clientes en la plataforma Salesforce",
           "Resolví errores persistentes en aplicaciones Salesforce de clientes, mejorando la confiabilidad del sistema",
-          "Monitoreé y revisé handlers de triggers, trabajos batch y procesos programables para asegurar estabilidad operativa"
+          "Monitoreé y revisé trigger handlers, batch jobs y procesos schedulable para asegurar estabilidad operativa"
         ]
       },
       {
