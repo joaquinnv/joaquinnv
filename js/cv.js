@@ -20,7 +20,7 @@ const PDF_PATH_BY_LANG = {
   es: 'assets/joaquin-noguera-cv-es.pdf',
 };
 /** Bust browser/CDN cache when the pre-built PDF is regenerated (`npm run build:pdf`). */
-const PDF_CACHE_BUST = '20260326a';
+const PDF_CACHE_BUST = '20261110a';
 
 /** Handles print button — opens the browser print dialog. */
 function initPrintButton() {

@@ -9,7 +9,7 @@
  * download button does not serve a stale file from the browser cache.
  */
 
-const { chromium } = require('playwright');
+const { chromium } = require('@playwright/test');
 const { spawn } = require('child_process');
 const path = require('path');
 
@@ -25,6 +25,28 @@ const EXPORTS = [
     outputPath: path.resolve(__dirname, '..', 'assets', 'joaquin-noguera-cv-es.pdf'),
   },
 ];
+/** Waits until the local server answers (npx may need to download `serve` the first time). */
+async function waitForServer(port, timeoutMs = 60_000) {
+  const http = require('http');
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    const ok = await new Promise((resolve) => {
+      const req = http.get({ host: '127.0.0.1', port, path: '/', timeout: 1000 }, (res) => {
+        res.resume();
+        resolve(true);
+      });
+      req.on('error', () => resolve(false));
+      req.on('timeout', () => {
+        req.destroy();
+        resolve(false);
+      });
+    });
+    if (ok) return;
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+  throw new Error(`Local server on port ${port} did not start in time`);
+}
+
 async function main() {
   /* Start a temporary local server (shell: true helps Windows find npx) */
   const server = spawn('npx', ['serve', '.', '-l', String(PORT), '--no-clipboard'], {
@@ -34,7 +56,7 @@ async function main() {
   });
 
   /* Wait for server to be ready */
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await waitForServer(PORT);
 
   try {
     const browser = await chromium.launch();

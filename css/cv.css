@@ -125,7 +125,7 @@
 
 @media (min-width: 40rem) {
   .cv__header-grid {
-    grid-template-columns: minmax(13.5rem, 34%) 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-8);
     align-items: start;
   }

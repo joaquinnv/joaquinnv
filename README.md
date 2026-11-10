@@ -1,22 +1,22 @@
 # Hey, I'm Joaquín 👋
 
-**Developer Backend Senior**
+**Senior Backend Developer (Node.js / NestJS)**
 
 I have 6+ years of professional experience and over a decade writing code. I architect NestJS microservices, optimize databases, and implement caching strategies that turn 20-second queries into sub-second responses. I thrive in fast-paced environments where I can solve complex problems and bring innovative solutions to the table.
 
 ## 🛠 Tech Stack
 
-**Backend:** Node.js · NestJS · Express · REST APIs · Microservices · Redis
+**Backend:** Node.js · NestJS · TypeScript · Express · REST APIs · Microservices · Redis · Payment Gateways · Jest
 
-**Frontend:** Angular · TypeScript · JavaScript · HTML5 · CSS3
+**Frontend:** Angular · JavaScript · HTML5 · CSS3
 
-**Cloud & DevOps:** Azure · Salesforce · Docker · Git · CI/CD
+**Cloud & DevOps:** Azure · Salesforce · Docker · Kubernetes · Git · CI/CD
 
 **Databases:** PostgreSQL · MongoDB · SQL
 
 ## 🔭 What I'm working on
 
-- Building payment infrastructure processing thousands of daily transactions
+- Open to new backend roles (**Node.js / NestJS**, remote)
 - Exploring **LangChain**, **LangGraph**, and **AI Agents**
 - Deepening my knowledge in software architecture
 
