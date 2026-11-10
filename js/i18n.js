@@ -200,7 +200,7 @@ function updateToggleLabel() {
       label.textContent = currentLang.toUpperCase();
     }
     btn.setAttribute('aria-label',
-      currentLang === 'en' ? 'Cambiar a español' : 'Switch to English'
+      `${currentLang.toUpperCase()}: ${currentLang === 'en' ? 'Cambiar a español' : 'Switch to English'}`
     );
   });
 }

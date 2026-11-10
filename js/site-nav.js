@@ -46,10 +46,11 @@ export function renderSiteNav(page) {
 
   header.innerHTML = `
         <div class="nav__container">
-            <a href="${logoHref}" class="nav__logo" aria-label="Joaquín Noguera — Home">
-                <span class="nav__logo-bracket">{</span>
-                <span class="nav__logo-letter">J</span>
-                <span class="nav__logo-bracket">}</span>
+            <a href="${logoHref}" class="nav__logo">
+                <span class="nav__logo-bracket" aria-hidden="true">{</span>
+                <span class="nav__logo-letter" aria-hidden="true">J</span>
+                <span class="nav__logo-bracket" aria-hidden="true">}</span>
+                <span class="sr-only">Joaquín Noguera — Home</span>
             </a>
 
             <nav class="nav__links" id="nav-links" aria-label="Main navigation">
@@ -59,7 +60,7 @@ export function renderSiteNav(page) {
             </nav>
 
             <div class="nav__actions">
-                <button class="nav__lang-toggle" data-lang-toggle aria-label="Switch language">
+                <button class="nav__lang-toggle" data-lang-toggle aria-label="EN: Switch language">
                     <span>EN</span>
                 </button>
                 <button class="nav__theme-toggle" data-theme-toggle aria-label="Toggle dark mode">

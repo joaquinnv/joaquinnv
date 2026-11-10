@@ -140,7 +140,7 @@ html.banner-export #linkedin-banner {
 .banner-preview-wrap {
   overflow-x: auto;
   padding-bottom: var(--space-16);
-  margin: 0 calc(-1 * var(--container-padding)) 0;
+  margin: 0 calc(-1 * var(--container-padding));
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 }
@@ -217,11 +217,11 @@ html.banner-export #linkedin-banner {
     auto,
     48px 48px,
     48px 48px;
-  opacity: 0.55;
+  opacity: 55%;
 }
 
 [data-theme="dark"] .banner-canvas__decor {
-  opacity: 0.38;
+  opacity: 38%;
   background-image:
     linear-gradient(
       135deg,

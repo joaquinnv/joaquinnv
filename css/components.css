@@ -78,6 +78,10 @@
   color: var(--color-secondary);
 }
 
+[data-theme="light"] .nav__link--cv {
+  color: var(--color-secondary-hover);
+}
+
 .nav__link--cv:hover {
   color: var(--color-text);
   background-color: var(--color-secondary-light);

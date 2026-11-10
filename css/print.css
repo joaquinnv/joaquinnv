@@ -136,7 +136,7 @@
 
   .cv__header-grid {
     display: grid;
-    grid-template-columns: 38mm 1fr;
+    grid-template-columns: 1fr;
     gap: 5mm;
     align-items: start;
   }
