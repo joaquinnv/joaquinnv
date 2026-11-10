@@ -19,10 +19,10 @@
     "preview_label": "Canvas (export area)",
     "download_dark": "Download PNG — dark",
     "download_light": "Download PNG — light",
-    "canvas_role": "Senior Software Developer",
+    "canvas_role": "Senior Backend Developer",
     "canvas_stack": "NestJS · Node.js · PostgreSQL · TypeScript",
     "canvas_location": "Paraná, Argentina · Remote",
-    "canvas_aria": "LinkedIn profile banner: Joaquín Noguera Velázquez, Senior Software Developer"
+    "canvas_aria": "LinkedIn profile banner: Joaquín Noguera Velázquez, Senior Backend Developer"
   },
   "hero": {
     "badge": "Open to opportunities",
@@ -30,7 +30,7 @@
     "cta_explore": "Explore My Work",
     "cta_cv": "View CV",
     "typing": [
-      "Senior Software Developer",
+      "Senior Backend Developer",
       "Building payment systems at scale",
       "NestJS • Node.js • PostgreSQL",
       "Exploring AI with LangChain"
@@ -40,8 +40,8 @@
     "label": "// about-me",
     "title": "About Me",
     "filename": "README.md",
-    "p1": "I've been coding for well over ten years, and about six of those in real jobs. Since 2022 I've been at Blackthorn.io with the backend as my home base: NestJS services, PostgreSQL, MongoDB, Redis. Most days it's payments and events — keeping that flow steady, watching for regressions, and tightening things before they turn into fires.",
-    "p2": "Backend is where I'm strongest, but in this job I work across whatever ships the feature: APIs and data first, and Angular or the rest of the stack when that's what the ticket needs. I still like being with product or support when production acts up, chasing a slow query, or refactoring so the next person who opens the file isn't guessing.",
+    "p1": "I've been coding for well over ten years, and about six of those in real jobs. From 2022 to 2026 I worked at Blackthorn.io with the backend as my home base: NestJS services, PostgreSQL, MongoDB, Redis. Most days it was payments and events — keeping that flow steady, watching for regressions, and tightening things before they turned into fires.",
+    "p2": "Backend is where I'm strongest, but in that job I worked across whatever shipped the feature: APIs and data first, and Angular or the rest of the stack when that's what the ticket needed. I still like being with product or support when production acts up, chasing a slow query, or refactoring so the next person who opens the file isn't guessing.",
     "p3": "I'm paying attention to where AI can cut real repetitive work out of day-to-day engineering — time and steps I actually get back, not another trend to chase. After work, in a totally different spirit, I sometimes build small mobile apps as a hobby. I'm not looking for mobile roles; mobile just feels like the best fit when I'm the only one carrying a project from a small idea to something that runs on my phone.",
     "learning_label": "On the side I'm exploring",
     "learning_tags": {
@@ -60,37 +60,25 @@
       {
         "title": "Software Developer",
         "company": "Blackthorn.io",
-        "period": "Apr 2022 — Present",
+        "period": "Apr 2022 — Nov 2026",
         "location": "United States (Remote)",
         "bullets": [
           "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
           "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
           "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
           "Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability",
-          "Provide cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
-          "Participate in on-call rotation, regularly resolving critical payment production incidents under pressure"
+          "Provided cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
+          "Participated in on-call rotation, regularly resolving critical payment production incidents under pressure"
         ]
       },
       {
-        "title": "Salesforce Developer",
+        "title": "Salesforce & Azure Integration Developer",
         "company": "Folder IT",
-        "period": "Aug 2021 — Apr 2022",
+        "period": "Mar 2021 — Apr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Provided CPQ support and maintenance for active client production systems on the Salesforce platform",
-          "Resolved long-standing bugs in client Salesforce applications, improving system reliability for end users",
-          "Monitored and reviewed trigger handlers, batch jobs, and schedulable processes to ensure operational stability"
-        ]
-      },
-      {
-        "title": "Azure Integration Developer",
-        "company": "Folder IT",
-        "period": "Mar 2021 — Jul 2021",
-        "location": "Santa Fe, Argentina",
-        "bullets": [
-          "Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake",
-          "Connected Salesforce with Microsoft Dynamics 365 and other enterprise systems for seamless data exchange",
-          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring, providing full visibility into integration health"
+          "Built 40+ enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
+          "Provided Salesforce CPQ support in client production systems: fixed long-standing bugs and monitored trigger handlers, batch jobs and schedulable processes to keep operations stable"
         ]
       },
       {
@@ -99,8 +87,7 @@
         "period": "Sep 2020 — Feb 2021",
         "location": "Esperanza, Santa Fe, Argentina",
         "bullets": [
-          "Built a full-stack graphic resources platform from scratch using Angular 9 frontend and Node.js/Express RESTful API",
-          "Translated Adobe XD mockups into production-ready interfaces using Bootstrap and Angular Material",
+          "Built a full-stack graphic resources platform from scratch with an Angular 9 frontend and a Node.js/Express REST API, turning Adobe XD mockups into production-ready interfaces (Bootstrap, Angular Material)",
           "Identified and proposed architectural improvements to key portions of the codebase"
         ]
       }
@@ -109,22 +96,22 @@
   "skills": {
     "label": "// tech-stack",
     "title": "Skills",
-    "subtitle": "Technologies I work with daily and have deep experience in",
+    "subtitle": "Technologies I've used in production",
     "categories": [
       {
         "icon": "fas fa-server",
         "title": "Backend",
-        "items": ["Node.js", "NestJS", "Express", "REST APIs", "Microservices", "Redis"]
+        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservices", "Redis", "Payment Gateways", "Testing (Jest)"]
       },
       {
         "icon": "fas fa-palette",
         "title": "Frontend",
-        "items": ["Angular", "HTML5", "CSS3", "JavaScript", "TypeScript", "Bootstrap"]
+        "items": ["Angular", "HTML5", "CSS3", "JavaScript", "Bootstrap"]
       },
       {
         "icon": "fas fa-cloud",
         "title": "Cloud & DevOps",
-        "items": ["Azure", "Salesforce", "Docker", "Git", "GitHub", "CI/CD"]
+        "items": ["Azure", "Salesforce", "Docker", "Kubernetes", "Git", "GitHub", "CI/CD"]
       },
       {
         "icon": "fas fa-database",
@@ -163,9 +150,9 @@
         "initials": "FZ"
       },
       {
-        "text": "I had the chance to work with Joaquin at Digital Lab, where we both started our careers. From day one, he stood out as someone reliable, easy to work with, and always willing to help. We collaborated closely on several tasks, and I really appreciated how he approached problems-calm, thoughtful, and always looking for a good solution. He's a strong team player and someone you can count on when things get challenging. I'm glad we had the opportunity to work together early on, and I'm sure he'll keep doing great wherever he goes.",
+        "text": "I had the chance to work with Joaquin at Digital Lab, where we both started our careers. From day one, he stood out as someone reliable, easy to work with, and always willing to help. We collaborated closely on several tasks, and I really appreciated how he approached problems — calm, thoughtful, and always looking for a good solution. He's a strong team player and someone you can count on when things get challenging. I'm glad we had the opportunity to work together early on, and I'm sure he'll keep doing great wherever he goes.",
         "name": "Hernan Llul",
-        "role": "Full Stack Developer, DigitalLab",
+        "role": "Full Stack Developer, Digital Lab",
         "initials": "HL"
       }
     ]
@@ -187,12 +174,13 @@
   },
   "cv": {
     "title": "Joaquín Noguera Velázquez",
-    "subtitle": "Senior Backend Software Developer",
-    "summary": "Senior backend developer with 10+ years in programming and 6+ years in professional software delivery. I build and operate payment and event systems with NestJS, Node.js/TypeScript, PostgreSQL, MongoDB, and Redis, with strong ownership of APIs, data modeling, performance, and production reliability. Key outcomes include migrating 48 Salesforce classes to external storage, cutting heavy query latency from 20+ seconds to sub-second with Redis, and co-building microservices across a 10+ repository architecture. I also mentor developers, partner with QA and product, handle Tier-3 incidents, and support on-call operations for payment-critical flows.",
+    "subtitle": "Senior Backend Developer (Node.js / NestJS)",
+    "summary": "Senior backend developer with 10+ years programming and 6+ years of professional experience, working with US-based teams. I design and operate payment and event systems with NestJS, Node.js/TypeScript, PostgreSQL, MongoDB and Redis, focused on performance and production reliability — for example, cutting heavy query times from 20+ seconds to sub-second with Redis. Comfortable across the stack, from Angular to Salesforce and Azure integrations.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
     "linkedin_banner_link": "LinkedIn cover banner",
     "website_label": "Portfolio",
+    "location": "Paraná, Entre Ríos, Argentina (Remote) · UTC-3",
     "sections": {
       "experience": "Experience",
       "education": "Education",
@@ -203,7 +191,7 @@
       {
         "title": "Software Developer (Backend)",
         "company": "Blackthorn.io",
-        "period": "Apr 2022 — Present",
+        "period": "Apr 2022 — Nov 2026",
         "location": "United States (Remote)",
         "bullets": [
           "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
@@ -215,25 +203,13 @@
         ]
       },
       {
-        "title": "Salesforce Developer",
+        "title": "Salesforce & Azure Integration Developer",
         "company": "Folder IT",
-        "period": "Aug 2021 — Apr 2022",
+        "period": "Mar 2021 — Apr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Provided CPQ support and maintenance for active client production systems on the Salesforce platform",
-          "Resolved long-standing bugs in client Salesforce applications, improving system reliability for end users",
-          "Monitored and reviewed trigger handlers, batch jobs, and schedulable processes to ensure operational stability"
-        ]
-      },
-      {
-        "title": "Azure Integration Developer",
-        "company": "Folder IT",
-        "period": "Mar 2021 — Jul 2021",
-        "location": "Santa Fe, Argentina",
-        "bullets": [
-          "Built 40+ enterprise integration flows using Azure Logic Apps, Function Apps, Service Bus, Data Factory, and Data Lake",
-          "Connected Salesforce with Microsoft Dynamics 365 and other enterprise systems for seamless data exchange",
-          "Implemented end-to-end monitoring via Serverless360 with Business Activity Monitoring, providing full visibility into integration health"
+          "Built 40+ enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
+          "Provided Salesforce CPQ support in client production systems: fixed long-standing bugs and monitored trigger handlers, batch jobs and schedulable processes to keep operations stable"
         ]
       },
       {
@@ -242,15 +218,14 @@
         "period": "Sep 2020 — Feb 2021",
         "location": "Esperanza, Santa Fe, Argentina",
         "bullets": [
-          "Built a full-stack graphic resources platform from scratch using Angular 9 frontend and Node.js/Express RESTful API",
-          "Translated Adobe XD mockups into production-ready interfaces using Bootstrap and Angular Material",
+          "Built a full-stack graphic resources platform from scratch with an Angular 9 frontend and a Node.js/Express REST API, turning Adobe XD mockups into production-ready interfaces (Bootstrap, Angular Material)",
           "Identified and proposed architectural improvements to key portions of the codebase"
         ]
       }
     ],
     "education": [
       {
-        "degree": "Informatics",
+        "degree": "Informatics Engineering (partial coursework)",
         "school": "Universidad Nacional del Litoral",
         "period": "2017 — 2019"
       },
@@ -262,7 +237,7 @@
     ],
     "languages_list": [
       { "name": "Spanish", "level": "Native / Bilingual" },
-      { "name": "English", "level": "Professional Working" }
+      { "name": "English", "level": "Professional · 6 yrs with US teams" }
     ]
   }
 }
