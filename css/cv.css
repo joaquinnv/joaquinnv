@@ -257,13 +257,15 @@
 .cv__lang-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  gap: var(--space-3);
   padding: var(--space-2) 0;
   font-size: var(--text-sm);
 }
 
 .cv__lang-level {
   font-size: var(--text-xs);
+  text-align: right;
   color: var(--color-text-tertiary);
 }
 
