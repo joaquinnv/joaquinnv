@@ -5,7 +5,7 @@
  */
 
 import { initTheme } from './theme.js';
-import { initI18n, onLangChange } from './i18n.js';
+import { initI18n, onLangChange, t } from './i18n.js';
 import { initParticles } from './particles.js';
 import { initAnimations } from './animations.js';
 import { initMobileNav, updateCopyrightYear } from './utils.js';
@@ -111,6 +111,94 @@ function initSmoothScroll() {
   });
 }
 
+/* ── Testimonials "Show more" ── */
+
+/** Cards visible at first (two rows on desktop) */
+const TESTIMONIALS_INITIAL_COUNT = 4;
+
+/** Cards revealed per "Show more" click */
+const TESTIMONIALS_STEP = 3;
+
+/** @type {(() => void)|null} Re-renders the button label for the current language */
+let updateTestimonialsLabel = null;
+
+/**
+ * Returns a translated label, or the English fallback before translations load.
+ * @param {string} key - i18n key
+ * @param {string} fallback - English text
+ * @returns {string} Label
+ */
+function labelOr(key, fallback) {
+  const value = t(key);
+  return value === key ? fallback : value;
+}
+
+/**
+ * Shows the first testimonials and reveals the rest in steps with "Show more".
+ * Once every card is visible the same button becomes "Show less": it collapses
+ * back to the first cards and returns the reader to the section heading, so the
+ * page never jumps and leaves them somewhere unexpected.
+ * Without JS every card stays visible and the button stays hidden.
+ */
+function initTestimonialsLoadMore() {
+  const grid = document.getElementById('testimonials-grid');
+  const button = document.getElementById('testimonials-more');
+  const section = document.getElementById('testimonials');
+  const heading = document.getElementById('testimonials-title');
+  if (!grid || !button) {
+    return;
+  }
+
+  const cards = Array.from(grid.querySelectorAll('.testimonial'));
+  if (cards.length <= TESTIMONIALS_INITIAL_COUNT) {
+    return;
+  }
+
+  let shown = TESTIMONIALS_INITIAL_COUNT;
+
+  const render = () => {
+    cards.forEach((card, index) => {
+      card.hidden = index >= shown;
+    });
+    const allShown = shown >= cards.length;
+    button.setAttribute('aria-expanded', String(allShown));
+    updateTestimonialsLabel();
+  };
+
+  updateTestimonialsLabel = () => {
+    const remaining = cards.length - shown;
+    button.textContent = remaining > 0
+      ? labelOr('testimonials.load_more', 'Show more testimonials ({count})').replace('{count}', String(remaining))
+      : labelOr('testimonials.show_less', 'Show fewer testimonials');
+  };
+
+  render();
+  button.hidden = false;
+
+  button.addEventListener('click', () => {
+    if (shown >= cards.length) {
+      shown = TESTIMONIALS_INITIAL_COUNT;
+      render();
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      (section || grid).scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+      return;
+    }
+
+    const firstNew = cards[shown];
+    shown = Math.min(cards.length, shown + TESTIMONIALS_STEP);
+    render();
+
+    /* Move focus to the first revealed card so keyboard and screen-reader users land on the new content */
+    firstNew.setAttribute('tabindex', '-1');
+    firstNew.focus();
+  });
+}
+
 /* ── Initialize Everything ── */
 async function init() {
   renderSiteNav('home');
@@ -120,6 +208,7 @@ async function init() {
   initAnimations();
   initMobileNav();
   initSmoothScroll();
+  initTestimonialsLoadMore();
   updateCopyrightYear();
 
   /* Start typing with current language phrases (set by initI18n callback below) */
@@ -141,6 +230,10 @@ onLangChange((_lang, translations) => {
 
   const typingEl = document.getElementById('hero-typing');
   startTypingAnimation(typingEl, currentPhrases);
+
+  if (updateTestimonialsLabel) {
+    updateTestimonialsLabel();
+  }
 });
 
 if (document.readyState === 'loading') {

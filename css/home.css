@@ -454,6 +454,30 @@
   }
 }
 
+.testimonial[hidden] {
+  display: none;
+}
+
+.testimonial:focus,
+#testimonials-title:focus {
+  outline: none;
+}
+
+.testimonial:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.testimonials__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+.testimonials__more:has(> [hidden]) {
+  display: none;
+}
+
 /* ── Contact ── */
 .contact__content {
   max-width: 56rem;
