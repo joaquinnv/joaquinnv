@@ -66,9 +66,10 @@
           "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
           "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
-          "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios, mejorando el aislamiento de servicios y el despliegue independiente",
+          "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios y los dockericé para que el equipo de infraestructura los desplegara en AWS, mejorando el aislamiento de servicios y el despliegue independiente",
           "Brindé soporte multifuncional: ofrecí mentoría a desarrolladores, colaboré con el equipo de QA y gestioné escalaciones de producción de nivel tres",
-          "Participé en rotación on-call, resolviendo regularmente incidentes críticos de producción de pagos bajo presión"
+          "Participé en rotación on-call, resolviendo regularmente incidentes críticos de producción de pagos bajo presión",
+          "Escribí y mantuve tests unitarios con Jest y tests end-to-end con Playwright usando escenarios Gherkin (BDD) en cada ticket nuevo; también trabajé con Cypress"
         ]
       },
       {
@@ -101,7 +102,7 @@
       {
         "icon": "fas fa-server",
         "title": "Backend",
-        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservicios", "Redis", "Pasarelas de pago", "Testing (Jest)"]
+        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservicios", "Redis", "Pasarelas de pago", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
       },
       {
         "icon": "fas fa-palette",
@@ -111,7 +112,7 @@
       {
         "icon": "fas fa-cloud",
         "title": "Cloud y DevOps",
-        "items": ["Azure", "Salesforce", "Docker", "Kubernetes", "Git", "GitHub", "CI/CD"]
+        "items": ["Azure", "Salesforce", "Docker", "Git", "GitHub", "CI/CD"]
       },
       {
         "icon": "fas fa-database",
@@ -223,9 +224,10 @@
           "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
           "Implementé caché Redis con TTLs dinámicos en endpoints no relacionados con pagos, reduciendo la latencia de consultas pesadas de 20+ segundos a menos de un segundo",
           "Diseñé analíticas de embudo de compra con Google Tag Manager para medir abandono y engagement, habilitando decisiones de producto basadas en datos",
-          "Co-desarrollé microservicios en NestJS dentro de una arquitectura de más de 10 repositorios, mejorando aislamiento y despliegue independiente",
+          "Co-desarrollé microservicios en NestJS dentro de una arquitectura de más de 10 repositorios y los dockericé para que el equipo de infraestructura los desplegara en AWS, mejorando aislamiento y despliegue independiente",
           "Brindé liderazgo multifuncional mediante mentoría a desarrolladores, colaboración con QA y gestión de escalaciones de producción de nivel 3",
-          "Participé en rotación on-call y resolví incidentes críticos de pagos bajo condiciones de alta presión"
+          "Participé en rotación on-call y resolví incidentes críticos de pagos bajo condiciones de alta presión",
+          "Escribí y mantuve tests unitarios con Jest y tests end-to-end con Playwright usando escenarios Gherkin (BDD) en cada ticket nuevo; también trabajé con Cypress"
         ]
       },
       {
