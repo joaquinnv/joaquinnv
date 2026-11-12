@@ -113,8 +113,11 @@ function initSmoothScroll() {
 
 /* ── Testimonials "Show more" ── */
 
-/** Cards visible at first and revealed per click (two rows on desktop) */
-const TESTIMONIALS_PAGE_SIZE = 4;
+/** Cards visible at first (two rows on desktop) */
+const TESTIMONIALS_INITIAL_COUNT = 4;
+
+/** Cards revealed per "Show more" click */
+const TESTIMONIALS_STEP = 3;
 
 /** @type {(() => void)|null} Re-renders the button label for the current language */
 let updateTestimonialsLabel = null;
@@ -131,11 +134,11 @@ function initTestimonialsLoadMore() {
   }
 
   const cards = Array.from(grid.querySelectorAll('.testimonial'));
-  if (cards.length <= TESTIMONIALS_PAGE_SIZE) {
+  if (cards.length <= TESTIMONIALS_INITIAL_COUNT) {
     return;
   }
 
-  let shown = TESTIMONIALS_PAGE_SIZE;
+  let shown = TESTIMONIALS_INITIAL_COUNT;
   cards.slice(shown).forEach((card) => {
     card.hidden = true;
   });
@@ -153,7 +156,7 @@ function initTestimonialsLoadMore() {
   button.hidden = false;
 
   button.addEventListener('click', () => {
-    const next = cards.slice(shown, shown + TESTIMONIALS_PAGE_SIZE);
+    const next = cards.slice(shown, shown + TESTIMONIALS_STEP);
     next.forEach((card) => {
       card.hidden = false;
     });
