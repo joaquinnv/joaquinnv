@@ -6,11 +6,11 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 
 ## 🛠 Tech Stack
 
-**Backend:** Node.js · NestJS · TypeScript · Express · REST APIs · Microservices · Redis · Payment Gateways · Jest
+**Backend:** Node.js · NestJS · TypeScript · Express · REST APIs · Microservices · Redis · Payment Gateways · Jest · Playwright · Cypress
 
 **Frontend:** Angular · JavaScript · HTML5 · CSS3
 
-**Cloud & DevOps:** Azure · Salesforce · Docker · Kubernetes · Git · CI/CD
+**Cloud & DevOps:** Azure · Salesforce · Docker · Git · CI/CD
 
 **Databases:** PostgreSQL · MongoDB · SQL
 
@@ -25,7 +25,7 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 - Migrated 48 Salesforce classes to external storage, bypassing governor limits
 - Implemented Redis caching that reduced query times from 20s → sub-second
 - Built 40+ enterprise integration flows on Azure
-- Co-created microservices in a 10+ repo NestJS architecture
+- Co-created microservices in a 10+ repo NestJS architecture, containerized with Docker
 - Designed purchase funnel analytics with Google Tag Manager
 
 ## 📬 Let's connect

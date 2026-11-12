@@ -66,9 +66,10 @@
           "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
           "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
           "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
-          "Co-created new microservices from scratch within a 10+ repository NestJS architecture, improving service isolation and independent deployability",
+          "Co-created new microservices from scratch within a 10+ repository NestJS architecture and containerized them with Docker for deployment on AWS by the infrastructure team, improving service isolation and independent deployability",
           "Provided cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
-          "Participated in on-call rotation, regularly resolving critical payment production incidents under pressure"
+          "Participated in on-call rotation, regularly resolving critical payment production incidents under pressure",
+          "Wrote and maintained unit tests with Jest and end-to-end tests with Playwright using Gherkin (BDD) scenarios with every new ticket; also worked with Cypress"
         ]
       },
       {
@@ -101,7 +102,7 @@
       {
         "icon": "fas fa-server",
         "title": "Backend",
-        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservices", "Redis", "Payment Gateways", "Testing (Jest)"]
+        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservices", "Redis", "Payment Gateways", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
       },
       {
         "icon": "fas fa-palette",
@@ -111,7 +112,7 @@
       {
         "icon": "fas fa-cloud",
         "title": "Cloud & DevOps",
-        "items": ["Azure", "Salesforce", "Docker", "Kubernetes", "Git", "GitHub", "CI/CD"]
+        "items": ["Azure", "Salesforce", "Docker", "Git", "GitHub", "CI/CD"]
       },
       {
         "icon": "fas fa-database",
@@ -223,9 +224,10 @@
           "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
           "Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing heavy list query latency from 20+ seconds to sub-second",
           "Built purchase-funnel analytics with Google Tag Manager to track drop-off and event engagement, enabling data-driven product decisions",
-          "Co-developed NestJS microservices in a 10+ repository architecture, improving service isolation and independent deployability",
+          "Co-developed NestJS microservices in a 10+ repository architecture and containerized them with Docker for deployment on AWS by the infrastructure team, improving service isolation and independent deployability",
           "Provided cross-functional leadership through developer mentoring, QA collaboration, and Tier-3 production escalation support",
-          "Participated in on-call rotation and resolved critical payment incidents under high-pressure production conditions"
+          "Participated in on-call rotation and resolved critical payment incidents under high-pressure production conditions",
+          "Wrote and maintained unit tests with Jest and end-to-end tests with Playwright using Gherkin (BDD) scenarios with every new ticket; also worked with Cypress"
         ]
       },
       {

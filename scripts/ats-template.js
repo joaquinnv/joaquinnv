@@ -39,10 +39,10 @@ function loadLang(lang) {
 }
 
 const CSS = `
-  @page { size: A4; margin: 12mm 15mm; }
+  @page { size: A4; margin: 10mm 15mm; }
   * { box-sizing: border-box; }
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 9.6pt; line-height: 1.34; color: #111; }
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 9.4pt; line-height: 1.3; color: #111; }
   h1 { font-size: 20pt; margin: 0 0 1mm; letter-spacing: 0.2pt; }
   .headline { font-size: 11pt; font-weight: bold; margin: 0 0 2mm; }
   .contact { margin: 0 0 0.8mm; font-size: 9.2pt; }
@@ -53,7 +53,7 @@ const CSS = `
   .job-title { margin: 0; }
   .job-dates { margin: 0 0 0.8mm; color: #333; }
   ul { margin: 0; padding-left: 4.6mm; }
-  li { margin: 0 0 0.7mm; }
+  li { margin: 0 0 0.5mm; }
   .skills p { margin: 0 0 0.9mm; }
   .nb { white-space: nowrap; }
 `;
