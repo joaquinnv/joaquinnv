@@ -82,7 +82,7 @@ test.describe('Homepage', () => {
     await expect(page.locator('#copyright-year')).toHaveText(year);
   });
 
-  test('testimonials "show more" reveals cards in pages until all are visible', async ({ page }) => {
+  test('testimonials "show more" reveals cards in steps, then "show less" collapses them', async ({ page }) => {
     const cards = page.locator('#testimonials-grid .testimonial');
     const visibleCards = page.locator('#testimonials-grid .testimonial:not([hidden])');
     const button = page.locator('#testimonials-more');
@@ -99,7 +99,17 @@ test.describe('Homepage', () => {
       await expect(visibleCards).toHaveCount(expected);
     }
 
-    await expect(button).toBeHidden();
+    if (total > TESTIMONIALS_INITIAL_COUNT) {
+      await expect(button).toHaveAttribute('aria-expanded', 'true');
+      await expect(button).toHaveText(/show fewer/i);
+      await button.click();
+      await expect(visibleCards).toHaveCount(TESTIMONIALS_INITIAL_COUNT);
+      await expect(page.locator('#testimonials-title')).toBeFocused();
+      await expect(button).toHaveAttribute('aria-expanded', 'false');
+      await expect(button).toContainText(`(${total - TESTIMONIALS_INITIAL_COUNT})`);
+    } else {
+      await expect(button).toBeHidden();
+    }
   });
 });
 

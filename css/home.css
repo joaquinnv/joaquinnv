@@ -458,7 +458,8 @@
   display: none;
 }
 
-.testimonial:focus {
+.testimonial:focus,
+#testimonials-title:focus {
   outline: none;
 }
 

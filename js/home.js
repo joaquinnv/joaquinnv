@@ -123,12 +123,28 @@ const TESTIMONIALS_STEP = 3;
 let updateTestimonialsLabel = null;
 
 /**
- * Shows the first page of testimonials and reveals the rest in pages
- * when the "Show more" button is clicked. Without JS every card stays visible.
+ * Returns a translated label, or the English fallback before translations load.
+ * @param {string} key - i18n key
+ * @param {string} fallback - English text
+ * @returns {string} Label
+ */
+function labelOr(key, fallback) {
+  const value = t(key);
+  return value === key ? fallback : value;
+}
+
+/**
+ * Shows the first testimonials and reveals the rest in steps with "Show more".
+ * Once every card is visible the same button becomes "Show less": it collapses
+ * back to the first cards and returns the reader to the section heading, so the
+ * page never jumps and leaves them somewhere unexpected.
+ * Without JS every card stays visible and the button stays hidden.
  */
 function initTestimonialsLoadMore() {
   const grid = document.getElementById('testimonials-grid');
   const button = document.getElementById('testimonials-more');
+  const section = document.getElementById('testimonials');
+  const heading = document.getElementById('testimonials-title');
   if (!grid || !button) {
     return;
   }
@@ -139,41 +155,47 @@ function initTestimonialsLoadMore() {
   }
 
   let shown = TESTIMONIALS_INITIAL_COUNT;
-  cards.slice(shown).forEach((card) => {
-    card.hidden = true;
-  });
+
+  const render = () => {
+    cards.forEach((card, index) => {
+      card.hidden = index >= shown;
+    });
+    const allShown = shown >= cards.length;
+    button.setAttribute('aria-expanded', String(allShown));
+    updateTestimonialsLabel();
+  };
 
   updateTestimonialsLabel = () => {
     const remaining = cards.length - shown;
-    const template = t('testimonials.load_more');
-    button.textContent = template === 'testimonials.load_more'
-      ? `Show more testimonials (${remaining})`
-      : template.replace('{count}', String(remaining));
+    button.textContent = remaining > 0
+      ? labelOr('testimonials.load_more', 'Show more testimonials ({count})').replace('{count}', String(remaining))
+      : labelOr('testimonials.show_less', 'Show fewer testimonials');
   };
 
-  updateTestimonialsLabel();
-  button.setAttribute('aria-expanded', 'false');
+  render();
   button.hidden = false;
 
   button.addEventListener('click', () => {
-    const next = cards.slice(shown, shown + TESTIMONIALS_STEP);
-    next.forEach((card) => {
-      card.hidden = false;
-    });
-    shown += next.length;
+    if (shown >= cards.length) {
+      shown = TESTIMONIALS_INITIAL_COUNT;
+      render();
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      (section || grid).scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+      return;
+    }
+
+    const firstNew = cards[shown];
+    shown = Math.min(cards.length, shown + TESTIMONIALS_STEP);
+    render();
 
     /* Move focus to the first revealed card so keyboard and screen-reader users land on the new content */
-    if (next.length > 0) {
-      next[0].setAttribute('tabindex', '-1');
-      next[0].focus();
-    }
-
-    if (shown >= cards.length) {
-      button.hidden = true;
-      button.setAttribute('aria-expanded', 'true');
-    } else {
-      updateTestimonialsLabel();
-    }
+    firstNew.setAttribute('tabindex', '-1');
+    firstNew.focus();
   });
 }
 
