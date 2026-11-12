@@ -26,6 +26,13 @@ const esc = (s) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
+/**
+ * Escapes text and keeps hyphenated words (US-based, data-driven, Tier-3) on one
+ * line. When Chromium breaks a line at a hyphen, PDF text extraction drops the
+ * hyphen and glues the halves ("USbased"), so ATS keyword matching misses them.
+ */
+const text = (s) => esc(s).replace(/(\S+-\S+)/g, '<span class="nb">$1</span>');
+
 function loadLang(lang) {
   const file = path.resolve(__dirname, '..', 'i18n', `${lang}.json`);
   return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -48,6 +55,7 @@ const CSS = `
   ul { margin: 0; padding-left: 4.6mm; }
   li { margin: 0 0 0.7mm; }
   .skills p { margin: 0 0 0.9mm; }
+  .nb { white-space: nowrap; }
 `;
 
 function buildAtsHtml(lang) {
@@ -62,14 +70,14 @@ function buildAtsHtml(lang) {
       <p class="job-title"><strong>${esc(r.title)}</strong>, ${esc(r.company)} — ${esc(r.location)}</p>
       <p class="job-dates">${esc(r.period)}</p>
       <ul>
-        ${r.bullets.map((b) => `<li>${esc(b)}</li>`).join('\n        ')}
+        ${r.bullets.map((b) => `<li>${text(b)}</li>`).join('\n        ')}
       </ul>
     </div>`,
     )
     .join('\n');
 
   const skills = d.skills.categories
-    .map((c) => `<p><strong>${esc(c.title)}:</strong> ${esc(c.items.join(', '))}</p>`)
+    .map((c) => `<p><strong>${esc(c.title)}:</strong> ${text(c.items.join(', '))}</p>`)
     .join('\n    ');
 
   const education = cv.education
@@ -94,7 +102,7 @@ function buildAtsHtml(lang) {
   <p class="contact">${link(CONTACT.linkedin)} | ${link(CONTACT.github)} | ${link(CONTACT.portfolio)}</p>
 
   <h2>${esc(SUMMARY_LABEL[lang])}</h2>
-  <p>${esc(cv.summary)}</p>
+  <p>${text(cv.summary)}</p>
 
   <h2>${esc(sectionTitles.experience)}</h2>
   ${jobs}
