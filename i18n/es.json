@@ -126,22 +126,28 @@
     "subtitle": "De personas con las que tuve el placer de trabajar",
     "items": [
       {
-        "text": "Joaquín demuestra de forma constante habilidades técnicas excepcionales y una comprensión profunda de nuestra industria. Su enfoque innovador y su capacidad para resolver problemas han contribuido de manera significativa al éxito de nuestros proyectos. No solo es técnicamente competente, sino también un excelente compañero de equipo. Siempre está dispuesto a brindar apoyo, compartir su conocimiento y colaborar para lograr los mejores resultados.",
-        "name": "Hugo Héctor Fernández",
-        "role": "Desarrollador de Software Senior, Blackthorn",
-        "initials": "HF"
+        "text": "Tuve el enorme placer no solo de trabajar directamente con Joaquín, sino de tenerlo como integrante de uno de mis equipos durante nuestro tiempo en Blackthorn. No puedo expresar lo reconfortante que es trabajar con alguien tan confiable. Incluso fuera de su zona de confort, Joaquín fue excelente entregando trabajo de gran calidad más rápido de lo que creía posible. Más importante aún, su nivel de comunicación mostraba una verdadera comprensión del equilibrio entre alcance, requisitos y viabilidad técnica en cada etapa del ciclo de vida. Si surge un desafío o una duda sobre un trabajo, nunca vas a tener que pedirle más detalles a Joaquín, porque ya habrá diagnosticado la situación y te traerá posibles soluciones.",
+        "name": "Thomas Horsch",
+        "role": "Engineering Manager, Blackthorn",
+        "initials": "TH"
       },
       {
-        "text": "Tuve el privilegio de ser su compañero de trabajo. Aportó siempre el máximo esfuerzo al equipo y tuvo un papel relevante para que completáramos las asignaciones a tiempo. Cualquier equipo se beneficiaría de contar con Joaquín.",
-        "name": "Cristian Vizzarri",
-        "role": "Desarrollador Salesforce, Folder IT",
-        "initials": "CV"
+        "text": "Tuve el placer de trabajar con Joaquín durante varios años, primero como QA Engineer de su equipo y luego como Software Support Engineer, y es uno de los desarrolladores más confiables con los que trabajé. Su código era siempre limpio y bien pensado, y cuando encontraba problemas, los tomaba en serio, los entendía rápido y los corregía sin fricción. Cuando pasé a soporte, volvimos a trabajar de cerca en los problemas de clientes que me llegaban. Joaquín siempre estaba dispuesto a meterse a fondo, ayudarme a entender qué pasaba por debajo y encontrar una solución. Explica los temas técnicos con claridad y nunca te hace sentir mal por preguntar. Cualquier equipo se beneficiaría de tener a Joaquín.",
+        "name": "Jason Arias",
+        "role": "Associate Software Engineer, Blackthorn",
+        "initials": "JA"
       },
       {
-        "text": "Tuve el placer de trabajar con Joaquín en Blackthorn y puedo afirmar con confianza que es un desarrollador y colaborador excepcional. Aborda los problemas con profundidad técnica y visión de arquitectura, orientado a soluciones robustas y escalables. Se mostró siempre abierto a la retroalimentación, ágil para resolver incidencias y proactivo para mejorar la calidad general del sistema.",
-        "name": "Franco Bianucci",
-        "role": "Sr. QA Automation Engineer, Blackthorn",
-        "initials": "FB"
+        "text": "Trabajé con Joaquín más de cuatro años en Blackthorn. Fui scrum master de su equipo y, cuando dejamos scrum, seguí acompañando al equipo con standups, actualizaciones y priorización. Joaquín trabajó como desarrollador full stack en las aplicaciones web detrás de los productos de Pagos, Eventos y Mensajería de Blackthorn. Es muy confiable. Cuando necesitaba ayuda de infraestructura o una revisión de código de otro equipo, la pedía él mismo en vez de dejar el ticket esperando, así que su trabajo rara vez quedaba bloqueado. Ese nivel de compromiso hace que las personas a su alrededor también trabajen mejor. Cualquier equipo que busque un ingeniero backend o full stack tendría suerte de contar con él.",
+        "name": "Lesley Boyd",
+        "role": "Technical Project Manager, Blackthorn",
+        "initials": "LB"
+      },
+      {
+        "text": "Trabajé con Joaquín en Blackthorn durante más de cuatro años y fue un placer tenerlo como compañero. Cuando entré a Blackthorn como desarrollador, fue una de las personas que me ayudó a ponerme al día, siempre dispuesto a compartir su conocimiento y darme una mano. Valoré mucho tenerlo como mentor en esa etapa. Es accesible, tranquilo y siempre está dispuesto a adaptarse, cambiar prioridades y asumir distintas responsabilidades según lo que necesite el equipo. Volvería a trabajar con él con gusto y lo recomendaría a cualquier equipo de ingeniería que busque un gran desarrollador y compañero.",
+        "name": "Carlos Mendoza",
+        "role": "Full Stack Developer, Blackthorn",
+        "initials": "CM"
       },
       {
         "text": "Joaquín tiene un nivel sobresaliente. Cuenta con las habilidades para proponer buenas soluciones, resolver problemas complejos y aporta una sólida experiencia como ingeniero full stack. Me entrevistó cuando ingresé a Blackthorn y, además, diseñó un proyecto exigente y bien estructurado que integra una base PostgreSQL con Salesforce para calcular reglas de permisos en eventos sin usar PII, un requisito clave. Recomiendo a Joaquín para proyectos futuros: es muy capaz de definir arquitectura de software desde cero.",
@@ -150,10 +156,28 @@
         "initials": "FZ"
       },
       {
+        "text": "Tuve el placer de trabajar con Joaquín en Blackthorn y puedo afirmar con confianza que es un desarrollador y colaborador excepcional. Aborda los problemas con profundidad técnica y visión de arquitectura, orientado a soluciones robustas y escalables. Se mostró siempre abierto a la retroalimentación, ágil para resolver incidencias y proactivo para mejorar la calidad general del sistema.",
+        "name": "Franco Bianucci",
+        "role": "Sr. QA Automation Engineer, Blackthorn",
+        "initials": "FB"
+      },
+      {
+        "text": "Joaquín demuestra de forma constante habilidades técnicas excepcionales y una comprensión profunda de nuestra industria. Su enfoque innovador y su capacidad para resolver problemas han contribuido de manera significativa al éxito de nuestros proyectos. No solo es técnicamente competente, sino también un excelente compañero de equipo. Siempre está dispuesto a brindar apoyo, compartir su conocimiento y colaborar para lograr los mejores resultados.",
+        "name": "Hugo Héctor Fernández",
+        "role": "Desarrollador de Software Senior, Blackthorn",
+        "initials": "HF"
+      },
+      {
         "text": "Tuve la oportunidad de trabajar con Joaquín en Digital Lab, donde ambos comenzamos nuestras carreras. Desde el primer día, se destacó por ser una persona confiable, fácil de tratar y siempre dispuesta a ayudar. Colaboramos de cerca en varias tareas, y valoré mucho su forma de abordar los problemas: con calma, criterio y siempre buscando una buena solución. Es un gran jugador de equipo y alguien en quien se puede confiar cuando las cosas se complican. Me alegra haber tenido la oportunidad de trabajar con él al inicio de nuestras carreras, y estoy seguro de que seguirá teniendo excelentes resultados donde sea que vaya.",
-        "name": "Hernan Llul",
+        "name": "Hernan Llull",
         "role": "Full Stack Developer, Digital Lab",
         "initials": "HL"
+      },
+      {
+        "text": "Tuve el privilegio de ser su compañero de trabajo. Aportó siempre el máximo esfuerzo al equipo y tuvo un papel relevante para que completáramos las asignaciones a tiempo. Cualquier equipo se beneficiaría de contar con Joaquín.",
+        "name": "Cristian Vizzarri",
+        "role": "Desarrollador Salesforce, Folder IT",
+        "initials": "CV"
       }
     ]
   },
