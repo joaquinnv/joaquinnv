@@ -4,6 +4,7 @@ const NAV_LINK_COUNT = 7;
 const CONTACT_CARD_COUNT = 4;
 const MIN_EXPERIENCE_ENTRIES = 3;
 const MIN_SKILL_TAGS = 10;
+const TESTIMONIALS_PAGE_SIZE = 4;
 const MOBILE_VIEWPORT_WIDTH = 375;
 const MOBILE_VIEWPORT_HEIGHT = 812;
 
@@ -78,6 +79,26 @@ test.describe('Homepage', () => {
   test('footer displays copyright year', async ({ page }) => {
     const year = new Date().getFullYear().toString();
     await expect(page.locator('#copyright-year')).toHaveText(year);
+  });
+
+  test('testimonials "show more" reveals cards in pages until all are visible', async ({ page }) => {
+    const cards = page.locator('#testimonials-grid .testimonial');
+    const visibleCards = page.locator('#testimonials-grid .testimonial:not([hidden])');
+    const button = page.locator('#testimonials-more');
+    const total = await cards.count();
+
+    await expect(visibleCards).toHaveCount(Math.min(total, TESTIMONIALS_PAGE_SIZE));
+
+    let expected = TESTIMONIALS_PAGE_SIZE;
+    while (expected < total) {
+      await expect(button).toBeVisible();
+      await expect(button).toContainText(`(${total - expected})`);
+      await button.click();
+      expected = Math.min(total, expected + TESTIMONIALS_PAGE_SIZE);
+      await expect(visibleCards).toHaveCount(expected);
+    }
+
+    await expect(button).toBeHidden();
   });
 });
 

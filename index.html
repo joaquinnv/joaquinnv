@@ -377,7 +377,7 @@
                     <p class="section__subtitle" data-i18n="testimonials.subtitle">From people I've had the pleasure of working with</p>
                 </div>
 
-                <div class="testimonials__grid">
+                <div class="testimonials__grid" id="testimonials-grid">
                     <!-- Thomas -->
                     <article class="card testimonial animate-on-scroll stagger-1" aria-label="Testimonial from Thomas Horsch">
                         <span class="testimonial__quote-mark" aria-hidden="true">"</span>
@@ -512,6 +512,13 @@
                             </div>
                         </div>
                     </article>
+                </div>
+
+                <!-- Shown by js/home.js only when there are more cards than the first page; without JS every card stays visible -->
+                <div class="testimonials__more">
+                    <button type="button" class="btn btn--secondary" id="testimonials-more" aria-controls="testimonials-grid" hidden>
+                        Show more testimonials
+                    </button>
                 </div>
             </div>
         </section>
