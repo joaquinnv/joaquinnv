@@ -17,7 +17,7 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 ## 🔭 What I'm working on
 
 - Open to new backend roles (**Node.js / NestJS**, remote)
-- Exploring **LangChain**, **LangGraph**, and **AI Agents**
+- Using **AI agents** day to day and building my own agent **skills** (self-study)
 - Deepening my knowledge in software architecture
 
 ## 🏆 Highlights

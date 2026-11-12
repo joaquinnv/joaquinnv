@@ -26,14 +26,14 @@
   },
   "hero": {
     "badge": "Open to opportunities",
-    "intro": "I build resilient backend systems that power thousands of payment transactions. Specialized in NestJS, Node.js, and PostgreSQL — with a knack for turning complex problems into elegant, scalable solutions.",
+    "intro": "I build resilient backend systems behind payment and event platforms. Specialized in NestJS, Node.js, and PostgreSQL — with a knack for turning complex problems into elegant, scalable solutions.",
     "cta_explore": "Explore My Work",
     "cta_cv": "View CV",
     "typing": [
       "Senior Backend Developer",
       "Building payment systems at scale",
       "NestJS • Node.js • PostgreSQL",
-      "Exploring AI with LangChain"
+      "Exploring AI agents & skills"
     ]
   },
   "about": {
@@ -45,8 +45,7 @@
     "p3": "I'm paying attention to where AI can cut real repetitive work out of day-to-day engineering — time and steps I actually get back, not another trend to chase. After work, in a totally different spirit, I sometimes build small mobile apps as a hobby. I'm not looking for mobile roles; mobile just feels like the best fit when I'm the only one carrying a project from a small idea to something that runs on my phone.",
     "learning_label": "On the side I'm exploring",
     "learning_tags": {
-      "langchain": "LangChain",
-      "langgraph": "LangGraph",
+      "agent_skills": "Agent Skills",
       "ai_agents": "AI Agents",
       "architecture": "Software Architecture",
       "mobile": "Mobile Development"

@@ -21,7 +21,7 @@ const DEFAULT_PHRASES = [
   'Senior Backend Developer',
   'Building payment systems at scale',
   'NestJS • Node.js • PostgreSQL',
-  'Exploring AI with LangChain',
+  'Exploring AI agents & skills',
 ];
 
 /* ── Typing Animation ── */
