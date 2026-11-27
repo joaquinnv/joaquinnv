@@ -25,31 +25,24 @@
     "canvas_aria": "LinkedIn profile banner: Joaquín Noguera Velázquez, Senior Backend Developer"
   },
   "hero": {
-    "badge": "Open to opportunities",
-    "intro": "I build resilient backend systems that power thousands of payment transactions. Specialized in NestJS, Node.js, and PostgreSQL — with a knack for turning complex problems into elegant, scalable solutions.",
-    "cta_explore": "Explore My Work",
+    "badge": "Available now · Remote (UTC-3)",
+    "intro": "6+ years of professional experience, working with US-based teams. Most recently at Blackthorn.io, on payment and event systems. Strongest in the backend, comfortable across the stack when a feature needs it.",
+    "cta_contact": "Contact me",
     "cta_cv": "View CV",
-    "typing": [
-      "Senior Backend Developer",
-      "Building payment systems at scale",
-      "NestJS • Node.js • PostgreSQL",
-      "Exploring AI with LangChain"
-    ]
+    "role": "Senior Backend Developer · Node.js\u00a0/\u00a0NestJS"
   },
   "about": {
     "label": "// about-me",
     "title": "About Me",
     "filename": "README.md",
-    "p1": "I've been coding for well over ten years, and about six of those in real jobs. From 2022 to 2026 I worked at Blackthorn.io with the backend as my home base: NestJS services, PostgreSQL, MongoDB, Redis. Most days it was payments and events — keeping that flow steady, watching for regressions, and tightening things before they turned into fires.",
+    "p1": "I have 6+ years of professional experience. From 2022 to 2026 I worked at Blackthorn.io with the backend as my home base: NestJS services, PostgreSQL, MongoDB, Redis. Most days it was payments and events — keeping that flow steady, watching for regressions, and tightening things before they turned into fires.",
     "p2": "Backend is where I'm strongest, but in that job I worked across whatever shipped the feature: APIs and data first, and Angular or the rest of the stack when that's what the ticket needed. I still like being with product or support when production acts up, chasing a slow query, or refactoring so the next person who opens the file isn't guessing.",
-    "p3": "I'm paying attention to where AI can cut real repetitive work out of day-to-day engineering — time and steps I actually get back, not another trend to chase. After work, in a totally different spirit, I sometimes build small mobile apps as a hobby. I'm not looking for mobile roles; mobile just feels like the best fit when I'm the only one carrying a project from a small idea to something that runs on my phone.",
+    "p3": "On my own time, as self-study, I use AI agents and build my own agent skills to see where they can cut repetitive work out of day-to-day engineering.",
     "learning_label": "On the side I'm exploring",
     "learning_tags": {
-      "langchain": "LangChain",
-      "langgraph": "LangGraph",
+      "agent_skills": "Agent Skills",
       "ai_agents": "AI Agents",
-      "architecture": "Software Architecture",
-      "mobile": "Mobile Development"
+      "architecture": "Software Architecture"
     }
   },
   "experience": {
@@ -63,13 +56,14 @@
         "period": "Apr 2022 — Nov 2026",
         "location": "United States (Remote)",
         "bullets": [
-          "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
-          "Implemented Redis caching system with dynamic TTLs across all non-payment endpoints, reducing large list query response times from 20+ seconds to sub-second",
-          "Designed and built purchase funnel analytics using Google Tag Manager, tracking user drop-off points and event engagement to enable data-driven product decisions",
-          "Co-created new microservices from scratch within a 10+ repository NestJS architecture and containerized them with Docker for deployment on AWS by the infrastructure team, improving service isolation and independent deployability",
-          "Provided cross-functional support: mentoring developers, assisting QA team, and handling Tier 3 production escalations",
-          "Participated in on-call rotation, regularly resolving critical payment production incidents under pressure",
-          "Wrote and maintained unit tests with Jest and end-to-end tests with Playwright using Gherkin (BDD) scenarios with every new ticket; also worked with Cypress"
+          "Helped build an event platform integrated with Salesforce and worked on payment systems",
+          "Built backend features with Node.js, NestJS, Express and TypeScript; also worked with Angular and Apex",
+          "Co-developed NestJS microservices with Docker and worked with PostgreSQL, MongoDB and Redis",
+          "Worked on payment integrations with Stripe (redirect-based and Stripe Elements) and Authorize.net, and handled critical payment incidents on call",
+          "Migrated Salesforce classes (events, tickets and system data) to external database storage to get past governor limits",
+          "Created custom Google Tag Manager events to track user activity in shopping carts",
+          "Wrote unit and end-to-end tests with Jest and Playwright (Gherkin/BDD); also worked with Cypress",
+          "Mentored developers, partnered with QA and handled Tier-3 production escalations"
         ]
       },
       {
@@ -78,7 +72,7 @@
         "period": "Mar 2021 — Apr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Built 40+ enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
+          "Built enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
           "Provided Salesforce CPQ support in client production systems: fixed long-standing bugs and monitored trigger handlers, batch jobs and schedulable processes to keep operations stable"
         ]
       },
@@ -102,7 +96,7 @@
       {
         "icon": "fas fa-server",
         "title": "Backend",
-        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservices", "Redis", "Payment Gateways", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
+        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservices", "Redis", "Payment Gateways", "Stripe", "Authorize.net", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
       },
       {
         "icon": "fas fa-palette",
@@ -188,7 +182,7 @@
     "label": "// get-in-touch",
     "title": "Contact",
     "subtitle": "Let's build something great together",
-    "intro": "I'm always open to discussing new opportunities, interesting projects, or just connecting with fellow developers. Feel free to reach out!",
+    "intro": "I'm available now for remote backend roles (Node.js / NestJS), as a contractor or through an EOR, with full schedule availability from UTC-3. Email and LinkedIn both work.",
     "email_title": "Email",
     "linkedin_label": "Joaquín Noguera",
     "github_label": "joaquinnv",
@@ -202,9 +196,10 @@
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Senior Backend Developer (Node.js / NestJS)",
-    "summary": "Senior backend developer with 10+ years programming and 6+ years of professional experience, working with US-based teams. I design and operate payment and event systems with NestJS, Node.js/TypeScript, PostgreSQL, MongoDB and Redis, focused on performance and production reliability — for example, cutting heavy query times from 20+ seconds to sub-second with Redis. Comfortable across the stack, from Angular to Salesforce and Azure integrations.",
+    "summary": "Senior Backend Developer with 6+ years of professional experience, working with US-based teams. At Blackthorn.io I worked on payment and event systems with NestJS, TypeScript, PostgreSQL, MongoDB and Redis, with a focus on performance and production reliability. Comfortable across the stack, from Angular to Salesforce and Azure integrations.",
     "print_btn": "Print CV",
     "download_btn": "Download PDF",
+    "download_ats_btn": "One-column PDF (ATS)",
     "linkedin_banner_link": "LinkedIn cover banner",
     "website_label": "Portfolio",
     "location": "Paraná, Entre Ríos, Argentina (Remote) · UTC-3",
@@ -221,13 +216,14 @@
         "period": "Apr 2022 — Nov 2026",
         "location": "United States (Remote)",
         "bullets": [
-          "Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies",
-          "Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing heavy list query latency from 20+ seconds to sub-second",
-          "Built purchase-funnel analytics with Google Tag Manager to track drop-off and event engagement, enabling data-driven product decisions",
-          "Co-developed NestJS microservices in a 10+ repository architecture and containerized them with Docker for deployment on AWS by the infrastructure team, improving service isolation and independent deployability",
-          "Provided cross-functional leadership through developer mentoring, QA collaboration, and Tier-3 production escalation support",
-          "Participated in on-call rotation and resolved critical payment incidents under high-pressure production conditions",
-          "Wrote and maintained unit tests with Jest and end-to-end tests with Playwright using Gherkin (BDD) scenarios with every new ticket; also worked with Cypress"
+          "Helped build an event platform integrated with Salesforce and worked on payment systems",
+          "Built backend features with Node.js, NestJS, Express and TypeScript; also worked with Angular and Apex",
+          "Co-developed NestJS microservices with Docker and worked with PostgreSQL, MongoDB and Redis",
+          "Worked on payment integrations with Stripe (redirect-based and Stripe Elements) and Authorize.net, and handled critical payment incidents on call",
+          "Migrated Salesforce classes (events, tickets and system data) to external database storage to get past governor limits",
+          "Created custom Google Tag Manager events to track user activity in shopping carts",
+          "Wrote unit and end-to-end tests with Jest and Playwright (Gherkin/BDD); also worked with Cypress",
+          "Mentored developers, partnered with QA and handled Tier-3 production escalations"
         ]
       },
       {
@@ -236,7 +232,7 @@
         "period": "Mar 2021 — Apr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Built 40+ enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
+          "Built enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360",
           "Provided Salesforce CPQ support in client production systems: fixed long-standing bugs and monitored trigger handlers, batch jobs and schedulable processes to keep operations stable"
         ]
       },

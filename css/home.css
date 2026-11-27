@@ -51,12 +51,26 @@
   margin-bottom: var(--space-6);
 }
 
+.hero .badge {
+  margin-bottom: var(--space-4);
+}
+
+.hero__stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  padding: 0;
+  list-style: none;
+}
+
 .hero__intro {
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   max-width: 36rem;
   margin-inline: auto;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 .hero__ctas {
@@ -72,7 +86,7 @@
 }
 
 .hero__image {
-  width: 12rem;
+  width: 8rem;
   aspect-ratio: 4 / 5;
   height: auto;
   object-fit: cover;
@@ -93,10 +107,21 @@
   z-index: -1;
 }
 
+/* Phones: keep the calls to action above the fold */
+@media (max-width: 47.99rem) {
+  .hero {
+    padding-top: calc(var(--nav-height) + var(--space-4));
+  }
+
+  .hero__container {
+    gap: var(--space-5);
+  }
+}
+
 /* Hero — small phones (375px+) */
 @media (min-width: 23.4375rem) {
   .hero__image {
-    width: 14rem;
+    width: 8rem;
   }
 }
 
@@ -142,6 +167,10 @@
 
   .hero__intro {
     margin-inline: 0;
+  }
+
+  .hero__stack {
+    justify-content: flex-start;
   }
 
   .hero__ctas {

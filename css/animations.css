@@ -52,22 +52,6 @@
 .stagger-5 { transition-delay: 500ms; }
 .stagger-6 { transition-delay: 600ms; }
 
-/* ── Typing cursor animation ── */
-.typing-cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1.2em;
-  margin-left: 2px;
-  background: var(--color-primary);
-  vertical-align: text-bottom;
-  animation: blink-cursor 1s step-end infinite;
-}
-
-@keyframes blink-cursor {
-  0%, 100% { opacity: 100%; }
-  50% { opacity: 0%; }
-}
-
 /* ── Skill bar fill animation ── */
 .skill-bar__fill {
   width: 0;
@@ -87,11 +71,6 @@
     opacity: 100%;
     transform: none;
     transition: none;
-  }
-
-  .typing-cursor {
-    animation: none;
-    opacity: 100%;
   }
 
   .badge__dot {

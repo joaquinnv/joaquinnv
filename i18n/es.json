@@ -25,31 +25,24 @@
     "canvas_aria": "Banner para LinkedIn: Joaquín Noguera Velázquez, desarrollador backend senior"
   },
   "hero": {
-    "badge": "Abierto a oportunidades",
-    "intro": "Desarrollo sistemas backend resilientes que procesan miles de transacciones de pago. Me especializo en NestJS, Node.js y PostgreSQL, con capacidad para convertir problemas complejos en soluciones claras y escalables.",
-    "cta_explore": "Explorar mi trabajo",
+    "badge": "Disponible ya · Remoto (UTC-3)",
+    "intro": "Más de 6 años de experiencia profesional, trabajando con equipos de EE. UU. Mi último rol fue en Blackthorn.io, en sistemas de pagos y eventos. Mi fuerte es el backend y me muevo por el resto del stack cuando la funcionalidad lo pide.",
+    "cta_contact": "Contactarme",
     "cta_cv": "Ver CV",
-    "typing": [
-      "Desarrollador Backend Senior",
-      "Construyendo sistemas de pago a escala",
-      "NestJS • Node.js • PostgreSQL",
-      "Explorando IA con LangChain"
-    ]
+    "role": "Desarrollador Backend Senior · Node.js\u00a0/\u00a0NestJS"
   },
   "about": {
     "label": "// sobre-mi",
     "title": "Sobre mí",
     "filename": "LEEME.md",
-    "p1": "Llevo más de diez años programando y unos seis en trabajos formales. Entre 2022 y 2026 trabajé en Blackthorn.io con el backend como base: NestJS, PostgreSQL, MongoDB, Redis. El día a día eran pagos y eventos: mantener la estabilidad del flujo, detectar regresiones y actuar antes de que los problemas escalaran.",
+    "p1": "Tengo más de seis años de experiencia profesional. Entre 2022 y 2026 trabajé en Blackthorn.io con el backend como base: NestJS, PostgreSQL, MongoDB, Redis. El día a día eran pagos y eventos: mantener la estabilidad del flujo, detectar regresiones y actuar antes de que los problemas escalaran.",
     "p2": "Donde tengo mayor solidez es en el backend; no obstante, en ese rol participé en lo necesario para cada entrega: primero APIs y datos, y también Angular o el resto del stack cuando el ticket lo requería. También colaboré con producto o soporte cuando había incidencias en producción, optimicé consultas lentas y refactoricé para que quien continuara el código no perdiera tiempo.",
-    "p3": "Sigo evaluando cómo la inteligencia artificial puede reducir el trabajo repetitivo en el día a día del desarrollo: tiempo recuperado, no una moda pasajera. Además, desarrollo aplicaciones móviles de forma ocasional como hobby; no busco roles de desarrollo móvil. Ese ámbito me resulta adecuado para proyectos en los que avanzo de forma autónoma desde la idea hasta un producto funcional en el dispositivo.",
+    "p3": "Por mi cuenta, como estudio personal, uso agentes de IA y creo skills propias para ver dónde pueden reducir el trabajo repetitivo del desarrollo.",
     "learning_label": "También exploro",
     "learning_tags": {
-      "langchain": "LangChain",
-      "langgraph": "LangGraph",
+      "agent_skills": "Skills para agentes",
       "ai_agents": "Agentes IA",
-      "architecture": "Arquitectura de Software",
-      "mobile": "Desarrollo móvil"
+      "architecture": "Arquitectura de Software"
     }
   },
   "experience": {
@@ -63,13 +56,14 @@
         "period": "Abr 2022 — Nov 2026",
         "location": "Estados Unidos (Remoto)",
         "bullets": [
-          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
-          "Implementé sistema de caché Redis con TTLs dinámicos en todos los endpoints no relacionados con pagos, reduciendo tiempos de respuesta de consultas grandes de 20+ segundos a menos de un segundo",
-          "Diseñé e implementé analíticas de embudo de compra usando Google Tag Manager, rastreando puntos de abandono y engagement en eventos para decisiones basadas en datos",
-          "Co-desarrollé nuevos microservicios desde cero dentro de una arquitectura NestJS de más de 10 repositorios y los dockericé para que el equipo de infraestructura los desplegara en AWS, mejorando el aislamiento de servicios y el despliegue independiente",
-          "Brindé soporte multifuncional: ofrecí mentoría a desarrolladores, colaboré con el equipo de QA y gestioné escalaciones de producción de nivel tres",
-          "Participé en rotación on-call, resolviendo regularmente incidentes críticos de producción de pagos bajo presión",
-          "Escribí y mantuve tests unitarios con Jest y tests end-to-end con Playwright usando escenarios Gherkin (BDD) en cada ticket nuevo; también trabajé con Cypress"
+          "Ayudé a construir una plataforma de eventos integrada con Salesforce y trabajé en sistemas de pagos",
+          "Desarrollé backend con Node.js, NestJS, Express y TypeScript; también trabajé con Angular y Apex",
+          "Co-desarrollé microservicios en NestJS con Docker y trabajé con PostgreSQL, MongoDB y Redis",
+          "Trabajé en integraciones de pago con Stripe (por redirección y con Stripe Elements) y Authorize.net, y atendí incidentes críticos de pagos en guardias",
+          "Migré clases de Salesforce (eventos, tickets y datos del sistema) a una base de datos externa para superar los governor limits",
+          "Creé eventos personalizados en Google Tag Manager para registrar la actividad de los usuarios en los carritos de compra",
+          "Escribí tests unitarios y end-to-end con Jest y Playwright (Gherkin/BDD); también trabajé con Cypress",
+          "Mentoreé desarrolladores, colaboré con QA y atendí escalaciones de producción de nivel 3"
         ]
       },
       {
@@ -78,7 +72,7 @@
         "period": "Mar 2021 — Abr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Desarrollé más de 40 flujos de integración empresarial en Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), conectando Salesforce con Dynamics 365 y otros sistemas, con monitoreo de extremo a extremo mediante Serverless360",
+          "Desarrollé flujos de integración empresarial en Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), conectando Salesforce con Dynamics 365 y otros sistemas, con monitoreo de extremo a extremo mediante Serverless360",
           "Brindé soporte de Salesforce CPQ en sistemas de producción de clientes: resolví errores persistentes y monitoreé trigger handlers, batch jobs y procesos schedulable para mantener la estabilidad operativa"
         ]
       },
@@ -102,7 +96,7 @@
       {
         "icon": "fas fa-server",
         "title": "Backend",
-        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservicios", "Redis", "Pasarelas de pago", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
+        "items": ["Node.js", "NestJS", "TypeScript", "Express", "REST APIs", "Microservicios", "Redis", "Pasarelas de pago", "Stripe", "Authorize.net", "Testing (Jest, Playwright, Cypress, BDD/Gherkin)"]
       },
       {
         "icon": "fas fa-palette",
@@ -188,7 +182,7 @@
     "label": "// contacto",
     "title": "Contacto",
     "subtitle": "Exploremos juntos nuevas oportunidades",
-    "intro": "Estoy abierto a conversar sobre nuevas oportunidades, proyectos interesantes o a conectar con otros profesionales del desarrollo. Puedes escribirme cuando quieras.",
+    "intro": "Estoy disponible ya para roles backend remotos (Node.js / NestJS), como contractor o a través de un EOR, con disponibilidad horaria completa desde UTC-3. Mis vías de contacto son el email y LinkedIn.",
     "email_title": "Email",
     "linkedin_label": "Joaquín Noguera",
     "github_label": "joaquinnv",
@@ -202,9 +196,10 @@
   "cv": {
     "title": "Joaquín Noguera Velázquez",
     "subtitle": "Desarrollador Backend Senior (Node.js / NestJS)",
-    "summary": "Desarrollador backend senior con más de 10 años programando y más de 6 de experiencia profesional, trabajando con equipos de EE. UU. Diseño y opero sistemas de pagos y eventos con NestJS, Node.js/TypeScript, PostgreSQL, MongoDB y Redis, con foco en rendimiento y estabilidad en producción; por ejemplo, reduje consultas pesadas de más de 20 segundos a menos de uno con Redis. Con versatilidad en todo el stack, desde Angular hasta integraciones con Salesforce y Azure.",
+    "summary": "Desarrollador backend senior con más de 6 años de experiencia profesional, trabajando con equipos de EE. UU. En Blackthorn.io trabajé en sistemas de pagos y eventos con NestJS, TypeScript, PostgreSQL, MongoDB y Redis, con foco en rendimiento y estabilidad en producción. Con versatilidad en todo el stack, desde Angular hasta integraciones con Salesforce y Azure.",
     "print_btn": "Imprimir CV",
     "download_btn": "Descargar PDF",
+    "download_ats_btn": "PDF a una columna (ATS)",
     "linkedin_banner_link": "Banner para LinkedIn",
     "website_label": "Sitio web",
     "location": "Paraná, Entre Ríos, Argentina (Remoto) · UTC-3",
@@ -221,13 +216,14 @@
         "period": "Abr 2022 — Nov 2026",
         "location": "Estados Unidos (Remoto)",
         "bullets": [
-          "Migré 48 clases de Salesforce (eventos, tickets y datos del sistema) a almacenamiento externo, superando los Governor Limits y mejorando la escalabilidad sin comprometer las políticas de seguridad",
-          "Implementé caché Redis con TTLs dinámicos en endpoints no relacionados con pagos, reduciendo la latencia de consultas pesadas de 20+ segundos a menos de un segundo",
-          "Diseñé analíticas de embudo de compra con Google Tag Manager para medir abandono y engagement, habilitando decisiones de producto basadas en datos",
-          "Co-desarrollé microservicios en NestJS dentro de una arquitectura de más de 10 repositorios y los dockericé para que el equipo de infraestructura los desplegara en AWS, mejorando aislamiento y despliegue independiente",
-          "Brindé liderazgo multifuncional mediante mentoría a desarrolladores, colaboración con QA y gestión de escalaciones de producción de nivel 3",
-          "Participé en rotación on-call y resolví incidentes críticos de pagos bajo condiciones de alta presión",
-          "Escribí y mantuve tests unitarios con Jest y tests end-to-end con Playwright usando escenarios Gherkin (BDD) en cada ticket nuevo; también trabajé con Cypress"
+          "Ayudé a construir una plataforma de eventos integrada con Salesforce y trabajé en sistemas de pagos",
+          "Desarrollé backend con Node.js, NestJS, Express y TypeScript; también trabajé con Angular y Apex",
+          "Co-desarrollé microservicios en NestJS con Docker y trabajé con PostgreSQL, MongoDB y Redis",
+          "Trabajé en integraciones de pago con Stripe (por redirección y con Stripe Elements) y Authorize.net, y atendí incidentes críticos de pagos en guardias",
+          "Migré clases de Salesforce (eventos, tickets y datos del sistema) a una base de datos externa para superar los governor limits",
+          "Creé eventos personalizados en Google Tag Manager para registrar la actividad de los usuarios en los carritos de compra",
+          "Escribí tests unitarios y end-to-end con Jest y Playwright (Gherkin/BDD); también trabajé con Cypress",
+          "Mentoreé desarrolladores, colaboré con QA y atendí escalaciones de producción de nivel 3"
         ]
       },
       {
@@ -236,7 +232,7 @@
         "period": "Mar 2021 — Abr 2022",
         "location": "Santa Fe, Argentina",
         "bullets": [
-          "Desarrollé más de 40 flujos de integración empresarial en Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), conectando Salesforce con Dynamics 365 y otros sistemas, con monitoreo de extremo a extremo mediante Serverless360",
+          "Desarrollé flujos de integración empresarial en Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), conectando Salesforce con Dynamics 365 y otros sistemas, con monitoreo de extremo a extremo mediante Serverless360",
           "Brindé soporte de Salesforce CPQ en sistemas de producción de clientes: resolví errores persistentes y monitoreé trigger handlers, batch jobs y procesos schedulable para mantener la estabilidad operativa"
         ]
       },
@@ -265,7 +261,7 @@
     ],
     "languages_list": [
       { "name": "Español", "level": "Nativo / Bilingüe" },
-      { "name": "Inglés", "level": "Profesional · 6 años con equipos de EE. UU." }
+      { "name": "Inglés", "level": "Profesional · 6 años con EE. UU." }
     ]
   }
 }
