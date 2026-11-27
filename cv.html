@@ -49,20 +49,20 @@
     <style>html[data-i18n-pending="true"] body{visibility:hidden}</style>
 
     <title>CV — Joaquín Noguera | Senior Backend Developer (Node.js / NestJS)</title>
-    <meta name="description" content="Professional CV of Joaquín Noguera Velázquez — Senior Backend Developer: payments and events (NestJS, PostgreSQL, MongoDB, Redis), full-stack contributions when needed, and practical use of AI in engineering.">
+    <meta name="description" content="Senior Backend Developer (Node.js / NestJS) with 6+ years of professional experience working with US-based teams. Payment and event systems. Remote, UTC-3.">
     <meta name="author" content="Joaquín Noguera Velázquez">
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="CV — Joaquín Noguera | Senior Backend Developer (Node.js / NestJS)">
-    <meta property="og:description" content="Senior Backend Developer — payments and events, full-stack when required, exploring practical AI in software engineering.">
+    <meta property="og:description" content="Senior Backend Developer (Node.js / NestJS) with 6+ years of professional experience working with US-based teams. Payment and event systems. Remote, UTC-3.">
     <meta property="og:url" content="https://joaquinnv.github.io/joaquinnv/cv.html">
     <link rel="canonical" href="https://joaquinnv.github.io/joaquinnv/cv.html">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="CV — Joaquín Noguera | Senior Backend Developer (Node.js / NestJS)">
-    <meta name="twitter:description" content="Senior Backend Developer — payments and events, full-stack when required, exploring practical AI in software engineering.">
+    <meta name="twitter:description" content="Senior Backend Developer (Node.js / NestJS) with 6+ years of professional experience working with US-based teams. Payment and event systems. Remote, UTC-3.">
     <meta name="twitter:url" content="https://joaquinnv.github.io/joaquinnv/cv.html">
 
     <!-- Favicon -->
@@ -127,15 +127,15 @@
 
             <!-- Actions -->
             <div class="cv__actions">
-                <button class="btn btn--secondary" id="print-btn" data-i18n="cv.print_btn">
-                    <i class="fas fa-print" aria-hidden="true"></i> Print CV
+                <button class="btn btn--secondary" id="print-btn">
+                    <i class="fas fa-print" aria-hidden="true"></i> <span data-i18n="cv.print_btn">Print CV</span>
                 </button>
-                <button class="btn btn--primary" id="download-btn" data-i18n="cv.download_btn">
-                    <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+                <button class="btn btn--primary" id="download-btn">
+                    <i class="fas fa-download" aria-hidden="true"></i> <span data-i18n="cv.download_btn">Download PDF</span>
                 </button>
-                <a href="banner.html" class="btn btn--secondary">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    <span data-i18n="cv.linkedin_banner_link">LinkedIn cover banner</span>
+                <a href="assets/joaquin-noguera-cv-ats-en.pdf" class="btn btn--secondary" id="download-ats-link" download="Joaquin-Noguera-CV-ATS-EN.pdf">
+                    <i class="fas fa-file-lines" aria-hidden="true"></i>
+                    <span data-i18n="cv.download_ats_btn">One-column PDF (ATS)</span>
                 </a>
             </div>
 
@@ -145,9 +145,7 @@
                     <div class="cv__header-main">
                         <h1 class="cv__name" data-i18n="cv.title">Joaquín Noguera Velázquez</h1>
                         <p class="cv__title" data-i18n="cv.subtitle">Senior Backend Developer (Node.js / NestJS)</p>
-                        <p class="cv__summary" data-i18n="cv.summary">
-                            Senior backend developer with 10+ years programming and 6+ years of professional experience, working with US-based teams. I design and operate payment and event systems with NestJS, Node.js/TypeScript, PostgreSQL, MongoDB and Redis, focused on performance and production reliability — for example, cutting heavy query times from 20+ seconds to sub-second with Redis. Comfortable across the stack, from Angular to Salesforce and Azure integrations.
-                        </p>
+                        <p class="cv__summary" data-i18n="cv.summary">Senior Backend Developer with 6+ years of professional experience, working with US-based teams. At Blackthorn.io I worked on payment and event systems with NestJS, TypeScript, PostgreSQL, MongoDB and Redis, with a focus on performance and production reliability. Comfortable across the stack, from Angular to Salesforce and Azure integrations.</p>
                         <div class="cv__contact-grid">
                             <span class="cv__contact-item">
                                 <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -193,13 +191,14 @@
                                 <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.0.location">United States (Remote)</span></span>
                             </div>
                             <ul class="cv__xp-bullets">
-                                <li data-i18n="cv.roles.0.bullets.0">Migrated 48 Salesforce classes (events, tickets, and system data) to external database storage, bypassing governor limits and improving scalability without compromising security policies</li>
-                                <li data-i18n="cv.roles.0.bullets.1">Implemented Redis caching with dynamic TTLs across non-payment endpoints, reducing heavy list query latency from 20+ seconds to sub-second</li>
-                                <li data-i18n="cv.roles.0.bullets.2">Built purchase-funnel analytics with Google Tag Manager to track drop-off and event engagement, enabling data-driven product decisions</li>
-                                <li data-i18n="cv.roles.0.bullets.3">Co-developed NestJS microservices in a 10+ repository architecture and containerized them with Docker for deployment on AWS by the infrastructure team, improving service isolation and independent deployability</li>
-                                <li data-i18n="cv.roles.0.bullets.4">Provided cross-functional leadership through developer mentoring, QA collaboration, and Tier-3 production escalation support</li>
-                                <li data-i18n="cv.roles.0.bullets.5">Participated in on-call rotation and resolved critical payment incidents under high-pressure production conditions</li>
-                                <li data-i18n="cv.roles.0.bullets.6">Wrote and maintained unit tests with Jest and end-to-end tests with Playwright using Gherkin (BDD) scenarios with every new ticket; also worked with Cypress</li>
+                                <li data-i18n="cv.roles.0.bullets.0">Helped build an event platform integrated with Salesforce and worked on payment systems</li>
+                                <li data-i18n="cv.roles.0.bullets.1">Built backend features with Node.js, NestJS, Express and TypeScript; also worked with Angular and Apex</li>
+                                <li data-i18n="cv.roles.0.bullets.2">Co-developed NestJS microservices with Docker and worked with PostgreSQL, MongoDB and Redis</li>
+                                <li data-i18n="cv.roles.0.bullets.3">Worked on payment integrations with Stripe (redirect-based and Stripe Elements) and Authorize.net, and handled critical payment incidents on call</li>
+                                <li data-i18n="cv.roles.0.bullets.4">Migrated Salesforce classes (events, tickets and system data) to external database storage to get past governor limits</li>
+                                <li data-i18n="cv.roles.0.bullets.5">Created custom Google Tag Manager events to track user activity in shopping carts</li>
+                                <li data-i18n="cv.roles.0.bullets.6">Wrote unit and end-to-end tests with Jest and Playwright (Gherkin/BDD); also worked with Cypress</li>
+                                <li data-i18n="cv.roles.0.bullets.7">Mentored developers, partnered with QA and handled Tier-3 production escalations</li>
                             </ul>
                         </article>
 
@@ -212,7 +211,7 @@
                                 <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span data-i18n="cv.roles.1.location">Santa Fe, Argentina</span></span>
                             </div>
                             <ul class="cv__xp-bullets">
-                                <li data-i18n="cv.roles.1.bullets.0">Built 40+ enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360</li>
+                                <li data-i18n="cv.roles.1.bullets.0">Built enterprise integration flows on Azure (Logic Apps, Function Apps, Service Bus, Data Factory, Data Lake), connecting Salesforce with Dynamics 365 and other systems, with end-to-end monitoring via Serverless360</li>
                                 <li data-i18n="cv.roles.1.bullets.1">Provided Salesforce CPQ support in client production systems: fixed long-standing bugs and monitored trigger handlers, batch jobs and schedulable processes to keep operations stable</li>
                             </ul>
                         </article>
@@ -273,6 +272,8 @@
                                 <span class="tag">Microservices</span>
                                 <span class="tag">Redis</span>
                                 <span class="tag">Payment Gateways</span>
+                                <span class="tag">Stripe</span>
+                                <span class="tag">Authorize.net</span>
                                 <span class="tag">Testing (Jest, Playwright, Cypress, BDD/Gherkin)</span>
                             </div>
                         </div>

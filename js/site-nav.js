@@ -44,6 +44,11 @@ export function renderSiteNav(page) {
     : 'nav__link nav__link--cv';
   const bannerCurrentAttrs = bannerIsCurrent ? ' data-nav-current aria-current="page"' : '';
 
+  /* The banner generator is a personal tool: only link it from its own page. */
+  const bannerLink = bannerIsCurrent
+    ? `<a href="banner.html" class="${bannerClass}"${bannerCurrentAttrs} data-i18n="nav.banner">LinkedIn banner</a>`
+    : '';
+
   header.innerHTML = `
         <div class="nav__container">
             <a href="${logoHref}" class="nav__logo">
@@ -56,7 +61,7 @@ export function renderSiteNav(page) {
             <nav class="nav__links" id="nav-links" aria-label="Main navigation">
                 ${sectionLinks}
                 <a href="cv.html" class="${cvClass}"${cvCurrentAttrs} data-i18n="nav.cv">View CV</a>
-                <a href="banner.html" class="${bannerClass}"${bannerCurrentAttrs} data-i18n="nav.banner">LinkedIn banner</a>
+                ${bannerLink}
             </nav>
 
             <div class="nav__actions">

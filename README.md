@@ -1,12 +1,12 @@
 # Hey, I'm Joaquín 👋
 
-**Senior Backend Developer (Node.js / NestJS)**
+**Senior Backend Developer (Node.js / NestJS)** · Remote from Argentina (UTC-3) · Available now
 
-I have 6+ years of professional experience and over a decade writing code. I architect NestJS microservices, optimize databases, and implement caching strategies that turn 20-second queries into sub-second responses. I thrive in fast-paced environments where I can solve complex problems and bring innovative solutions to the table.
+6+ years of professional experience, working with US-based teams. At Blackthorn.io I worked on payment and event systems with NestJS, TypeScript, PostgreSQL, MongoDB and Redis. I build backend services, tune slow queries and use caching where it pays off.
 
 ## 🛠 Tech Stack
 
-**Backend:** Node.js · NestJS · TypeScript · Express · REST APIs · Microservices · Redis · Payment Gateways · Jest · Playwright · Cypress
+**Backend:** Node.js · NestJS · TypeScript · Express · REST APIs · Microservices · Redis · Payment Gateways · Stripe · Authorize.net · Jest · Playwright · Cypress
 
 **Frontend:** Angular · JavaScript · HTML5 · CSS3
 
@@ -22,11 +22,12 @@ I have 6+ years of professional experience and over a decade writing code. I arc
 
 ## 🏆 Highlights
 
-- Migrated 48 Salesforce classes to external storage, bypassing governor limits
-- Implemented Redis caching that reduced query times from 20s → sub-second
-- Built 40+ enterprise integration flows on Azure
-- Co-created microservices in a 10+ repo NestJS architecture, containerized with Docker
-- Designed purchase funnel analytics with Google Tag Manager
+- Helped build an event platform integrated with Salesforce and worked on payment systems
+- Worked on payment integrations with Stripe (redirect-based and Stripe Elements) and Authorize.net
+- Co-developed NestJS microservices with Docker
+- Migrated Salesforce classes to external database storage to get past governor limits
+- Built enterprise integration flows on Azure
+- Created custom Google Tag Manager events to track user activity in shopping carts
 
 ## 📬 Let's connect
 

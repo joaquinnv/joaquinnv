@@ -5,7 +5,7 @@
  */
 
 import { initTheme } from './theme.js';
-import { initI18n } from './i18n.js';
+import { initI18n, onLangChange } from './i18n.js';
 import { initAnimations } from './animations.js';
 import { initCurrentPageNavLink, initMobileNav, updateCopyrightYear } from './utils.js';
 import { renderSiteNav } from './site-nav.js';
@@ -20,7 +20,7 @@ const PDF_PATH_BY_LANG = {
   es: 'assets/joaquin-noguera-cv-es.pdf',
 };
 /** Bust browser/CDN cache when the pre-built PDF is regenerated (`npm run build:pdf`). */
-const PDF_CACHE_BUST = '20261110a';
+const PDF_CACHE_BUST = '20261127a';
 
 /** Handles print button — opens the browser print dialog. */
 function initPrintButton() {
@@ -50,6 +50,18 @@ function initDownloadButton() {
     });
   }
 }
+
+/** Points the ATS download link at the PDF that matches the current language. */
+function updateAtsLink(lang) {
+  const link = document.getElementById('download-ats-link');
+  if (link) {
+    const code = lang === 'es' ? 'es' : 'en';
+    link.href = `assets/joaquin-noguera-cv-ats-${code}.pdf?v=${PDF_CACHE_BUST}`;
+    link.download = `Joaquin-Noguera-CV-ATS-${code.toUpperCase()}.pdf`;
+  }
+}
+
+onLangChange(updateAtsLink);
 
 /** Initializes all CV page modules and features. */
 async function init() {
